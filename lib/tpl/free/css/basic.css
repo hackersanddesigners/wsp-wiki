@@ -2,4 +2,14 @@
    basics
           */
 
+.d-ib {
+  display: inline-block;
+}
 
+.w--two-thirds {
+  width: 70%;
+}
+
+.w--full {
+  width: 100%;
+}

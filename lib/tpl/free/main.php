@@ -2,7 +2,7 @@
 /**
  * DokuWiki F.R.E.E. template
  *
- * @link     http://github.com/afincato/f-r-e-e
+ * @link     https://github.com/afincato/f-r-e-e
  * @author   André Fincato <work@andrefincato.info>
  */
 
@@ -35,22 +35,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
 
     <!-- user tools -->
     <?php if ($conf['useacl'] && $showTools): ?>
-      <?php
-        if (!empty($_SERVER['REMOTE_USER'])) {
-          echo '<p class="user">';
-          tpl_userinfo(); /* 'Logged in as ...' */
-          echo '</p>';
-        }
-      ?>
-
-      <?php tpl_toolsevent('usertools', array(
-        'admin'     => tpl_action('admin', 1, '', 1),
-        /* 'userpage'  => _tpl_action('userpage', 1, '', 1), */
-        /* 'profile'   => tpl_action('profile', 1, '', 1), */
-        /* 'register'  => tpl_action('register', 1, '', 1), */
-        'login'     => tpl_action('login', 1, '', 1),
-      )); ?>
-
+      
       <!-- page actions -->
       <?php if ($showTools): ?>
         <?php tpl_toolsevent('pagetools', array(
@@ -61,6 +46,23 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
           /* 'revert'    => tpl_action('revert', 1, '', 1), */
         )); ?>
       <?php endif; ?>
+
+      <?php tpl_toolsevent('usertools', array(
+        'admin'     => tpl_action('admin', 1, '', 1),
+        /* 'userpage'  => _tpl_action('userpage', 1, '', 1), */
+        /* 'profile'   => tpl_action('profile', 1, '', 1), */
+        /* 'register'  => tpl_action('register', 1, '', 1), */
+        'log in'     => tpl_action('login', 1, '', 1),
+      )); ?>
+
+      <?php
+        if (!empty($_SERVER['REMOTE_USER'])) {
+          echo '<p class="user d-ib">';
+          tpl_userinfo(); /* 'Logged in as ...' */
+          echo '</p>';
+        }
+      ?>
+
     <?php endif ?>
 
   </div>

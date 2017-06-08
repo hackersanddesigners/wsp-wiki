@@ -114,7 +114,7 @@ if (!function_exists('tpl_toolsevent')) {
             'items' => $items
         );
 
-        $hook = 'TEMPLATE_'.strtoupper($toolsname).'_DISPLAY';
+        $hook = 'TEMPLATE_'.($toolsname).'_DISPLAY';
         $evt = new Doku_Event($hook, $data);
         if($evt->advise_before()){
             foreach($evt->data['items'] as $k => $html) echo $html;
