@@ -102,7 +102,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Times New Roman', serif;
 }
 
-h1, h2, h3, h4, h5, h6,
-p {
+.dw > h1,
+.dw > h2,
+.dw > h3,
+.dw > h4,
+.dw > h5,
+.dw > h6,
+.dw > p {
   margin: 0 0 1.35rem 0;
 }

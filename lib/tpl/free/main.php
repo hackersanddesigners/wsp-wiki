@@ -28,15 +28,17 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
 <div id="dokuwiki__site">
   <div class="site <?php echo tpl_classes(); ?>
     <?php echo ($showSidebar) ? 'hasSidebar' : ''; ?>">
-    <div class='pd-t--1 pd-h--1 bgc-white'>
+    <div class="pos-fx pos-t pos-l pos-r flex-row flex-jsb pd-v--1 pd-h--1 bgc-white">
     <?php html_msgarea() /* occasional error and info messages on top of the page */ ?>
 
     <!-- search -->
-    <?php tpl_searchform() ?>
+    <div class="w--full w--six-ten__bg">
+      <?php tpl_searchform() ?>
+    </div>
 
     <!-- user tools -->
     <?php if ($conf['useacl'] && $showTools): ?>
-      
+      <div class="w--full w--four-ten__bg flex-row flex-jsb">
       <!-- page actions -->
       <?php if ($showTools): ?>
         <?php tpl_toolsevent('pagetools', array(
@@ -63,6 +65,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
           echo '</p>';
         }
       ?>
+      </div>
     </div>
     <?php endif ?>
 
@@ -70,13 +73,13 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
 
     <!-- aside -->
     <?php if ($showSidebar): ?>
-      <div class="w--third__500  pd-t--2 pd-h--1 bgc-red">
+      <div class="w--third__md  pd-t--2 pd-h--1 bgc-red">
         <?php tpl_include_page($conf['sidebar'], 1, 1) /* includes the nearest sidebar page */ ?>
       </div>
     <?php endif; ?>
 
     <!-- content -->
-    <div class="dw w--two-thirds__500 pd-t--2 pd-h--1">
+    <div class="dw w--two-thirds__md pd-t--2 pd-h--1">
       <?php tpl_flush() /* flush the output buffer */ ?>
 
       <?php tpl_content() /* the main content */ ?>
