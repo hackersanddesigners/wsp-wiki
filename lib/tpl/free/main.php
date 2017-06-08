@@ -28,6 +28,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
 <div id="dokuwiki__site">
   <div class="site <?php echo tpl_classes(); ?>
     <?php echo ($showSidebar) ? 'hasSidebar' : ''; ?>">
+    <div class='pd-t--1 pd-h--1 bgc-white'>
     <?php html_msgarea() /* occasional error and info messages on top of the page */ ?>
 
     <!-- search -->
@@ -58,26 +59,24 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
       <?php
         if (!empty($_SERVER['REMOTE_USER'])) {
           echo '<p class="user d-ib">';
-          tpl_userinfo(); /* 'Logged in as ...' */
+          tpl_userinfo();
           echo '</p>';
         }
       ?>
-
+    </div>
     <?php endif ?>
 
-  </div>
-
-  <div class="wrapper">
+  <div class="flex-row flex-jsb">
 
     <!-- aside -->
     <?php if ($showSidebar): ?>
-      <div id="dokuwiki__aside">
+      <div class="w--third__500  pd-t--2 pd-h--1 bgc-red">
         <?php tpl_include_page($conf['sidebar'], 1, 1) /* includes the nearest sidebar page */ ?>
       </div>
     <?php endif; ?>
 
     <!-- content -->
-    <div id="dokuwiki__content">
+    <div class="dw w--two-thirds__500 pd-t--2 pd-h--1">
       <?php tpl_flush() /* flush the output buffer */ ?>
 
       <?php tpl_content() /* the main content */ ?>
@@ -88,10 +87,8 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
   </div><!-- /wrapper -->
 
   <!-- footer -->
-  <div id="dokuwiki__footer">
-    <div class="doc">
-      <?php tpl_pageinfo() /* 'Last modified' etc */ ?>
-    </div>
+  <div class="dw">
+    <?php tpl_pageinfo() /* 'Last modified' etc */ ?>
     <?php tpl_license('button') /* content license, parameters: img=*badge|button|0, imgonly=*0|1, return=*0|1 */ ?>
   </div>
 

@@ -2,14 +2,107 @@
    basics
           */
 
-.d-ib {
-  display: inline-block;
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
 }
 
-.w--two-thirds {
-  width: 70%;
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-.w--full {
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
   width: 100%;
+  font-size: 18px;
+  line-height: 1.35;
+  font-family: Arial, sans-serif;
+  color: #222;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  background-color: yellow;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+}
+
+.msc {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+}
+
+sup {
+  font-size: 70%;
+  padding: 0 0.15rem 0 0;
+}
+
+.dw img {
+  /* display: block; */
+  /* width: 100%; */
+  /* height: auto; */
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  display: table-row;
+  padding: 0 0 0 0.75rem;
+}
+
+.dw ul li:before {
+  display: table-cell;
+  text-align: right;
+  padding: 0 calc(var(--baseline) / 2) 0 0;
+  content: '\2014';
+  margin: 0 0 0 -2rem;
+  width: 2rem;
+}
+
+ol {
+  list-style: none;
+  display: table;
+  margin-left: var(--baseline);
+}
+
+ol li {
+  display: table-row;
+  counter-increment: number-list;
+}
+
+.dw ol li:before {
+  content: counter(number-list) ".";
+  display: table-cell;
+  text-align: right;
+  padding: 0 calc(var(--baseline) / 2) 0 0;
+  margin: 0 0 0 -2rem;
+  width: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Times New Roman', serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+p {
+  margin: 0 0 1.35rem 0;
 }
