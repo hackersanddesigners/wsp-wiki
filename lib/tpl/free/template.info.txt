@@ -1,0 +1,7 @@
+base     f-r-e-e
+author   André Fincato
+email    work@andrefincato.info
+date     2017-07-01
+name     F.R.E.E.
+desc     Basic, primary.
+url      https://github.com/afincato/f-r-e-e
