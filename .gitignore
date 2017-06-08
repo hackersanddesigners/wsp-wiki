@@ -4,5 +4,4 @@ data
 conf
 bin
 inc
-lib/tpl/dokuwiki/
-lib/tpl/dokuwiki_template_starter/
+lib/tpl/dokuwiki
