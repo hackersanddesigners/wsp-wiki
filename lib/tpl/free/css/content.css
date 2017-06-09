@@ -5,41 +5,46 @@
 /* links to wiki pages */
 
 /* existing wikipage */
-.dw a.wikilink1 {
-    color: __existing__;
-    background-color: inherit;
+.dokuwiki a.wikilink1 {
+    /* color: __existing__; */
+    /* background-color: inherit; */
 }
 /* not existing wikipage */
-.dw a.wikilink2 {
-    color: __missing__;
-    background-color: inherit;
+.dokuwiki a.wikilink2 {
+    /* color: __missing__; */
+    /* background-color: inherit; */
+}
+
+.dokuwiki a.wikilink2:link,
+.dokuwiki a.wikilink2:visited {
+  border-bottom: none;
 }
 
 /* toc */
 
-#dw__toc {
+#dokuwiki__toc {
   background-color: transparent;
   border: 1px solid blue;
 }
 
-#dw__toc ul li:before {
+#dokuwiki__toc ul li:before {
   content: '';
 }
 
 /* images */
 
-/* embedded images (styles are already partly set in dw's lib/styles/all.css) */
+/* embedded images (styles are already partly set in dokuwiki's lib/styles/all.css) */
 
-.dw img.media {
+.dokuwiki img.media {
     margin: .2em 0;
 }
-.dw img.medialeft {
+.dokuwiki img.medialeft {
     margin: .2em 1.5em .2em 0;
 }
-.dw img.mediaright {
+.dokuwiki img.mediaright {
     margin: .2em 0 .2em 1.5em;
 }
-.dw img.mediacenter {
+.dokuwiki img.mediacenter {
     margin: .2em auto;
 }
 
@@ -47,30 +52,30 @@
 
 /* div before each table */
 
-.dw table.inline {
+.dokuwiki table.inline {
     min-width: 50%;
 }
-.dw table.inline tr:hover td {
+.dokuwiki table.inline tr:hover td {
     background-color: transparent;
 }
-.dw table.inline tr:hover th {
+.dokuwiki table.inline tr:hover th {
     background-color: __border__;
 }
 
 /* code */
 
 /* fix if background-color hides underlining */
-.dw em.u code {
+.dokuwiki em.u code {
     text-decoration: underline;
 }
 
 /* filenames for downloadable file and code blocks */
-.dw dl.code,
-.dw dl.file {
+.dokuwiki dl.code,
+.dokuwiki dl.file {
 }
 
-.dw dl.code dt,
-.dw dl.file dt {
+.dokuwiki dl.code dt,
+.dokuwiki dl.file dt {
     background-color: none;
     border: solid __border__;
     border-width: 1px 1px 0;
@@ -79,24 +84,24 @@
     padding: .1em .5em .2em;
     margin-left: 1em;
 }
-[dir=rtl] .dw dl.code dt,
-[dir=rtl] .dw dl.file dt {
+[dir=rtl] .dokuwiki dl.code dt,
+[dir=rtl] .dokuwiki dl.file dt {
     margin-left: 0;
     margin-right: 1em;
 }
-.dw dl.code dt a,
-.dw dl.file dt a {
+.dokuwiki dl.code dt a,
+.dokuwiki dl.file dt a {
 }
 
-.dw dl.code dd,
-.dw dl.file dd {
+.dokuwiki dl.code dd,
+.dokuwiki dl.file dd {
     margin: 0;
 }
 
 /* for code in <file> */
-.dw pre.file,
-.dw dl.file pre,
-.dw dl.file dt {
+.dokuwiki pre.file,
+.dokuwiki dl.file pre,
+.dokuwiki dl.file dt {
     border-color: __text_neu__;
 }
 

@@ -38,9 +38,8 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
 
     <!-- user tools -->
     <?php if ($conf['useacl'] && $showTools): ?>
-      <div class="w--full usertools w--usertools__bg flex-row flex-jsb">
       <!-- page actions -->
-      <ul>
+      <ul class="w--full usertools w--usertools__bg flex-row flex-jsb">
       <?php if ($showTools): ?>
         <?php tpl_toolsevent('pagetools', array(
           'edit'      => tpl_action('edit', 1, 'li', 1),
@@ -59,15 +58,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
         'log in'     => tpl_action('login', 1, 'li', 1),
       )); ?>
       </ul>
-
-      <?php
-        if (!empty($_SERVER['REMOTE_USER'])) {
-          echo '<p class="user d-ib">';
-          tpl_userinfo();
-          echo '</p>';
-        }
-      ?>
-      </div>
+    
     </div>
     <?php endif ?>
 

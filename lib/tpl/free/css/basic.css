@@ -49,6 +49,15 @@ body {
   -ms-overflow-style: none;
 }
 
+input {
+  border: 1px solid transparent;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 1px solid #222;
+}
+
 sup {
   font-size: 70%;
   padding: 0 0.15rem 0 0;
@@ -58,6 +67,11 @@ sup {
   /* display: block; */
   /* width: 100%; */
   /* height: auto; */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 ul {

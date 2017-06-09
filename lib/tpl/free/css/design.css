@@ -2,6 +2,13 @@
    design
           */
 
+/* type-size */
+
+.ft-1 {
+  font-size: 18px;
+}
+
+
 /* colours */
 
 .bgc-white {
@@ -47,9 +54,19 @@
   display: inline-block;
 }
 
-.usertools li:after {
+@media (min-width: 900px) {
+  .usertools {
+    padding-left: 0.5rem;
+  }
+}
+
+.usertools li:not(:last-child):after {
   content: "|";
   padding: 0 0.25rem;
+}
+
+.bd-b--1 {
+  border-bottom: 1px solid #222;
 }
 
 /* position */
