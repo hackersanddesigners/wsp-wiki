@@ -26,70 +26,59 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
 
 <body>
 <div id="dokuwiki__site">
-  <div class="site <?php echo tpl_classes(); ?>
-    <?php echo ($showSidebar) ? 'hasSidebar' : ''; ?>">
-    <div class="pos-fx pos-t pos-l pos-r flex-row flex-jsb pd-v--1 pd-h--1 bgc-white">
-    <?php html_msgarea() /* occasional error and info messages on top of the page */ ?>
+ <div class="flex flex-cl site <?php echo tpl_classes(); ?><?php echo ($showSidebar) ? 'hasSidebar' : ''; ?>">
+   <nav class="pos-fx pos-t pos-r pos-l flex__bg flex-row__bg pd-v--1 pd-h--1 bgc-white">
+      <?php html_msgarea() ?>
 
-    <!-- search -->
-    <div class="w--full w--search__bg">
-      <?php tpl_searchform() ?>
-    </div>
+      <div class="w--full w--search__bg">
+        <?php tpl_searchform() ?>
+      </div>
 
-    <!-- user tools -->
-    <?php if ($conf['useacl'] && $showTools): ?>
-      <!-- page actions -->
-      <ul class="w--full usertools w--usertools__bg flex-row flex-jsb">
-      <?php if ($showTools): ?>
-        <?php tpl_toolsevent('pagetools', array(
-          'edit'      => tpl_action('edit', 1, 'li', 1),
-          'discussion'=> _tpl_action('discussion', 1, 'li', 1),
-          'revisions' => tpl_action('revisions', 1, 'li', 1),
-          /* 'subscribe' => tpl_action('subscribe', 1, '', 1), */
-          /* 'revert'    => tpl_action('revert', 1, '', 1), */
-        )); ?>
+      <?php if ($conf['useacl'] && $showTools): ?>
+        <ul class="usertools w--usertools__bg">
+          <?php if ($showTools): ?>
+          <?php tpl_toolsevent('pagetools', array(
+            'edit'      => tpl_action('edit', 1, 'li', 1),
+            'discussion'=> _tpl_action('discussion', 1, 'li', 1),
+            'revisions' => tpl_action('revisions', 1, 'li', 1),
+            /* 'subscribe' => tpl_action('subscribe', 1, '', 1), */
+            /* 'revert'    => tpl_action('revert', 1, '', 1), */
+          )); ?>
+          <?php endif; ?>
+
+          <?php tpl_toolsevent('usertools', array(
+            'admin'     => tpl_action('admin', 1, 'li', 1),
+            /* 'userpage'  => _tpl_action('userpage', 1, '', 1), */
+            /* 'profile'   => tpl_action('profile', 1, '', 1), */
+            /* 'register'  => tpl_action('register', 1, '', 1), */
+            'log in'     => tpl_action('login', 1, 'li', 1),
+          )); ?>
+        </ul>
+      <?php endif ?>
+    </nav>
+
+   <div class="flex mg-t--flush">
+      <?php if ($showSidebar): ?>
+        <aside class="w--third__md pd-t--2 pd-h--1 bgc-red">
+          <?php tpl_include_page($conf['sidebar'], 1, 1) /* includes the nearest sidebar page */ ?>
+        </aside>
       <?php endif; ?>
 
-      <?php tpl_toolsevent('usertools', array(
-        'admin'     => tpl_action('admin', 1, 'li', 1),
-        /* 'userpage'  => _tpl_action('userpage', 1, '', 1), */
-        /* 'profile'   => tpl_action('profile', 1, '', 1), */
-        /* 'register'  => tpl_action('register', 1, '', 1), */
-        'log in'     => tpl_action('login', 1, 'li', 1),
-      )); ?>
-      </ul>
-    
-    </div>
-    <?php endif ?>
+      <main class="dw w--two-thirds__md pd-t--2 pd-h--1 of-scroll">
+        <?php tpl_flush() /* flush the output buffer */ ?>
+        <?php tpl_content() /* the main content */ ?>
+        <?php tpl_pageinfo() /* 'Last modified' etc */ ?>
+        <?php tpl_flush() ?>
+      </main>
 
-  <div class="flex-row flex-jsb">
-
-    <!-- aside -->
-    <?php if ($showSidebar): ?>
-      <div class="w--third__md  pd-t--2 pd-h--1 bgc-red">
-        <?php tpl_include_page($conf['sidebar'], 1, 1) /* includes the nearest sidebar page */ ?>
-      </div>
-    <?php endif; ?>
-
-    <!-- content -->
-    <div class="dw w--two-thirds__md pd-t--2 pd-h--1">
-      <?php tpl_flush() /* flush the output buffer */ ?>
-
-      <?php tpl_content() /* the main content */ ?>
-
-      <?php tpl_flush() ?>
     </div>
 
-  </div><!-- /wrapper -->
+    <footer class="">
+      <?php tpl_license('button') ?>
+    </footer>
 
-  <!-- footer -->
-  <div class="dw">
-    <?php tpl_pageinfo() /* 'Last modified' etc */ ?>
-    <?php tpl_license('button') /* content license, parameters: img=*badge|button|0, imgonly=*0|1, return=*0|1 */ ?>
   </div>
-
-</div><!-- /site -->
-
-<div class="no"><?php tpl_indexerWebBug() /* provide DokuWiki housekeeping, required in all templates */ ?></div>
+  <div class="d-n"><?php tpl_indexerWebBug() ?></div>
+</div>
 </body>
 </html>

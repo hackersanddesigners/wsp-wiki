@@ -155,8 +155,8 @@
 .JSpopup {
     background-color: __background__;
     color: __text__;
-    border: 1px solid __border__;
-    line-height: 1.2;
+    /* border: 1px solid __border__; */
+    /* line-height: 1.2; */
     padding: 0 .2em;
 }
 
