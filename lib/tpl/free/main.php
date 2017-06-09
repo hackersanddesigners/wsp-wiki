@@ -32,31 +32,33 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
     <?php html_msgarea() /* occasional error and info messages on top of the page */ ?>
 
     <!-- search -->
-    <div class="w--full w--six-ten__bg">
+    <div class="w--full w--search__bg">
       <?php tpl_searchform() ?>
     </div>
 
     <!-- user tools -->
     <?php if ($conf['useacl'] && $showTools): ?>
-      <div class="w--full w--four-ten__bg flex-row flex-jsb">
+      <div class="w--full usertools w--usertools__bg flex-row flex-jsb">
       <!-- page actions -->
+      <ul>
       <?php if ($showTools): ?>
         <?php tpl_toolsevent('pagetools', array(
-          'edit'      => tpl_action('edit', 1, '', 1),
-          'discussion'=> _tpl_action('discussion', 1, '', 1),
-          'revisions' => tpl_action('revisions', 1, '', 1),
+          'edit'      => tpl_action('edit', 1, 'li', 1),
+          'discussion'=> _tpl_action('discussion', 1, 'li', 1),
+          'revisions' => tpl_action('revisions', 1, 'li', 1),
           /* 'subscribe' => tpl_action('subscribe', 1, '', 1), */
           /* 'revert'    => tpl_action('revert', 1, '', 1), */
         )); ?>
       <?php endif; ?>
 
       <?php tpl_toolsevent('usertools', array(
-        'admin'     => tpl_action('admin', 1, '', 1),
+        'admin'     => tpl_action('admin', 1, 'li', 1),
         /* 'userpage'  => _tpl_action('userpage', 1, '', 1), */
         /* 'profile'   => tpl_action('profile', 1, '', 1), */
         /* 'register'  => tpl_action('register', 1, '', 1), */
-        'log in'     => tpl_action('login', 1, '', 1),
+        'log in'     => tpl_action('login', 1, 'li', 1),
       )); ?>
+      </ul>
 
       <?php
         if (!empty($_SERVER['REMOTE_USER'])) {

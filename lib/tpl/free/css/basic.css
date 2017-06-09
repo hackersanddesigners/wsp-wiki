@@ -64,7 +64,7 @@ ul {
   list-style: none;
 }
 
-ul li {
+.dw ul li {
   display: table-row;
   padding: 0 0 0 0.75rem;
 }
@@ -78,13 +78,13 @@ ul li {
   width: 2rem;
 }
 
-ol {
+.dw ol {
   list-style: none;
   display: table;
   margin-left: var(--baseline);
 }
 
-ol li {
+.dw ol li {
   display: table-row;
   counter-increment: number-list;
 }
