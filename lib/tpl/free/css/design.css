@@ -33,16 +33,8 @@
   display: flex;
 }
 
-.flex-row {
-  flex-flow: row wrap;
-}
-
 .flex-cl {
   flex-flow: column;
-}
-
-.flex-jsb {
-  justify-content: space-between;
 }
 
 @media (min-width: 820px) {
