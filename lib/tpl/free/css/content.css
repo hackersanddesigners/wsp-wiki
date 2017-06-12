@@ -4,17 +4,6 @@
 
 /* links to wiki pages */
 
-/* existing wikipage */
-.dokuwiki a.wikilink1 {
-    /* color: __existing__; */
-    /* background-color: inherit; */
-}
-/* not existing wikipage */
-.dokuwiki a.wikilink2 {
-    /* color: __missing__; */
-    /* background-color: inherit; */
-}
-
 .dokuwiki a.wikilink2:link,
 .dokuwiki a.wikilink2:visited {
   border-bottom: none;
@@ -29,6 +18,42 @@
 
 #dokuwiki__toc ul li:before {
   content: '';
+}
+
+#dw__toc {
+  float: none;
+  width: 100%;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+@media (min-width: 700px) {
+  #dw__toc {
+    position: fixed;
+    right: 0;
+    width: 15rem;
+  }
+}
+
+#dw__toc > div {
+  max-height: 85vh;
+  border-bottom: 1px solid red;
+  overflow: scroll;
+  padding: 0;
+}
+
+.dokuwiki h3.toggle {
+  padding: 0;
+  margin: 0;
+}
+
+#dw__toc ul li:before {
+  width: 1rem;
+}
+
+#dw__toc ul ul {
+  padding: 0;
 }
 
 /* images */
@@ -126,36 +151,6 @@ aside a {
   margin-bottom: 1rem;
 }
 
-#dw__toc {
-  float: none;
-  position: fixed;
-  right: 0;
-  width: 15rem;
-  background-color: #ffffff;
-  margin: 0;
-  padding: 0.5rem;
-}
-
-#dw__toc > div {
-  max-height: 85vh;
-  border-bottom: 1px solid red;
-  overflow: scroll;
-  padding: 0;
-}
-
-.dokuwiki h3.toggle {
-  padding: 0;
-  margin: 0;
-}
-
-#dw__toc ul li:before {
-  width: 1rem;
-}
-
-#dw__toc ul ul {
-  padding: 0;
-}
-
 /* panel */
 
 #config__manager fieldset td.value {
@@ -245,8 +240,6 @@ button.toolbutton:not(:last-child) {
 .JSpopup {
     background-color: __background__;
     color: __text__;
-    /* border: 1px solid __border__; */
-    /* line-height: 1.2; */
     padding: 0 .2em;
 }
 

@@ -37,6 +37,16 @@
   flex-flow: column;
 }
 
+@media (min-width: 600px) {
+  .flex__md {
+    display: flex;
+  }
+
+  .flex-row__md {
+    flex-flow: row;
+  }
+}
+
 @media (min-width: 820px) {
   .flex__bg {
     display: flex;
@@ -69,6 +79,35 @@
 .usertools li:not(:last-child):after {
   content: "|";
   padding: 0 0.25rem;
+}
+
+aside li {
+  display: inline-block;
+  font-family: 'Times New Roman', serif;
+  font-size: 21px;
+  font-style: italic;
+}
+
+/* reset curid for any <a> */
+.dokuwiki span.curid a {
+  font-weight: normal;
+}
+
+/* add it only to <a> in the sidebar */
+.dokuwiki aside span.curid a {
+  font-weight: bold;
+  font-style: normal;
+}
+
+aside li:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 600px) {
+  aside li {
+    display: block;
+    font-size: 27px;
+  }
 }
 
 .bd-b--1 {
@@ -121,6 +160,12 @@
   padding-bottom: 1rem;
 }
 
+@media (min-width: 600px) {
+  .pd-t--2__md {
+    padding-top: 1rem;
+  }
+}
+
 .mg-t--flush {
   margin-top: 90px;
   height: calc(~"100vh - 90px");
@@ -154,7 +199,7 @@
   width: 100%;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
 
   .w--third__md {
     width: 30%;
@@ -175,7 +220,3 @@
     width: 60%;
   }
 }
-
-/* .h--fill { */
-  /* height: 100vh; */
-/* } */

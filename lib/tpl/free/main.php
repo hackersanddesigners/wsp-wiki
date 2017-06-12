@@ -57,14 +57,14 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
       <?php endif ?>
     </nav>
 
-   <div class="flex mg-t--flush">
+   <div class="dokuwiki flex flex-cl flex-row__md mg-t--flush">
       <?php if ($showSidebar): ?>
-        <aside class="w--third__md pd-t--2 pd-h--1 bgc-red">
+        <aside class="w--full w--third__md pd-t--1 pd-t--2__md pd-h--1 bgc-red">
           <?php tpl_include_page($conf['sidebar'], 1, 1) /* includes the nearest sidebar page */ ?>
         </aside>
       <?php endif; ?>
 
-      <main class="dw w--two-thirds__md pd-t--2 pd-h--1 of-scroll">
+      <main class="dw w--full w--two-thirds__md pd-t--2 pd-h--1 of-scroll">
         <?php tpl_flush() /* flush the output buffer */ ?>
         <?php tpl_content() /* the main content */ ?>
         <?php tpl_pageinfo() /* 'Last modified' etc */ ?>
