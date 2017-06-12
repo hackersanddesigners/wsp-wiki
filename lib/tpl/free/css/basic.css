@@ -49,15 +49,6 @@ body {
   -ms-overflow-style: none;
 }
 
-input {
-  border: 1px solid transparent;
-}
-
-input:focus {
-  outline: none;
-  border-bottom: 1px solid #222;
-}
-
 sup {
   font-size: 70%;
   padding: 0 0.15rem 0 0;
@@ -71,7 +62,14 @@ sup {
 
 a {
   color: inherit;
-  text-decoration: none;
+}
+
+pre, code {
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
 ul {
@@ -86,7 +84,7 @@ ul {
 .dw ul li:before {
   display: table-cell;
   text-align: right;
-  padding: 0 calc(var(--baseline) / 2) 0 0;
+  padding: 0 0.25rem 0 0;
   content: '\2014';
   margin: 0 0 0 -2rem;
   width: 2rem;
@@ -107,21 +105,28 @@ ul {
   content: counter(number-list) ".";
   display: table-cell;
   text-align: right;
-  padding: 0 calc(var(--baseline) / 2) 0 0;
+  padding: 0 0.25rem 0 0;
   margin: 0 0 0 -2rem;
   width: 2rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Times New Roman', serif;
+  font-weight: bold;
 }
 
-.dw > h1,
-.dw > h2,
-.dw > h3,
-.dw > h4,
-.dw > h5,
-.dw > h6,
-.dw > p {
+.dw h1,
+.dw h2,
+.dw h3,
+.dw h4,
+.dw h5,
+.dw h6,
+.dw p {
   margin: 0 0 1.35rem 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #222;
+  margin: 1rem 0;
 }

@@ -53,20 +53,20 @@
 /* div before each table */
 
 .dokuwiki table.inline {
-    min-width: 50%;
+  min-width: 50%;
 }
 .dokuwiki table.inline tr:hover td {
-    background-color: transparent;
+  background-color: transparent;
 }
 .dokuwiki table.inline tr:hover th {
-    background-color: __border__;
+  background-color: __border__;
 }
 
 /* code */
 
 /* fix if background-color hides underlining */
 .dokuwiki em.u code {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* filenames for downloadable file and code blocks */
@@ -76,33 +76,84 @@
 
 .dokuwiki dl.code dt,
 .dokuwiki dl.file dt {
-    background-color: none;
-    border: solid __border__;
-    border-width: 1px 1px 0;
-    color: inherit;
-    display: inline;
-    padding: .1em .5em .2em;
-    margin-left: 1em;
+  background-color: none;
+  border: solid __border__;
+  border-width: 1px 1px 0;
+  color: inherit;
+  display: inline;
+  padding: .1em .5em .2em;
+  margin-left: 1em;
 }
 [dir=rtl] .dokuwiki dl.code dt,
 [dir=rtl] .dokuwiki dl.file dt {
-    margin-left: 0;
-    margin-right: 1em;
-}
-.dokuwiki dl.code dt a,
-.dokuwiki dl.file dt a {
+  margin-left: 0;
+  margin-right: 1em;
 }
 
 .dokuwiki dl.code dd,
 .dokuwiki dl.file dd {
-    margin: 0;
+  margin: 0;
 }
 
 /* for code in <file> */
 .dokuwiki pre.file,
 .dokuwiki dl.file pre,
 .dokuwiki dl.file dt {
-    border-color: __text_neu__;
+  border-color: __text_neu__;
+}
+
+.usertools a,
+aside a {
+  text-decoration: none;
+}
+
+/* main */
+
+.dw h1,
+.dw h2,
+.dw h3,
+.dw h4,
+.dw h5,
+.dw h6,
+.dw p,
+.dw ul,
+.dw ol,
+.dw blockquote,
+.dw pre,
+.dw code,
+.dw hr {
+  max-width: 39rem;
+  margin-bottom: 1rem;
+}
+
+#dw__toc {
+  float: none;
+  position: fixed;
+  right: 0;
+  width: 15rem;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+#dw__toc > div {
+  max-height: 85vh;
+  border-bottom: 1px solid red;
+  overflow: scroll;
+  padding: 0;
+}
+
+.dokuwiki h3.toggle {
+  padding: 0;
+  margin: 0;
+}
+
+#dw__toc ul li:before {
+  width: 1rem;
+}
+
+#dw__toc ul ul {
+  padding: 0;
 }
 
 /* panel */
@@ -125,6 +176,45 @@
   max-width: 27.5em;
   width: 100%;
   height: 4em;
+}
+
+.dokuwiki textarea.edit {
+  font-size: 18px;
+  padding: 0.25rem;
+}
+
+.dokuwiki button {
+  font-size: 18px;
+  padding: 0.25rem;
+  background: #ffffff;
+  border: 1px solid #222;
+}
+
+.dokuwiki button:active {
+  background: yellow;
+  color: __text__;
+}
+
+button.toolbutton:not(:last-child) {
+  margin-right: 0.25rem;
+}
+
+#size__ctl {
+  display: none;
+}
+
+.dokuwiki input {
+  font-size: 18px;
+  border: 1px solid transparent;
+}
+
+.dokuwiki input:focus {
+  outline: none;
+  border-bottom: 1px solid #222;
+}
+
+.dokuwiki .editBar .summary {
+  display: block;
 }
 
 /* media manager */
