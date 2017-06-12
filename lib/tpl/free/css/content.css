@@ -22,18 +22,12 @@
 
 #dw__toc {
   float: none;
-  width: 100%;
+  position: fixed;
+  right: 0;
+  width: 15rem;
   background-color: #ffffff;
   margin: 0;
   padding: 0.5rem;
-}
-
-@media (min-width: 700px) {
-  #dw__toc {
-    position: fixed;
-    right: 0;
-    width: 15rem;
-  }
 }
 
 #dw__toc > div {
@@ -212,6 +206,54 @@ button.toolbutton:not(:last-child) {
   display: block;
 }
 
+/* admin */
+
+#extension__manager {
+  border: 1px solid #222;
+}
+
+#extension__manager .dw ul li {
+  display: inline-block;
+  padding: 0;
+}
+
+#extension__manager ul li:before {
+  display: block;
+  text-align: left;
+  padding: 0;
+  content: '';
+  margin: 0;
+  width: 0;
+}
+
+.dokuwiki .tabs > ul li a,
+.dokuwiki ul.tabs li strong,
+.dokuwiki ul.tabs li a,
+#extension__manager ul.tabs li.active a {
+  background-color: white;
+  padding: 0.25rem 0.5rem;
+  margin: 0;
+  border: none;
+  border-right: 1px solid #222;
+  border-radius: 0;
+  text-decoration: none;
+}
+
+#extension__manager .panelHeader,
+#extension__list ul.extensionList {
+  background-color: white;
+  margin: 0;
+}
+
+#extension__list ul.extensionList li {
+  margin: 0;
+  padding: 0.5rem;
+}
+
+#extension__list ul.extensionList li:last-child {
+  border-bottom: none;
+}
+
 /* media manager */
 
 /* some headings in the media manager should not look like headings */
@@ -240,6 +282,8 @@ button.toolbutton:not(:last-child) {
 .JSpopup {
     background-color: __background__;
     color: __text__;
+    /* border: 1px solid __border__; */
+    /* line-height: 1.2; */
     padding: 0 .2em;
 }
 
