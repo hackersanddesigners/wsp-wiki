@@ -20,6 +20,10 @@ class ComposerStaticInita19a915ee98347a0c787119619d2ff9b
         array (
             'phpseclib\\' => 10,
         ),
+        'E' => 
+        array (
+            'EtherpadLite\\' => 13,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -30,6 +34,10 @@ class ComposerStaticInita19a915ee98347a0c787119619d2ff9b
         'phpseclib\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib',
+        ),
+        'EtherpadLite\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/tomnomnom/etherpad-lite-client/EtherpadLite',
         ),
     );
 

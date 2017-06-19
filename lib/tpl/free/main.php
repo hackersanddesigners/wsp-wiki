@@ -71,6 +71,30 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
         <?php tpl_flush() ?>
       </main>
 
+    <?php // if page is not 'admin' page, and page exists (eg. saved on disk)
+      if($INFO['id'] != 'admin' AND $INFO['exists']):
+
+        require 'vendor/autoload.php';
+        $instance = new EtherpadLite\Client($apiKey, $baseUrl);
+        $padID = $INFO['id'] . '-' . $INFO['meta']['date']['created'];
+        
+        // createGroup
+        $group = $instance->createGroupIfNotExistsFor('f-r-e-e');
+          
+        // listAllPads
+        $padlist = $instance->listAllPads();
+
+        // check if pad already exists, otherwise make a new one
+        // --- http://thinkofdev.com/php-fast-way-to-determine-a-key-elements-existance-in-an-array/
+        if(isset($padlist->padIDs[$padID]) === NULL || !in_array($padID, $padlist->padIDs)) {
+          $newPad = $instance->createPad($padID);
+          echo "new pad $padID";
+        }
+      ?>
+      <iframe src='http://localhost:9001/p/<?php echo $padID ?>' width=600>
+
+    <?php endif ?>
+
     </div>
 
     <footer class="">

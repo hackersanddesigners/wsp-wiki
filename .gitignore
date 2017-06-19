@@ -5,3 +5,5 @@ conf
 bin
 inc
 lib/tpl/dokuwiki
+
+etherpad-lite/*.txt
