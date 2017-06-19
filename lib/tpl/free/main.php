@@ -27,7 +27,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
 <body>
 <div id="dokuwiki__site">
  <div class="flex flex-cl site <?php echo tpl_classes(); ?><?php echo ($showSidebar) ? 'hasSidebar' : ''; ?>">
-   <nav class="pos-fx pos-t pos-r pos-l flex__bg flex-row__bg pd-v--1 pd-h--1 bgc-white">
+   <nav class="pos-fx pos-t pos-r pos-l z-2 flex__bg flex-row__bg pd-v--1 pd-h--1 bgc-white">
       <?php html_msgarea() ?>
 
       <div class="w--full w--search__bg">
@@ -91,13 +91,14 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
           echo "new pad $padID";
         }
       ?>
-      <iframe src='http://localhost:9001/p/<?php echo $padID ?>' width=600>
+      <button class="pad-button pos-fx pos-t pos-r pos-b">P</button>
+      <iframe src='http://localhost:9001/p/<?php echo $padID ?>' class="pad d-n">
 
     <?php endif ?>
 
     </div>
 
-    <footer class="">
+    <footer>
       <?php tpl_license('button') ?>
     </footer>
 

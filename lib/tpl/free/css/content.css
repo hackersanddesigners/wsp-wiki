@@ -188,6 +188,12 @@ button.toolbutton:not(:last-child) {
   margin-right: 0.25rem;
 }
 
+button.pad-button {
+  border: none;
+  background-color: blue;
+  color: white;
+}
+
 #size__ctl {
   display: none;
 }

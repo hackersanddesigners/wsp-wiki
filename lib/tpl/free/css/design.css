@@ -125,16 +125,28 @@ aside li:not(:last-child) {
   top: 0;
 }
 
-.pos-l {
-  left: 0;
-}
-
 .pos-r {
   right: 0;
 }
 
+.pos-b {
+  bottom: 0;
+}
+
+.pos-l {
+  left: 0;
+}
+
 .of-scroll {
   overflow: scroll;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+.z-2 {
+  z-index: 2;
 }
 
 /* spacing */
@@ -202,8 +214,16 @@ aside li:not(:last-child) {
 
 @media (min-width: 600px) {
 
+  .w--bl__md {
+    width: 1rem;
+  }
+
   .w--third__md {
     width: 30%;
+  }
+
+  .w--half__md {
+    width: 50%;
   }
 
   .w--two-thirds__md {
