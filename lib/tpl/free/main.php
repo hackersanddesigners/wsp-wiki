@@ -71,11 +71,13 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
         <?php tpl_flush() ?>
       </main>
 
-    <?php // if page is not 'admin' page, and page exists (eg. saved on disk)
+    <?php
       if($INFO['id'] != 'admin' AND $INFO['exists']):
+    ?>
 
+      <?php
         require 'vendor/autoload.php';
-        $instance = new EtherpadLite\Client($apiKey, $baseUrl);
+        $instance = new EtherpadLite\Client('', $baseUrl);
         $padID = $INFO['id'] . '-' . $INFO['meta']['date']['created'];
         
         // createGroup
