@@ -1,9 +1,11 @@
 # wiki
-
 data
 conf
 bin
 inc
 lib/tpl/dokuwiki
+# wiki plugins
+vendor
 
-etherpad-lite/*.txt
+# etherpad
+etherpad-lite
