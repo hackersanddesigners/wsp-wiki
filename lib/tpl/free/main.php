@@ -93,8 +93,8 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
           echo "new pad $padID";
         }
       ?>
-      <button class="pad-button pos-fx pos-t pos-r pos-b">P</button>
-      <iframe src='http://localhost:9001/p/<?php echo $padID ?>' class="pad d-n">
+      <iframe src='http://localhost:9001/p/<?php echo $padID ?>' class="pad d-n"></iframe>
+      <button class="pad-button">P</button>
 
     <?php endif ?>
 
