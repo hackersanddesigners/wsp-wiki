@@ -41,8 +41,6 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
             'edit'      => tpl_action('edit', 1, 'li', 1),
             'discussion'=> _tpl_action('discussion', 1, 'li', 1),
             'revisions' => tpl_action('revisions', 1, 'li', 1),
-            /* 'subscribe' => tpl_action('subscribe', 1, '', 1), */
-            /* 'revert'    => tpl_action('revert', 1, '', 1), */
           )); ?>
           <?php endif; ?>
 
