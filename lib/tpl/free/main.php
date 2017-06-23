@@ -34,27 +34,27 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
         <?php tpl_searchform() ?>
       </div>
 
-      <?php if ($conf['useacl'] && $showTools): ?>
+      <?php if ($INFO['userinfo'] != ''): ?>
         <ul class="usertools w--usertools__bg">
           <?php if ($showTools): ?>
           <?php tpl_toolsevent('pagetools', array(
             'edit'      => tpl_action('edit', 1, 'li', 1),
-            'discussion'=> _tpl_action('discussion', 1, 'li', 1),
-            'revisions' => tpl_action('revisions', 1, 'li', 1),
-            /* 'subscribe' => tpl_action('subscribe', 1, '', 1), */
-            /* 'revert'    => tpl_action('revert', 1, '', 1), */
+            'revisions' => tpl_action('revisions', 1, 'li', 1)
           )); ?>
           <?php endif; ?>
 
           <?php tpl_toolsevent('usertools', array(
             'admin'     => tpl_action('admin', 1, 'li', 1),
-            /* 'userpage'  => _tpl_action('userpage', 1, '', 1), */
-            /* 'profile'   => tpl_action('profile', 1, '', 1), */
-            /* 'register'  => tpl_action('register', 1, '', 1), */
-            'log in'     => tpl_action('login', 1, 'li', 1),
+            'log in'    => tpl_action('login', 1, 'li', 1)
           )); ?>
         </ul>
-      <?php endif ?>
+      <?php else: ?>
+      <ul>
+        <?php tpl_toolsevent('usertools', array(
+          'log in'    => tpl_action('login', 1, 'li', 1)
+        )); ?>
+      </ul>
+    <?php endif ?>
     </nav>
 
    <div class="dokuwiki flex flex-cl flex-row__md flex-jsb mg-t--flush">
