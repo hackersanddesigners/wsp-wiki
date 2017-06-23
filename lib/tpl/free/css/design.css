@@ -265,9 +265,3 @@ aside li:not(:last-child) {
 .h--full {
   height: 100%;
 }
-
-@media (min-width: 600px) {
-  .h--full__md {
-    height: 100%;
-  }
-}
