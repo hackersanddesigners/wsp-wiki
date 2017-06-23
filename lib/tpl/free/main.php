@@ -41,6 +41,8 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
             'edit'      => tpl_action('edit', 1, 'li', 1),
             'discussion'=> _tpl_action('discussion', 1, 'li', 1),
             'revisions' => tpl_action('revisions', 1, 'li', 1),
+            /* 'subscribe' => tpl_action('subscribe', 1, '', 1), */
+            /* 'revert'    => tpl_action('revert', 1, '', 1), */
           )); ?>
           <?php endif; ?>
 
@@ -55,14 +57,14 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
       <?php endif ?>
     </nav>
 
-   <div class="dokuwiki flex flex-cl flex-row__md mg-t--flush">
+   <div class="dokuwiki flex flex-cl flex-row__md flex-jsb mg-t--flush">
       <?php if ($showSidebar): ?>
-        <aside class="w--full w--third__md pd-t--1 pd-t--2__md pd-h--1 bgc-red">
+        <aside class="w--full w--third__md pd-v--05 pd-t--2__md pd-h--1 bgc-red">
           <?php tpl_include_page($conf['sidebar'], 1, 1) /* includes the nearest sidebar page */ ?>
         </aside>
       <?php endif; ?>
 
-      <main class="dw w--full w--two-thirds__md pd-t--2 pd-h--1 of-scroll">
+      <main class="dw h--full w--full w--two-thirds__bg pd-t--2 pd-h--1 of-scroll">
         <?php tpl_flush() /* flush the output buffer */ ?>
         <?php tpl_content() /* the main content */ ?>
         <?php tpl_pageinfo() /* 'Last modified' etc */ ?>
@@ -75,7 +77,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
 
       <?php
         require 'vendor/autoload.php';
-        $instance = new EtherpadLite\Client('', $baseUrl);
+        $instance = new EtherpadLite\Client('2e30bec97cdce21ea0f9f4e4c6b38755d7139b8adb9258981192b785a69ca684', $baseUrl);
         $padID = $INFO['id'] . '-' . $INFO['meta']['date']['created'];
         
         // createGroup
@@ -91,8 +93,8 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
           echo "new pad $padID";
         }
       ?>
-      <iframe src='http://localhost:9001/p/<?php echo $padID ?>' class="pad d-n"></iframe>
-      <button class="pad-button">P</button>
+      <iframe src='http://localhost:9001/p/<?php echo $padID ?>' class="pad d-n bd-a--0 mh--half"></iframe>
+      <button class="pad-button"><p>P</p></button>
 
     <?php endif ?>
 

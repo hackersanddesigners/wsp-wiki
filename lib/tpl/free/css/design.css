@@ -37,6 +37,10 @@
   flex-flow: column;
 }
 
+.flex-jsb {
+  justify-content: space-between;
+}
+
 @media (min-width: 600px) {
   .flex__md {
     display: flex;
@@ -111,6 +115,10 @@ aside li:not(:last-child) {
   }
 }
 
+.bd-a--0 {
+  border: 0;
+}
+
 .bd-b--1 {
   border-bottom: 1px solid #222;
 }
@@ -159,6 +167,10 @@ aside li:not(:last-child) {
 .pd-h--1 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+.pd-v--05 {
+  padding-top: 0.25rem;
 }
 
 .pd-t--1 {
@@ -239,5 +251,23 @@ aside li:not(:last-child) {
 
   .w--six-ten__bg {
     width: 60%;
+  }
+
+   .w--two-thirds__bg {
+    width: 70%;
+  }
+}
+
+.mh--half {
+  min-height: 50%;
+}
+
+.h--full {
+  height: 100%;
+}
+
+@media (min-width: 600px) {
+  .h--full__md {
+    height: 100%;
   }
 }
