@@ -72,7 +72,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
       </main>
 
     <?php
-      if($INFO['id'] != 'admin' AND $INFO['exists']):
+      if ($INFO['userinfo'] !='' AND $INFO['id'] != 'admin' AND $INFO['exists']):
     ?>
 
       <?php
