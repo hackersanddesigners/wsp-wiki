@@ -72,7 +72,16 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
       </main>
 
     <?php
-      if ($INFO['userinfo'] !='' AND $INFO['id'] != 'admin' AND $INFO['exists']):
+      // check if
+      // user is logged in
+      if ($INFO['userinfo'] != ''
+      // page exists
+      AND $INFO['exists']
+      // page is not in 'edit' mode
+      AND $_REQUEST['do'] != 'edit'
+      // page is not in 'admin' mode
+      AND $_REQUEST['do'] != 'admin'
+      ):
     ?>
 
       <?php
