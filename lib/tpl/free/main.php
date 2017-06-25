@@ -64,8 +64,8 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
         </aside>
       <?php endif; ?>
 
-      <main class="dw h--full w--full w--two-thirds__bg pd-t--2 pd-h--1 of-scroll">
-        <div class="pd-b--2">
+      <main class="dw h--full w--full w--two-thirds__bg pd-b--2 pd-b--3__md pd-h--1 pd-h--3__md of-scroll">
+        <div class="ta-c pd-b--2">
           <?php if ($_REQUEST['do'] == 'search' OR $_REQUEST['do'] == 'admin'): ?>
             <a href="/">Home</a> ———
           <?php endif; ?>

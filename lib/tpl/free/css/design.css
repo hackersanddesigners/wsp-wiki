@@ -154,9 +154,8 @@ aside li:not(:last-child) {
 
 /* spacing */
 
-.pd-v--1 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+.pd-v--05 {
+  padding-top: 0.25rem;
 }
 
 .pd-h--1 {
@@ -164,8 +163,9 @@ aside li:not(:last-child) {
   padding-right: 0.5rem;
 }
 
-.pd-v--05 {
-  padding-top: 0.25rem;
+.pd-h--1 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .pd-t--1 {
@@ -181,8 +181,17 @@ aside li:not(:last-child) {
 }
 
 @media (min-width: 600px) {
+  .pd-h--3__md {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .pd-t--2__md {
     padding-top: 1rem;
+  }
+
+  .pd-b--3__md {
+    padding-bottom: 2rem;
   }
 }
 

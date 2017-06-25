@@ -145,6 +145,20 @@ aside a {
   margin-bottom: 1rem;
 }
 
+.dw p:last-child {
+  margin-bottom: 0;
+}
+
+.wrap_big-link p {
+  font-size: 21px;
+}
+
+@media (min-width: 600px) {
+  .wrap_big-link p {
+    font-size: 46px;
+  }
+}
+
 /* search results */
 
 .dokuwiki div.search_quickresult {
