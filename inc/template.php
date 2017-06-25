@@ -869,7 +869,6 @@ function tpl_searchform($ajax = true, $autocomplete = true) {
     print 'placeholder="Search the wiki or make a new article" ';
     if(!$autocomplete) print 'autocomplete="off" ';
     print 'id="qsearch__in" accesskey="f" name="id" class="edit w--full ft-1" title="[F]" />';
-    /* print '<button type="submit" title="'.$lang['btn_search'].'">'.$lang['btn_search'].'</button>'; */
     if($ajax) print '<div id="qsearch__out" class="ajax_qsearch JSpopup"></div>';
     print '</div></form>';
     return true;
