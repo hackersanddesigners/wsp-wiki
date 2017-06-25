@@ -265,3 +265,9 @@ aside li:not(:last-child) {
 .h--full {
   height: 100%;
 }
+
+/* transitions */
+
+.xdl {
+  transition: all 0.5s ease
+}

@@ -145,6 +145,38 @@ aside a {
   margin-bottom: 1rem;
 }
 
+/* search results */
+
+.dokuwiki div.search_quickresult {
+  margin-bottom: 1.5rem;
+}
+
+.dokuwiki div.search_quickresult ul li {
+  float: none;
+  width: auto;
+  margin: 0 1.5rem;
+}
+
+.dokuwiki dl.search_results {
+  margin-bottom: 1.2rem;
+}
+
+.dokuwiki dl.search_results dt {
+  font-weight: normal;
+  margin-bottom: 0.25rem;
+}
+
+.dokuwiki dl.search_results dd {
+  color: #222;
+  background-color: inherit;
+  margin: 0 0 1.2rem 0;
+}
+
+.dokuwiki .search_hit {
+  color: red;
+  background-color: transparent;
+}
+
 /* panel */
 
 #config__manager fieldset td.value {

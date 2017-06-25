@@ -383,7 +383,6 @@ function html_search(){
     $data = ft_pageLookup($QUERY,true,useHeading('navigation'));
     if(count($data)){
         print '<div class="search_quickresult">';
-        print '<h3>'.$lang['quickhits'].':</h3>';
         print '<ul class="search_quickhits">';
         foreach($data as $id => $title){
             print '<li> ';
@@ -401,8 +400,6 @@ function html_search(){
             print '</li> ';
         }
         print '</ul> ';
-        //clear float (see http://www.complexspiral.com/publications/containing-floats/)
-        print '<div class="clearer"></div>';
         print '</div>';
     }
     flush();
