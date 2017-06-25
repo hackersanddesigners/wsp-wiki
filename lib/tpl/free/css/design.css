@@ -2,12 +2,6 @@
    design
           */
 
-/* type-size */
-
-.ft-1 {
-  font-size: 18px;
-}
-
 /* colours */
 
 .bgc-white {
@@ -56,7 +50,11 @@
   justify-content: space-between;
 }
 
-@media (min-width: 600px) {
+.flex-aib {
+  align-items: baseline;
+}
+
+@media (min-width: 700px) {
   .flex__md {
     display: flex;
   }
@@ -83,6 +81,11 @@
   .w--usertools__bg {
     flex: 0 1 auto;
   }
+}
+
+.dokuwiki input.edit,
+.dokuwiki select.edit {
+  vertical-align: baseline;
 }
 
 .usertools li {
@@ -122,7 +125,7 @@ aside li:not(:last-child) {
   margin-right: 0.5rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   aside li {
     display: block;
     font-size: 46px;
@@ -196,7 +199,7 @@ aside li:not(:last-child) {
   padding-bottom: 1rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .pd-h--3__md {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -212,21 +215,28 @@ aside li:not(:last-child) {
 }
 
 .mg-t--flush {
-  margin-top: 90px;
-  height: calc(~"100vh - 90px");
+  margin-top: 83px;
+  height: calc(~"100vh - 83px");
 }
 
 @media (min-width: 493px) {
   .mg-t--flush {
-    margin-top: 66px;
-    height: calc(~"100vh - 66px");
+    margin-top: 62px;
+    height: calc(~"100vh - 62px");
   }
 }
 
-@media (min-width: 820px) {
+@media (min-width: 600px) {
   .mg-t--flush {
-    margin-top: 42px;
-    height: calc(~"100vh - 42px");
+    margin-top: 97px;
+    height: calc(~"100vh - 97px");
+  }
+}
+
+@media (min-width: 885px) {
+  .mg-t--flush {
+    margin-top: 64px;
+    height: calc(~"100vh - 64px");
   }
 }
 
@@ -244,10 +254,10 @@ aside li:not(:last-child) {
   width: 100%;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
 
   .w--bl__md {
-    width: 1rem;
+    width: 1.5rem;
   }
 
   .w--third__md {
@@ -263,7 +273,7 @@ aside li:not(:last-child) {
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1100px) {
 
   .w--four-ten__bg {
     width: 40%;
@@ -273,7 +283,7 @@ aside li:not(:last-child) {
     width: 60%;
   }
 
-   .w--two-thirds__bg {
+ .w--two-thirds__bg {
     width: 70%;
   }
 }

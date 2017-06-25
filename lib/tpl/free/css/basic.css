@@ -13,9 +13,9 @@
 html {
   width: 100%;
   font-size: 18px;
-  line-height: 1.35;
+  line-height: 1.2;
   font-family: Arial, sans-serif;
-  color: #222;
+  color: black;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
@@ -23,6 +23,12 @@ html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+@media (min-width: 600px) {
+  html {
+    font-size: 28px;
+  }
 }
 
 body {
@@ -103,19 +109,26 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
+h1 {
+  font-size: 36px;
+}
+
+h2, h3, h4, h5, h6 {
+  font-size: 27px;
+}
+
 @media (min-width: 600px) {
   h1 {
     font-size: 46px;
   }
 
-  p {
-    font-size: 28px;
-    line-height: 1.2;
+  h2, h3, h4, h5, h6 {
+    font-size: 36px;
   }
 }
 
 hr {
   border: none;
-  border-top: 1px solid #222;
+  border-top: 1px solid black;
   margin: 1rem 0;
 }

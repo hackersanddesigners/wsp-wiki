@@ -38,8 +38,8 @@
     position: fixed;
     width: 14rem;
     max-height: 85vh;
-    top: 109px;
-    right: 26px;
+    top: 134px;
+    right: 36px;
   }
 
   #dw__toc > div {
@@ -155,6 +155,13 @@ aside a {
   margin-bottom: 1rem;
 }
 
+.level1+h2,
+.level1+h3,
+.level2+h2,
+.level2+h3 {
+  margin-top: 1rem;
+}
+
 .dw p:last-child {
   margin-bottom: 0;
 }
@@ -163,7 +170,7 @@ aside a {
   font-size: 21px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .wrap_big-link p {
     font-size: 46px;
   }
@@ -235,20 +242,19 @@ aside a {
 }
 
 .dokuwiki textarea.edit {
-  font-size: 18px;
+  font-size: inherit;
   padding: 0.25rem;
 }
 
 .dokuwiki button {
-  font-size: 18px;
+  font-size: inherit;
   padding: 0.25rem;
   background: #ffffff;
   border: 1px solid black;
 }
 
 .dokuwiki button:active {
-  background: yellow;
-  color: __text__;
+  color: red;
 }
 
 button.toolbutton:not(:last-child) {
@@ -266,7 +272,7 @@ button.pad-button {
 }
 
 .dokuwiki input {
-  font-size: 18px;
+  font-size: inherit;
   border: 1px solid transparent;
 }
 
