@@ -14,7 +14,7 @@ html {
 }
 body,
 textarea {
-  font-family: Helvetica, Arial, sans-serif
+  font-family: Arial, sans-serif
 }
 iframe {
   position: absolute
@@ -33,7 +33,7 @@ iframe {
   width: 160px;
   color: #fff;
   padding: 5px;
-  border-radius: 0 0 6px 6px;
+  /* border-radius: 0 0 6px 6px; */
   border: 1px solid #ccc;
 }
 #otherusers {
@@ -121,7 +121,7 @@ a img {
   background: -ms-linear-gradient(#fff, #f0f0f0);
   background: linear-gradient(#fff, #f0f0f0);
   border: 1px solid #ccc;
-  border-radius: 3px;
+  /* border-radius: 3px; */
   color: #ccc;
   cursor: pointer;
   display: inline-block;
@@ -156,15 +156,15 @@ a img {
 }
 
 .toolbar ul li a.grouped-left {
-  border-radius: 3px 0 0 3px;
+  /* border-radius: 3px 0 0 3px; */
 }
 .toolbar ul li a.grouped-middle {
-  border-radius: 0;
+  /* border-radius: 0; */
   margin-left: -2px;
   border-left: 0;
 }
 .toolbar ul li a.grouped-right {
-  border-radius: 0 3px 3px 0;
+  /* border-radius: 0 3px 3px 0; */
   margin-left: -2px;
   border-left: 0;
 }
@@ -181,7 +181,7 @@ a img {
   padding: 4px;
   line-height: 22px; /* fix for safari (win/mac) */
   height: 28px; /* fix for chrome (mac) */
-  border-radius: 3px;
+  /* border-radius: 3px; */
   border: 1px solid #ccc;
   outline: none;
 }
@@ -338,7 +338,7 @@ li[data-key=showusers] > a #online_count {
   top: 0px;
   z-index: 101;
   display: none;
-  border-radius: 0 0 6px 6px;
+  /* border-radius: 0 0 6px 6px; */
   background: #f7f7f7;
   border: 1px solid #ccc;
   border-top: 0;
@@ -361,9 +361,9 @@ li[data-key=showusers] > a #online_count {
   background: -ms-linear-gradient(#fff, #ccc);
   background: linear-gradient(#fff, #ccc);
   border: 1px solid #ccc;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  /* -webkit-border-radius: 4px; */
+  /* -moz-border-radius: 4px; */
+  /* border-radius: 4px; */
   font-size: 12px;
   cursor: pointer;
   color: #000;
@@ -383,9 +383,9 @@ li[data-key=showusers] > a #online_count {
   padding: 4px;
   overflow: hidden;
   color: #fff;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  /* -webkit-border-radius: 5px; */
+  /* -moz-border-radius: 5px; */
+  /* border-radius: 5px; */
 }
 #myusernameform {
   margin-left: 30px
@@ -762,9 +762,9 @@ table#otheruserstable {
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.7);
   padding: 10px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
+  /* -webkit-border-radius: 6px; */
+  /* -moz-border-radius: 6px; */
+  /* border-radius: 6px; */
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
   filter: alpha(opacity=80);
   opacity: .8;
@@ -878,7 +878,7 @@ input[type=checkbox] {
   width: 80%;
   max-width: 500px;
   padding: 10px;
-  border-radius: 0 0 6px 6px;
+  /* border-radius: 0 0 6px 6px; */
   border: 1px solid #ccc;
   border-top: none;
   background: #f7f7f7;
@@ -927,7 +927,7 @@ input[type=checkbox] {
   background: #fff;
   padding: 2px;
   height: 24px;
-  border-radius: 3px;
+  /* border-radius: 3px; */
   border: 1px solid #ccc;
   outline: none;
   width: 120px;
@@ -951,9 +951,9 @@ input[type=checkbox] {
   background-color: #f1f1f1 !important;
   right: 0px !important;
   top: 37px;
-  -webkit-border-radius: 0px !important;
-  -moz-border-radius: 0px !important;
-  border-radius: 0px !important;
+  /* -webkit-border-radius: 0px !important; */
+  /* -moz-border-radius: 0px !important; */
+  /* border-radius: 0px !important; */
   height: auto !important;
   border: none !important;
   border-left: 1px solid #ccc !important;
@@ -962,7 +962,7 @@ input[type=checkbox] {
 .chatAndUsers{
   display:block !important;
   right:0px !important;
-  border-radius:0px !important;
+  /* border-radius:0px !important; */
   width:182px !important;
 /* Below makes UI look weird when X makes editbar flow onto two lines */
 /*  margin:2px 0 0 0 !important;*/
@@ -1066,7 +1066,7 @@ input[type=checkbox] {
       top: auto;
       right:0px !important;
       bottom: 33px;
-      border-radius: 0px !important;
+      /* border-radius: 0px !important; */
       height: 55px !important;
       overflow: auto;
     }
@@ -1112,7 +1112,7 @@ input[type=checkbox] {
       float: right;
     }
     .toolbar ul.menu_right > li a {
-      border-radius: 0;
+      /* border-radius: 0; */
       border: none;
       background: none;
       margin: 0;
@@ -1133,9 +1133,9 @@ input[type=checkbox] {
       right:48px;
     }
     .popup {
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      border-radius: 0;
+      /* -webkit-border-radius: 0; */
+      /* -moz-border-radius: 0; */
+      /* border-radius: 0; */
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       -ms-box-sizing: border-box;
