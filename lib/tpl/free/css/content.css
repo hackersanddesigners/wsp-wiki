@@ -7,14 +7,10 @@
 .dokuwiki a.wikilink2:link,
 .dokuwiki a.wikilink2:visited {
   border-bottom: none;
+  text-decoration: underline;
 }
 
 /* toc */
-
-#dokuwiki__toc {
-  background-color: transparent;
-  border: 1px solid blue;
-}
 
 #dokuwiki__toc ul li:before {
   content: '';
@@ -22,19 +18,33 @@
 
 #dw__toc {
   float: none;
-  position: fixed;
-  right: 0;
-  width: 15rem;
-  background-color: #ffffff;
-  margin: 0;
+  width: 100%;
+  max-height: 25vh;
+  overflow: scroll;
+  background-color: yellow;
+  margin: 0 0 1rem 0;
   padding: 0.5rem;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 #dw__toc > div {
-  max-height: 85vh;
-  border-bottom: 1px solid red;
-  overflow: scroll;
+  max-height: 25vh;
   padding: 0;
+}
+
+@media (min-width: 900px) {
+  #dw__toc {
+    position: fixed;
+    width: 14rem;
+    max-height: 85vh;
+    top: 109px;
+    right: 26px;
+  }
+
+  #dw__toc > div {
+    max-height: 78vh;
+  }
 }
 
 .dokuwiki h3.toggle {
@@ -191,7 +201,18 @@ aside a {
   background-color: transparent;
 }
 
+/* edit article */
+
+.summary {
+  padding-top: 0.5rem;
+}
+
 /* panel */
+
+.dw .admin_tasks {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 
 #config__manager fieldset td.value {
   max-width: 31em;

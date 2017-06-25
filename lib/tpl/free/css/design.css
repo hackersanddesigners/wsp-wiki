@@ -18,6 +18,22 @@
   background-color: red;
 }
 
+/* borders */
+
+.bd-a--0 {
+  border: 0;
+}
+
+.bd-b--1 {
+  border-bottom: 1px solid #222;
+}
+
+/* align */
+
+.ta-c {
+  text-align: center;
+}
+
 /* display */
 
 .d-n {
@@ -92,12 +108,12 @@ aside li {
 }
 
 /* reset curid for any <a> */
-.dokuwiki span.curid a {
+span.curid a {
   font-weight: normal;
 }
 
 /* add it only to <a> in the sidebar */
-.dokuwiki aside span.curid a {
+span.curid a {
   font-weight: bold;
   font-style: normal;
 }
