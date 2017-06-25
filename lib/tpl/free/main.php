@@ -104,12 +104,12 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
 
         // check if pad already exists, otherwise make a new one
         // --- http://thinkofdev.com/php-fast-way-to-determine-a-key-elements-existance-in-an-array/
-        if(isset($padlist->padIDs[$padID]) === NULL || !in_array($padID, $padlist->padIDs)) {
-          $newPad = $instance->createPad($padID);
-        }
+        /* if(isset($padlist->padIDs[$padID]) === NULL || !in_array($padID, $padlist->padIDs)) { */
+        /*   $newPad = $instance->createPad($padID); */
+        /* } */
       ?>
       <iframe src='http://localhost:9001/p/<?php echo $padID ?>' class="pad d-n bd-a--0 mh--half"></iframe>
-      <button class="pad-button"><p>P</p></button>
+      <button class="pad-button">✎</button>
 
     <?php endif ?>
 
