@@ -3,7 +3,7 @@ documents
 data
 conf
 bin
-inc
+# inc
 lib/tpl/dokuwiki
 # wiki plugins
 vendor

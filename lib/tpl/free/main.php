@@ -65,8 +65,9 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
       <?php endif; ?>
 
       <main class="dw h--full w--full w--two-thirds__bg pd-t--2 pd-h--1 of-scroll">
-        <?php tpl_flush() /* flush the output buffer */ ?>
-        <?php tpl_content() /* the main content */ ?>
+        <div class="pd-b--2"><?php tpl_breadcrumbs() ?></div>
+        <?php tpl_flush() ?>
+        <?php tpl_content() ?>
         <?php tpl_flush() ?>
       </main>
 
