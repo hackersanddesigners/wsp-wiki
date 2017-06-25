@@ -3,10 +3,18 @@ documents
 data
 conf
 bin
-# inc
 lib/tpl/dokuwiki
+
 # wiki plugins
 vendor
 
 # etherpad
-etherpad-lite
+!etherpad-lite/
+
+etherpad-lite/*
+!etherpad-lite/src/
+
+etherpad-lite/src/*
+!etherpad-lite/src/static/
+
+etherpad-lite/src/static/*
