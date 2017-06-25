@@ -408,6 +408,7 @@ function html_search(){
     $data = ft_pageSearch($QUERY,$regex);
     if(count($data)){
         print '<dl class="search_results">';
+        print '<h2>'.$lang['alsofound'].'</h2>';
         $num = 1;
         foreach($data as $id => $cnt){
             print '<dt>';

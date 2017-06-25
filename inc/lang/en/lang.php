@@ -183,7 +183,8 @@ $lang['reference']             = 'References for';
 $lang['ref_inuse']             = 'The file can\'t be deleted, because it\'s still used by the following pages:';
 $lang['ref_hidden']            = 'Some references  are on pages you don\'t have permission to read';
 
-$lang['hits']                  = 'Hits';
+$lang['alsofound']             = 'Term also found in';
+$lang['hits']                  = 'hits';
 $lang['quickhits']             = 'Matching pagenames';
 $lang['toc']                   = 'Table of Contents';
 $lang['current']               = 'current';
