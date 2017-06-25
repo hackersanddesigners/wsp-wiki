@@ -81,6 +81,8 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
       AND $_REQUEST['do'] != 'edit'
       // page is not in 'admin' mode
       AND $_REQUEST['do'] != 'admin'
+      // page is not in 'search' mode
+      AND $_REQUEST['do'] != 'search'
       ):
     ?>
 
