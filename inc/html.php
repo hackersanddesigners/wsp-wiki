@@ -426,8 +426,6 @@ function html_search(){
             flush();
         }
         print '</dl>';
-    }else{
-        print '<div class="nothing">'.$lang['nothingfound'].'</div>';
     }
 
     //hide progressbar

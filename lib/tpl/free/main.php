@@ -65,7 +65,12 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
       <?php endif; ?>
 
       <main class="dw h--full w--full w--two-thirds__bg pd-t--2 pd-h--1 of-scroll">
-        <div class="pd-b--2"><?php tpl_breadcrumbs() ?></div>
+        <div class="pd-b--2">
+          <?php if ($_REQUEST['do'] == 'search' OR $_REQUEST['do'] == 'admin'): ?>
+            <a href="/">Home</a> ———
+          <?php endif; ?>
+          <?php tpl_breadcrumbs() ?>
+        </div>
         <?php tpl_flush() ?>
         <?php tpl_content() ?>
         <?php tpl_flush() ?>
@@ -101,7 +106,6 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
         // --- http://thinkofdev.com/php-fast-way-to-determine-a-key-elements-existance-in-an-array/
         if(isset($padlist->padIDs[$padID]) === NULL || !in_array($padID, $padlist->padIDs)) {
           $newPad = $instance->createPad($padID);
-          echo "new pad $padID";
         }
       ?>
       <iframe src='http://localhost:9001/p/<?php echo $padID ?>' class="pad d-n bd-a--0 mh--half"></iframe>
