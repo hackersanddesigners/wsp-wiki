@@ -8,7 +8,6 @@
   font-size: 18px;
 }
 
-
 /* colours */
 
 .bgc-white {
@@ -110,17 +109,9 @@ aside li:not(:last-child) {
 @media (min-width: 600px) {
   aside li {
     display: block;
-    font-size: 27px;
+    font-size: 46px;
     margin-bottom: 1rem;
   }
-}
-
-.bd-a--0 {
-  border: 0;
-}
-
-.bd-b--1 {
-  border-bottom: 1px solid #222;
 }
 
 /* position */
@@ -145,9 +136,13 @@ aside li:not(:last-child) {
   left: 0;
 }
 
+/* overflow */
+
 .of-scroll {
   overflow: scroll;
 }
+
+/* z-index */
 
 .z-1 {
   z-index: 1;
