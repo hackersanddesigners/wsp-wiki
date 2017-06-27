@@ -37,13 +37,13 @@
   #dw__toc {
     position: fixed;
     width: 14rem;
-    max-height: 85vh;
-    top: 134px;
+    max-height: 80vh;
+    top: 116px;
     right: 36px;
   }
 
   #dw__toc > div {
-    max-height: 78vh;
+    max-height: 80vh;
   }
 }
 
