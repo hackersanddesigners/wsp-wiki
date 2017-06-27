@@ -94,19 +94,17 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
       <?php
         require 'vendor/autoload.php';
         $instance = new EtherpadLite\Client('2e30bec97cdce21ea0f9f4e4c6b38755d7139b8adb9258981192b785a69ca684', $baseUrl);
-        $padID = $INFO['id'] . '-' . $INFO['meta']['date']['created'];
+				$page = str_replace(':', '.', $INFO['id']);
+        $padID = $page . '-' . $INFO['meta']['date']['created'];
         
-        // createGroup
-        $group = $instance->createGroupIfNotExistsFor('f-r-e-e');
-          
         // listAllPads
         $padlist = $instance->listAllPads();
 
         // check if pad already exists, otherwise make a new one
         // --- http://thinkofdev.com/php-fast-way-to-determine-a-key-elements-existance-in-an-array/
-        /* if(isset($padlist->padIDs[$padID]) === NULL || !in_array($padID, $padlist->padIDs)) { */
-        /*   $newPad = $instance->createPad($padID); */
-        /* } */
+        if(isset($padlist->padIDs[$padID]) === NULL || !in_array($padID, $padlist->padIDs)) {
+          $newPad = $instance->createPad($padID);
+        }
       ?>
       <iframe src='http://localhost:9001/p/<?php echo $padID ?>' class="pad d-n bd-a--0 mh--half"></iframe>
       <button class="pad-button">✎</button>
