@@ -171,10 +171,12 @@ aside ul {
 }
 
 .wrap_big-link p {
-  font-size: 21px;
+  /* font-family: Arial; */
+  /* font-style: normal; */
+  font-size: 36px;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
   .wrap_big-link p {
     font-size: 46px;
   }
