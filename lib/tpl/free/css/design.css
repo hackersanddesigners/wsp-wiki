@@ -106,7 +106,7 @@
 aside li {
   display: inline-block;
   font-family: 'Times New Roman', serif;
-  font-size: 21px;
+  font-size: 110%;
   font-style: italic;
 }
 
@@ -175,6 +175,7 @@ aside li:not(:last-child) {
 
 .pd-v--05 {
   padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .pd-h--1 {

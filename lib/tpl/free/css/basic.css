@@ -58,6 +58,12 @@ a {
   color: inherit;
 }
 
+.dw a {
+  font-family: 'Times New Roman';
+  font-style: italic;
+  font-size: 110%;
+}
+
 pre, code {
  white-space: pre-wrap;       /* css-3 */
  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */

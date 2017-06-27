@@ -27,7 +27,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
 <body>
 <div id="dokuwiki__site">
  <div class="flex flex-cl site <?php echo tpl_classes(); ?><?php echo ($showSidebar) ? 'hasSidebar' : ''; ?>">
-   <nav class="pos-fx pos-t pos-r pos-l z-2 flex__bg flex-row__bg flex-aib pd-b--05 pd-h--1 bgc-white">
+   <nav class="pos-fx pos-t pos-r pos-l z-2 flex__bg flex-row__bg flex-aib pd-v--05 pd-h--1 bgc-white">
       <?php html_msgarea() ?>
 
       <div class="w--full w--search__bg">
@@ -59,7 +59,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
 
    <div class="dokuwiki flex flex-cl flex-row__md flex-jsb mg-t--flush">
       <?php if ($showSidebar): ?>
-        <aside class="w--full w--third__md pd-v--05 pd-t--2__md pd-h--1 bgc-red">
+        <aside class="w--full w--third__md pd-t--1 pd-b--05 pd-t--2__md pd-h--1 bgc-red">
           <?php tpl_include_page($conf['sidebar'], 1, 1) /* includes the nearest sidebar page */ ?>
         </aside>
       <?php endif; ?>

@@ -136,6 +136,10 @@ aside a {
   text-decoration: none;
 }
 
+aside ul {
+  /* padding-top: 0.25rem; */
+}
+
 /* main */
 
 .dw h1,
