@@ -65,8 +65,37 @@
 /* embedded images (styles are already partly set in dokuwiki's lib/styles/all.css) */
 
 .dokuwiki img.media {
-    margin: .2em 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1rem auto;
 }
+
+img.mediabox2 {
+  width: 100%;
+}
+
+div.thumb2 .thumbinner {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  font-size: inherit;
+  overflow: hidden;
+  padding: 0;
+}
+html .thumbcaption {
+  text-align: center;
+  font-size: inherit;
+  padding: 0;
+  line-height: inherit;
+  border: none;
+}
+div.thumb2 .mediabox2 {
+  background: transparent;
+  border: none;
+  margin: 0;
+}
+
 .dokuwiki img.medialeft {
     margin: .2em 1.5em .2em 0;
 }
