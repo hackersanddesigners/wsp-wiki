@@ -165,10 +165,6 @@ aside a {
   text-decoration: none;
 }
 
-aside ul {
-  /* padding-top: 0.25rem; */
-}
-
 /* main */
 
 .dw h1,
@@ -396,8 +392,6 @@ button.pad-button {
 .JSpopup {
     background-color: __background__;
     color: __text__;
-    /* border: 1px solid __border__; */
-    /* line-height: 1.2; */
     padding: 0 .2em;
 }
 

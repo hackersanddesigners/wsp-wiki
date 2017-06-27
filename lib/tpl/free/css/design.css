@@ -235,15 +235,15 @@ aside li:not(:last-child) {
 
 @media (min-width: 600px) {
   .mg-t--flush {
-    margin-top: 75px;
-    height: calc(~"100vh - 75px");
+    margin-top: 82px;
+    height: calc(~"100vh - 82px");
   }
 }
 
 @media (min-width: 885px) {
   .mg-t--flush {
-    margin-top: 42px;
-    height: calc(~"100vh - 42px");
+    margin-top: 49px;
+    height: calc(~"100vh - 49px");
   }
 }
 
