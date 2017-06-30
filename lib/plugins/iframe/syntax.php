@@ -34,8 +34,6 @@ class syntax_plugin_iframe extends DokuWiki_Syntax_Plugin {
         // set defaults
         $opts = array(
                     'url'    => $url,
-                    'width'  => '98%',
-                    'height' => '400px',
                     'alt'    => $alt,
                     'scroll' => true,
                     'border' => true,
@@ -44,22 +42,6 @@ class syntax_plugin_iframe extends DokuWiki_Syntax_Plugin {
                     'mozallowfullscreen' => true,
                     'webkitallowfullscreen' => true,
                 );
-
-        // handle size parameters
-        $matches=array();
-        if(preg_match('/\[?(\d+(em|%|pt|px)?)\s*([,xX]\s*(\d+(em|%|pt|px)?))?\]?/',$param,$matches)){
-            if($matches[4]){
-                // width and height was given
-                $opts['width'] = $matches[1];
-                if(!$matches[2]) $opts['width'] .= 'px'; //default to pixel when no unit was set
-                $opts['height'] = $matches[4];
-                if(!$matches[5]) $opts['height'] .= 'px'; //default to pixel when no unit was set
-            }elseif($matches[2]){
-                // only height was given
-                $opts['height'] = $matches[1];
-                if(!$matches[2]) $opts['height'] .= 'px'; //default to pixel when no unit was set
-            }
-        }
 
         // handle other parameters
         if(preg_match('/noscroll(bars?|ing)?/',$param)){
@@ -93,7 +75,6 @@ class syntax_plugin_iframe extends DokuWiki_Syntax_Plugin {
             $opts = array(
                         'title' => $data['alt'],
                         'src'   => $data['url'],
-                        'style' => 'width:'.$data['width'].'; height:'.$data['height'],
                         );
             if(!$data['border']) $opts['frameborder'] = 0;
             if(!$data['scroll']) $opts['scrolling'] = 'no';
@@ -102,7 +83,7 @@ class syntax_plugin_iframe extends DokuWiki_Syntax_Plugin {
             if($data['mozallowfullscreen'])   $opts['mozallowfullscreen'] = $data['mozallowfullscreen'];
             if($data['webkitallowfullscreen'])   $opts['webkitallowfullscreen'] = $data['webkitallowfullscreen'];
             $params = buildAttributes($opts);
-            $R->doc .= "<iframe $params>".hsc($alt).'</iframe>';
+            $R->doc .= "<div class='embed'><iframe $params>".hsc($alt).'</iframe></div>';
         }
 
         return true;
