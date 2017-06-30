@@ -101,5 +101,3 @@ class syntax_plugin_imagebox extends DokuWiki_Syntax_Plugin {
 		return false;
 	}
 }
-
-//Setup VIM: ex: et ts=4 enc=utf-8 :
