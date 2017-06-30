@@ -345,26 +345,6 @@ class syntax_plugin_gallery extends DokuWiki_Syntax_Plugin {
             return $ret;
         }
 
-        // prepare alignment
-        $align = '';
-        $xalign = '';
-        if($data['align'] == 1){
-            $align  = ' gallery_right';
-            $xalign = ' align="right"';
-        }
-        if($data['align'] == 2){
-            $align  = ' gallery_left';
-            $xalign = ' align="left"';
-        }
-        if($data['align'] == 3){
-            $align  = ' gallery_center';
-            $xalign = ' align="center"';
-        }
-        if(!$data['_single']){
-            if(!$align) $align = ' gallery_center'; // center galleries on default
-            if(!$xalign) $xalign = ' align="center"';
-        }
-
         $page = 0;
 
         // build gallery
@@ -459,7 +439,7 @@ class syntax_plugin_gallery extends DokuWiki_Syntax_Plugin {
             $pgret .= '</div>';
         }
 
-        return '<div class="gallery'.$align.'"'.$xalign.'>'.$pgret.$ret.'<div class="clearer"></div></div>';
+        return '<div class="gallery'.$align.'"'.$xalign.'>'.$pgret.$ret.'</div>';
     }
 
     /**
