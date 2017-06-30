@@ -364,6 +364,12 @@ button.pad-button {
   border-bottom: none;
 }
 
+#draft__status {
+  float: none;
+  color: inherit;
+  padding-bottom: 1rem;
+}
+
 /* media manager */
 
 /* some headings in the media manager should not look like headings */
