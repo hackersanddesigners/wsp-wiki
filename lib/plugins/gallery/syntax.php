@@ -384,43 +384,24 @@ class syntax_plugin_gallery extends DokuWiki_Syntax_Plugin {
                      $close_pg = true;
                 }
 
-                // new table?
-                if($i == 0 || ($data['paginate'] && ($i % $data['paginate'] == 0))){
-                    $ret .= '<table>';
-
-                }
-
-                // new row?
-                if($i % $data['cols'] == 0){
-                    $ret .= '<tr>';
-                }
-
                 // an image cell
-                $ret .= '<td>';
+                $ret .= '<div>';
                 $ret .= $this->_image($img,$data);
                 $ret .= $this->_showname($img,$data);
                 $ret .= $this->_showtitle($img,$data);
-                $ret .= '</td>';
-                $i++;
+                $ret .= '</div>';
 
-                // done with this row? cloase it
-                $close_tr = true;
-                if($i % $data['cols'] == 0){
-                    $ret .= '</tr>';
-                    $close_tr = false;
-                }
+                $i++;
 
                 // close current page and table
                 if($data['paginate'] && ($i % $data['paginate'] == 0)){
                     if ($close_tr){
                         // add remaining empty cells
                         while($i % $data['cols']){
-                            $ret .= '<td></td>';
+                            $ret .= '<div></div>';
                             $i++;
                         }
-                        $ret .= '</tr>';
                     }
-                    $ret .= '</table>';
                     $ret .= '</div>';
                     $close_pg = false;
                 }
@@ -430,16 +411,13 @@ class syntax_plugin_gallery extends DokuWiki_Syntax_Plugin {
             if ($close_tr){
                 // add remaining empty cells
                 while($i % $data['cols']){
-                    $ret .= '<td></td>';
+                    $ret .= '<div></div>';
                     $i++;
                 }
-                $ret .= '</tr>';
             }
 
             if(!$data['paginate']){
-                $ret .= '</table>';
             }elseif ($close_pg){
-                $ret .= '</table>';
                 $ret .= '</div>';
             }
         }else{ // format as div sequence
@@ -659,5 +637,3 @@ class syntax_plugin_gallery extends DokuWiki_Syntax_Plugin {
     }
 
 }
-
-//Setup VIM: ex: et ts=4 enc=utf-8 :
