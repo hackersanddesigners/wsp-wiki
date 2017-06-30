@@ -40,6 +40,9 @@ class syntax_plugin_iframe extends DokuWiki_Syntax_Plugin {
                     'scroll' => true,
                     'border' => true,
                     'align'  => false,
+                    'allowfullscreen' => true,
+                    'mozallowfullscreen' => true,
+                    'webkitallowfullscreen' => true,
                 );
 
         // handle size parameters
@@ -68,6 +71,15 @@ class syntax_plugin_iframe extends DokuWiki_Syntax_Plugin {
         if(preg_match('/(left|right)/',$param,$matches)){
             $opts['align'] = $matches[1];
         }
+        if(preg_match('/(allowfullscreen)/',$param,$matches)){
+           $opts['allowfullscreen'] = $matches[1];
+        }
+        if(preg_match('/(mozallowfullscreen)/',$param,$matches)){
+           $opts['mozallowfullscreen'] = $matches[1];
+        }
+        if(preg_match('/(webkitallowfullscreen)/',$param,$matches)){
+           $opts['webkitallowfullscreen'] = $matches[1];
+        }
 
         return $opts;
     }
@@ -86,6 +98,9 @@ class syntax_plugin_iframe extends DokuWiki_Syntax_Plugin {
             if(!$data['border']) $opts['frameborder'] = 0;
             if(!$data['scroll']) $opts['scrolling'] = 'no';
             if($data['align'])   $opts['align'] = $data['align'];
+            if($data['allowfullscreen'])   $opts['allowfullscreen'] = $data['allowfullscreen'];
+            if($data['mozallowfullscreen'])   $opts['mozallowfullscreen'] = $data['mozallowfullscreen'];
+            if($data['webkitallowfullscreen'])   $opts['webkitallowfullscreen'] = $data['webkitallowfullscreen'];
             $params = buildAttributes($opts);
             $R->doc .= "<iframe $params>".hsc($alt).'</iframe>';
         }
