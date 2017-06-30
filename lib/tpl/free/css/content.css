@@ -84,6 +84,7 @@ div.thumb2 .thumbinner {
   padding: 0;
 }
 html .thumbcaption {
+  font-family: 'Times New Roman', serif;
   text-align: center;
   font-size: inherit;
   padding: 0;
