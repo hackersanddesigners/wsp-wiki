@@ -352,7 +352,7 @@ class syntax_plugin_gallery extends DokuWiki_Syntax_Plugin {
             $ret .= $this->_image($files[0],$data);
             $ret .= $this->_showname($files[0],$data);
             $ret .= $this->_showtitle($files[0],$data);
-        }elseif($data['cols'] > 0){ // format as table
+        }elseif($data['cols'] > 0){
             $close_pg = false;
 
             $i = 0;
@@ -365,7 +365,7 @@ class syntax_plugin_gallery extends DokuWiki_Syntax_Plugin {
                 }
 
                 // an image cell
-                $ret .= '<div>';
+                $ret .= '<div class="gallery-item">';
                 $ret .= $this->_image($img,$data);
                 $ret .= $this->_showname($img,$data);
                 $ret .= $this->_showtitle($img,$data);
@@ -373,7 +373,7 @@ class syntax_plugin_gallery extends DokuWiki_Syntax_Plugin {
 
                 $i++;
 
-                // close current page and table
+                // close current page
                 if($data['paginate'] && ($i % $data['paginate'] == 0)){
                     if ($close_tr){
                         // add remaining empty cells
@@ -472,46 +472,17 @@ class syntax_plugin_gallery extends DokuWiki_Syntax_Plugin {
 
         //prepare img attributes
         $i             = array();
-        $i['width']    = $w;
-        $i['height']   = $h;
+        $i['width']    = '';
+        $i['height']   = '';
         $i['border']   = 0;
         $i['alt']      = $this->_meta($img,'title');
-        $i['class']    = 'tn';
+        $i['class']    = 'tn gallery-cell';
         $iatt = buildAttributes($i);
         $src  = ml($img['id'],$dim);
 
-        // prepare lightbox dimensions
-        $w_lightbox = (int) $this->_meta($img,'width');
-        $h_lightbox = (int) $this->_meta($img,'height');
-        $dim_lightbox = array();
-        if($w_lightbox > $data['iw'] || $h_lightbox > $data['ih']){
-            $ratio = $this->_ratio($img,$data['iw'],$data['ih']);
-            $w_lightbox = floor($w_lightbox * $ratio);
-            $h_lightbox = floor($h_lightbox * $ratio);
-            $dim_lightbox = array('w'=>$w_lightbox,'h'=>$h_lightbox);
-        }
-
-        //prepare link attributes
-        $a           = array();
-        $a['title']  = $this->_meta($img,'title');
-        $a['data-caption'] = trim(str_replace("\n",' ',$this->_meta($img,'desc')));
-        if(!$a['data-caption']) unset($a['data-caption']);
-        if($data['lightbox']){
-            $href   = ml($img['id'],$dim_lightbox);
-            $a['class'] = "lightbox JSnocheck";
-            $a['rel']   = 'lightbox[gal-'.substr(md5($ID),4).']'; //unique ID for the gallery
-        }elseif($img['detail'] && !$data['direct']){
-            $href   = $img['detail'];
-        }else{
-            $href   = ml($img['id'],array('id'=>$ID),$data['direct']);
-        }
-        $aatt = buildAttributes($a);
-
         // prepare output
         $ret  = '';
-        $ret .= '<a href="'.$href.'" '.$aatt.'>';
         $ret .= '<img src="'.$src.'" '.$iatt.' />';
-        $ret .= '</a>';
         return $ret;
     }
 
