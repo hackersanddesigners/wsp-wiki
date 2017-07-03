@@ -8,6 +8,10 @@
   background-color: white;
 }
 
+.bgc-blue {
+  background-color: blue;
+}
+
 .bgc-red {
   background-color: red;
 }
@@ -61,6 +65,10 @@
 
   .flex-row__md {
     flex-flow: row;
+  }
+
+  .flex-jsb__md {
+    justify-content: space-between;
   }
 }
 
@@ -278,6 +286,14 @@ aside li:not(:last-child) {
   .w--two-thirds__md {
     width: 70%;
   }
+
+  .w--full__md {
+    width: 100%;
+  }
+
+  .w--auto__md {
+    width: auto;
+  }
 }
 
 @media (min-width: 1100px) {
@@ -301,6 +317,12 @@ aside li:not(:last-child) {
 
 .h--full {
   height: 100%;
+}
+
+@media (min-width: 700px) {
+  .h--full__md {
+    height: 100%;
+  }
 }
 
 /* transitions */

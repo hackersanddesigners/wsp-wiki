@@ -106,8 +106,10 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
           $newPad = $instance->createPad($padID);
         }
       ?>
-      <iframe src='http://localhost:9001/p/<?php echo $padID ?>' class="pad d-n bd-a--0 mh--half"></iframe>
-      <button class="pad-button">✎</button>
+      <div class="pad-wrap flex__md flex-jsb__md h--full__md">
+        <iframe src='http://localhost:9001/p/<?php echo $padID ?>' class="pad d-n bd-a--0 mh--half"></iframe>
+        <button class="pad-button w--full w--auto__md h--full__md">✎</button>
+      </div>
 
     <?php endif ?>
 

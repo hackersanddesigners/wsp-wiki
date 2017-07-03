@@ -8,6 +8,7 @@
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
+  z-index: 1;
 }
 
 html {

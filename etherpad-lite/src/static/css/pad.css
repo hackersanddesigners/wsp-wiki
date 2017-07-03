@@ -638,8 +638,6 @@ table#otheruserstable {
   border-left: 1px solid #999;
   border-right: 1px solid #999;
   border-top: 1px solid #999;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
   background-color: #fff;
   cursor: pointer;
 }
