@@ -212,8 +212,8 @@ aside li:not(:last-child) {
   padding-bottom: 1rem;
 }
 
-.pd-b--three-fifth {
-  padding-bottom: 60vh;
+.pd-b--tf {
+  padding-bottom: ~'60vh';
 }
 
 @media (min-width: 700px) {
