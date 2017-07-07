@@ -13,7 +13,7 @@
 
 html {
   width: 100%;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.2;
   font-family: Arial, sans-serif;
   color: black;
@@ -26,9 +26,9 @@ html {
   box-sizing: border-box;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   html {
-    font-size: 28px;
+    font-size: 27px;
   }
 }
 
@@ -118,7 +118,7 @@ h2, h3, h4, h5, h6 {
   font-size: 27px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   h1 {
     font-size: 46px;
   }
