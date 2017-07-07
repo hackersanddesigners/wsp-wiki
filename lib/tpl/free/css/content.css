@@ -211,18 +211,6 @@ aside a {
   border: none;
 }
 
-.pad {
-  position: absolute;
-  bottom: 49px;
-}
-
-@media (min-width: 700px) {
-  .pad {
-    position: static;
-    bottom: auto;
-  }
-}
-
 /* Flickity */
 
 .gallery {

@@ -207,6 +207,10 @@ aside li:not(:last-child) {
   padding-bottom: 1rem;
 }
 
+.pd-b--three-fifth {
+  padding-bottom: 60vh;
+}
+
 @media (min-width: 700px) {
   .pd-h--2__md {
     padding-left: 1rem;
@@ -226,32 +230,6 @@ aside li:not(:last-child) {
   .pd-h--3__bg {
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-}
-
-.mg-t--flush {
-  margin-top: 69px;
-  height: calc(~"100vh - 69px");
-}
-
-@media (min-width: 345px) {
-  .mg-t--flush {
-    margin-top: 49px;
-    height: calc(~"100vh - 49px");
-  }
-}
-
-@media (min-width: 600px) {
-  .mg-t--flush {
-    margin-top: 82px;
-    height: calc(~"100vh - 82px");
-  }
-}
-
-@media (min-width: 885px) {
-  .mg-t--flush {
-    margin-top: 49px;
-    height: calc(~"100vh - 49px");
   }
 }
 
@@ -310,6 +288,8 @@ aside li:not(:last-child) {
     width: 70%;
   }
 }
+
+/* heights */
 
 .mh--half {
   min-height: 50%;
