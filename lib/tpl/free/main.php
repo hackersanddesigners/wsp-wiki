@@ -26,11 +26,11 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
 
 <body>
 <div id="dokuwiki__site">
+ <?php $usr_l = $INFO['userinfo'] ?>
  <div class="flex flex-cl site <?php echo tpl_classes(); ?><?php echo ($showSidebar) ? 'hasSidebar' : ''; ?>">
-   <nav class="pos-fx pos-t pos-r pos-l z-2 flex <?php echo $usr_l > 0 ? ' flex-row' : ' flex-cl' ?> flex-row__bg flex-jsb flex-aib pd-v--05 pd-h--1 bgc-white">
+   <nav class="pos-fx pos-t pos-r pos-l z-2 flex<?php echo $usr_l > 0 ? ' flex-cl flex-row__bg' : ' flex-row' ?> flex-jsb flex-aib pd-v--05 pd-h--1 bgc-white">
       <?php html_msgarea() ?>
   
-      <?php $usr_l = $INFO['userinfo'] ?>
       <div class="<?php echo $usr_l > 0 ? 'w--full ' : '' ?>search-wrap">
         <?php tpl_searchform() ?>
       </div>
