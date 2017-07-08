@@ -169,6 +169,11 @@ aside li:not(:last-child) {
   overflow: scroll;
 }
 
+.ofy-scroll {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+}
+
 /* z-index */
 
 .z-1 {

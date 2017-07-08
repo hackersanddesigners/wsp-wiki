@@ -107,7 +107,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
         }
       ?>
       <div class="pad-wrap flex__md flex-jsb__md h--full__md xdl">
-        <iframe src="http://localhost:9001/p/<?php echo $padID ?>" class="pad xdsd bd-a--0"></iframe>
+        <div class="pad xdsd ofy-scroll"><iframe src="http://localhost:9001/p/<?php echo $padID ?>" class="w--full h--full bd-a--0"></iframe></div>
         <button class="pad-button w--full w--auto__md h--full__md">✎</button>
       </div>
 
