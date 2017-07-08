@@ -57,6 +57,11 @@ a {
   font-family: 'Times New Roman';
   font-style: italic;
   font-size: 110%;
+  word-wrap: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 pre, code {
