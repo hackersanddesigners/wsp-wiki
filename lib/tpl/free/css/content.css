@@ -38,7 +38,7 @@
     position: fixed;
     width: 14rem;
     max-height: 80vh;
-    top: 116px;
+    padding-top: 9px;
     right: 36px;
   }
 
