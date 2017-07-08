@@ -109,6 +109,22 @@ div.thumb2 .mediabox2 {
   background-color: __border__;
 }
 
+/* fieldset */
+
+.dokuwiki fieldset {
+  width: 42rem;
+  max-width: 100%;
+}
+
+.dokuwiki label.block {
+  text-align: center;
+}
+
+.dokuwiki label.block select, 
+.dokuwiki label.block input.edit {
+  border-bottom: 1px solid black;
+}
+
 /* code */
 
 /* fix if background-color hides underlining */
