@@ -64,7 +64,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
         </aside>
       <?php endif; ?>
 
-      <main class="dw h--full w--full w--two-thirds__bg pd-b--2 pd-b--3__md pd-h--2 pd-h--3__bg of-scroll">
+      <main class="dw h--full w--full w--two-thirds__bg pd-b--2 pd-b--3__md pd-h--2 pd-h--3__bg of-scroll xdl">
         <div class="ta-c pd-t--1 pd-b--2">
           <?php if ($_REQUEST['do'] == 'search' OR $_REQUEST['do'] == 'admin'): ?>
             <a href="/">Home</a> ———
@@ -106,8 +106,8 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
           $newPad = $instance->createPad($padID);
         }
       ?>
-      <div class="pad-wrap flex__md flex-jsb__md h--full__md">
-        <iframe src="http://localhost:9001/p/<?php echo $padID ?>" class="pad d-n bd-a--0 mh--half xdl"></iframe>
+      <div class="pad-wrap flex__md flex-jsb__md h--full__md xdl">
+        <iframe src="http://localhost:9001/p/<?php echo $padID ?>" class="pad xdsd bd-a--0"></iframe>
         <button class="pad-button w--full w--auto__md h--full__md">✎</button>
       </div>
 

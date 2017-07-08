@@ -208,6 +208,10 @@ aside li:not(:last-child) {
   padding-bottom: 0.25rem;
 }
 
+.pd-b--1 {
+  padding-bottom: 0.5rem;
+}
+
 .pd-b--2 {
   padding-bottom: 1rem;
 }
@@ -313,5 +317,24 @@ aside li:not(:last-child) {
 /* transitions */
 
 .xdl {
-  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s cubic-bezier(.17,.67,.83,.67);
+  -moz-transition: all 0.1s cubic-bezier(.17,.67,.83,.67);
+  -o-transition: all 0.1s cubic-bezier(.17,.67,.83,.67);
+  transition: all 0.1s cubic-bezier(.17,.67,.83,.67);
+  -webkit-transition-property: width, height;
+  -moz-transition-property: width, height;
+  -o-transition-property: width, height;
+  transition-property: width, height;
+}
+
+.xdsd, .xdsu {
+  height: 0;
+  overflow-y: hidden;
+  -webkit-transition: height 0.15s ease-in-out;
+  -moz-transition: height 0.15s ease-in-out;
+  -o-transition: height 0.15s ease-in-out;
+  transition: height 0.15s ease-in-out;
+}
+.xdsu {
+  height: 50%;
 }
