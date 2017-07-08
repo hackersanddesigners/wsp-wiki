@@ -26,7 +26,7 @@ html {
   box-sizing: border-box;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 750px) {
   html {
     font-size: 27px;
   }
@@ -118,7 +118,7 @@ h2, h3, h4, h5, h6 {
   font-size: 27px;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 750px) {
   h1 {
     font-size: 46px;
   }
