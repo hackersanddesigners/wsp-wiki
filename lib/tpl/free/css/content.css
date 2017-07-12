@@ -64,7 +64,8 @@
 
 /* embedded images (styles are already partly set in dokuwiki's lib/styles/all.css) */
 
-.dokuwiki img.media {
+.dokuwiki img.media, 
+#dokuwiki__detail img {
   display: block;
   width: 100%;
   height: auto;
@@ -240,7 +241,6 @@ aside a {
 }
 
 .gallery-cell {
-  max-height: 45vh;
   display: block;
   max-width: 100%;
   height: auto;
