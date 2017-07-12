@@ -17,10 +17,11 @@
 }
 
 #dw__toc {
+  z-index: 3;
   float: none;
   width: 100%;
   max-height: 25vh;
-  overflow: scroll;
+  overflow: hidden;
   background-color: yellow;
   margin: 0 0 1rem 0;
   padding: 0.5rem;
@@ -29,6 +30,7 @@
 }
 
 #dw__toc > div {
+  overflow: scroll;
   max-height: 25vh;
   padding: 0;
 }
