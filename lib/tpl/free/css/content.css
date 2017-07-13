@@ -10,6 +10,10 @@
   text-decoration: underline;
 }
 
+a.breadcrumbs {
+  text-decoration: none;
+}
+
 /* toc */
 
 #dokuwiki__toc ul li:before {

@@ -2,6 +2,10 @@
    design
           */
 
+.ft-small {
+  font-size: 80%;
+}
+
 /* colours */
 
 .bgc-white {

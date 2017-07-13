@@ -882,7 +882,7 @@ function tpl_searchform($ajax = true, $autocomplete = true) {
  * @param string $sep Separator between entries
  * @return bool
  */
-function tpl_breadcrumbs($sep = '•') {
+function tpl_breadcrumbs($sep = '→') {
     global $lang;
     global $conf;
 
