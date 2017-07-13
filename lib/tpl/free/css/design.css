@@ -224,6 +224,10 @@ aside li:not(:last-child) {
   padding-bottom: 1rem;
 }
 
+.pd-b--4 {
+  padding-bottom: 4rem;
+}
+
 .pd-b--tf {
   padding-bottom: ~'60vh';
 }
