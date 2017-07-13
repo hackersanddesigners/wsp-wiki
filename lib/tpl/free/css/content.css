@@ -499,6 +499,34 @@ button.pad-button {
 
 /* admin */
 
+div.error, 
+div.info, 
+div.success, 
+div.notify {
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 4;
+  -moz-animation: fadeout 3s forwards;
+  -webkit-animation: fadeout 3s forwards;
+  -o-animation: fadeout 3s forwards;
+  animation: fadeout 3s forwards;
+}
+
+@keyframes fadeout {
+  0%   {opacity: 1;}
+  70%  {opacity: 1;}
+  100% {opacity: 0;}
+}
+@-webkit-keyframes fadeout {
+  0%   {opacity: 1;}
+  70%  {opacity: 1;}
+  100% {opacity: 0;}
+}
+
 #extension__manager {
   border: 1px solid black;
 }
