@@ -24,7 +24,7 @@ a.breadcrumbs {
   z-index: 3;
   float: none;
   width: 100%;
-  max-height: 25vh;
+  /* max-height: 25vh; */
   overflow: hidden;
   background-color: yellow;
   margin: 0 0 1rem 0;
@@ -35,20 +35,29 @@ a.breadcrumbs {
 
 #dw__toc > div {
   overflow: scroll;
-  max-height: 25vh;
   padding: 0;
 }
 
 @media (min-width: 900px) {
   #dw__toc {
     position: fixed;
-    width: 14rem;
-    max-height: 80vh;
+    width: 6rem;
+    /* max-height: 80vh; */
     padding-top: 9px;
+    bottom: 0;
     right: 36px;
   }
 
+  #dw__toc.open {
+    max-height: 80vh;
+  }
+
   #dw__toc > div {
+    height: 0;
+    /* max-height: 80vh; */
+  }
+
+  #dw__toc > div.open {
     max-height: 80vh;
   }
 }
