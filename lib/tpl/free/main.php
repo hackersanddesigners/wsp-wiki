@@ -69,7 +69,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
       <main class="dw h--full w--full<?php echo $admin > 0 ? ' w--two-thirds__bg' : '' ?> pd-b--4 pd-b--3__md pd-h--2 pd-h--3__bg of-scroll xdl">
         <div class="ft-small pd-t--1 pd-b--2">
           <?php if ($_REQUEST['do'] == 'search' OR $_REQUEST['do'] == 'admin'): ?>
-            <a href="/">Home</a> ———
+            ← <a href="/">Home</a> ——
           <?php endif; ?>
           <?php tpl_breadcrumbs() ?>
         </div>
