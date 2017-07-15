@@ -24,17 +24,14 @@ a.breadcrumbs {
   z-index: 3;
   float: none;
   width: 100%;
-  /* max-height: 25vh; */
-  overflow: hidden;
   background-color: yellow;
-  margin: 0 0 1rem 0;
+  margin: 0;
   padding: 0.5rem;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
 
 #dw__toc > div {
-  overflow: scroll;
   padding: 0;
 }
 
@@ -42,24 +39,64 @@ a.breadcrumbs {
   #dw__toc {
     position: fixed;
     width: 6rem;
-    /* max-height: 80vh; */
+    max-height: 80vh;
     padding-top: 9px;
-    bottom: 0;
+    bottom: 1rem;
     right: 36px;
   }
 
+  #dw__toc.closed,
   #dw__toc.open {
-    max-height: 80vh;
+    overflow-y: hidden;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    -webkit-transition-property: width, height;
+    -moz-transition-property: width, height;
+    -o-transition-property: width, height;
+    transition-property: width, height;
+  }
+
+  #dw__toc.open {
+    width: 14rem;
+    height: 80vh;
+  }
+
+  #dw__toc h3.open {
+    position: fixed;
+    bottom: 0;
+    min-height: 85px;
+    background-color: yellow;
+    width: 13.2rem;
   }
 
   #dw__toc > div {
+    position: absolute;
+    bottom: 2rem;
+    padding-top: 2.4rem;
+  }
+
+  #dw__toc > div.closed,
+  #dw__toc > div.open {
     height: 0;
-    /* max-height: 80vh; */
+    overflow-y: hidden;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    -webkit-transition-property: width, height;
+    -moz-transition-property: width, height;
+    -o-transition-property: width, height;
+    transition-property: width, height;
   }
 
   #dw__toc > div.open {
-    max-height: 80vh;
+    width: 14rem;
+    height: 80vh;
+    overflow-y: scroll;
   }
+
 }
 
 .dokuwiki h3.toggle {
