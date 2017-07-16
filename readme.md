@@ -1,4 +1,4 @@
-F.R.E.E.
+wsp.wiki
 ========
 
 Wiki running on DokuWiki and enhanced by adding a new Etherpad's pad to each new article.
