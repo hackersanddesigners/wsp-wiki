@@ -9,6 +9,13 @@ Commissioned by [Workshop Project](http://www.workshopproject.org) for [FREE, A 
 
 * [DokuWiki](https://github.com/splitbrain/dokuwiki)
 * [Etherpad Lite](https://github.com/ether/etherpad-lite) + [php client](https://github.com/tomnomnom/etherpad-lite-client)
+* [PDF.js](https://www.dokuwiki.org/plugin:pdfjs?s%5B%5D=pdf&s%5B%5D=embed)
+* [Gallery](https://www.dokuwiki.org/plugin:gallery)
+* [iframe](https://www.dokuwiki.org/plugin:iframe)
+* [imagebox](https://www.dokuwiki.org/plugin:imagebox)
+* [move](https://www.dokuwiki.org/plugin:move)
+* [smtp](https://www.dokuwiki.org/plugin:smtp)
+* [wrap](https://www.dokuwiki.org/plugin:wrap)
 
 * * *
 
