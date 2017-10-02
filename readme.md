@@ -143,11 +143,11 @@ for youtube, click on embed, then copy only the url after `src=`, eg
 
 	Since we need a namespace to create a gallery, I suggest to choose a name for the above namespace that makes semantically sense, or that is a clear reminder to the image gallery you want to create, etc.
 	
-/Screen Shot 2017-07-08 at 17.46.02.png
+![](https://github.com/afincato/wsp-wiki/blob/master/dw-upload-01.png)
 
 - Once you have uploaded the first file, the prepended namespace will be visible on the tree menu in the Media File column (eg, playground, test, etc)
 
-/Screen Shot 2017-07-08 at 17.49.47.png
+![](https://github.com/afincato/wsp-wiki/blob/master/dw-upload-02.png)
 
 - Now click on the newly created namespace, then drag and drop all the rest of pictures you want to upload. check if they are all correctly uploaded inside that namespace/folder
 - Close the File Manager window and create the image gallery like this
