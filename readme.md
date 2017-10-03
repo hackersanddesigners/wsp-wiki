@@ -24,7 +24,7 @@ DokuWiki plugins:
 
 ## Installation
 
-Note: the wiki runs on a digital ocean server, and I extensively followed the documentation present on the digital ocean website to set things up. For the most part though, it’s a matter of working on a unix environment with Ubuntu (in this case, but swappable with some other distros if you want).
+Note: the wiki runs on a digital ocean server, and I extensively followed the documentation present on the digital ocean website to set things up. For the most part though, it’s a matter of working on a unix environment with Ubuntu (in this case, but interchangeable with some other distros if you want).
 
 The setup consists of Ubuntu 16.04.2 LTS and nginx (as it seems to work better with `node.js`).  [Let's Encrypt](https://letsencrypt.org) for the SSL certificate.
 
