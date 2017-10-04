@@ -40,7 +40,7 @@ In that case, jump to `2.` Otherwise:
 4. run `composer install` from the same directory where `composer.json` sits, and wait for all packages to be downloaded and installed
 5. replace `template.php` with custom version that you find in `/inc` ([ref](https://github.com/afincato/wsp-wiki/blob/master/inc/template.php))
 6. replace `lang.php` with custom version in `/inc/lang/en` ([ref](https://github.com/afincato/wsp-wiki/blob/master/inc/lang/en/lang.php)) (some labels are different, for example: Old Revisions → History, etc — change them as you need)
-7. replace `page.js` with custom version in `/lib/scripts` (the TOC button works differently) ([ref])
+7. replace `page.js` with custom version in `/lib/scripts` (the TOC button works differently) ([ref](https://github.com/hackersanddesigners/wsp-wiki/blob/master/lib/scripts/page.js))
 8. for nice urls, first set some options in the panel config and update the `.htaccess` file in `/wiki` accordingly ([see this](https://www.dokuwiki.org/rewrite), and double check [this section](https://www.dokuwiki.org/rewrite#further_details_for_the_technically_savvy)), then [update nginx config file](https://www.nginx.com/resources/wiki/start/topics/recipes/dokuwiki/)
 
 TODO: figure how to keep customised copies of the files in 5., 6. and 7. so when dokuwiki has to be upgraded there's not need to manually replace them (DW lets you make local copies of config files, but it seems to be a bit harder when you need to manipulate core files).
