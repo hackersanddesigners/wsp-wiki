@@ -383,6 +383,7 @@ function html_search(){
     $data = ft_pageLookup($QUERY,true,useHeading('navigation'));
     if(count($data)){
         print '<div class="search_quickresult">';
+        print '<h3>'.$lang['quickhits'].':</h3>';
         print '<ul class="search_quickhits">';
         foreach($data as $id => $title){
             print '<li> ';
@@ -400,6 +401,8 @@ function html_search(){
             print '</li> ';
         }
         print '</ul> ';
+        //clear float (see http://www.complexspiral.com/publications/containing-floats/)
+        print '<div class="clearer"></div>';
         print '</div>';
     }
     flush();
@@ -408,7 +411,6 @@ function html_search(){
     $data = ft_pageSearch($QUERY,$regex);
     if(count($data)){
         print '<dl class="search_results">';
-        print '<h2>'.$lang['alsofound'].'</h2>';
         $num = 1;
         foreach($data as $id => $cnt){
             print '<dt>';
@@ -426,6 +428,8 @@ function html_search(){
             flush();
         }
         print '</dl>';
+    }else{
+        print '<div class="nothing">'.$lang['nothingfound'].'</div>';
     }
 
     //hide progressbar

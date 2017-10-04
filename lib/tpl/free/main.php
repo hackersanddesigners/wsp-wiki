@@ -97,7 +97,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
 
       <?php
         require 'vendor/autoload.php';
-        $instance = new EtherpadLite\Client('', $baseUrl);
+        $instance = new EtherpadLite\Client('2e30bec97cdce21ea0f9f4e4c6b38755d7139b8adb9258981192b785a69ca684', $baseUrl);
 				$page = str_replace(':', '.', $INFO['id']);
         $padID = $page . '-' . $INFO['meta']['date']['created'];
         
