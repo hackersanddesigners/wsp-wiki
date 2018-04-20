@@ -1,5 +1,6 @@
 {
     "require": {
-        "tomnomnom/etherpad-lite-client": "^0.1.2"
+        "tomnomnom/etherpad-lite-client": "^0.1.2",
+        "phpseclib/phpseclib": "~2.0"
     }
 }
