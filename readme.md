@@ -50,7 +50,13 @@ TODO: figure how to keep customised copies of the files in 5., 6. and 7. so when
 We need to install `node.js` to be able to run etherpad (which is why we opted to setup a linux server from scratch).
 
 * [install node.js with nvm](http://blog.pagepro.co/2017/01/25/setting-up-node-js-application-on-digital-ocean-droplet/) (in case you need to install Ubuntu software to build the nvm package, do `sudo apt-get update` and then `sudo apt-get install build-essential libssl-dev`) ([ref](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04))
-* [set pad to be accessible from subdirectory](https://github.com/ether/etherpad-lite/wiki/How-to-put-Etherpad-Lite-behind-a-reverse-Proxy#from-subdirectory-url)
+* install [etherpad-lite](https://github.com/ether/etherpad-lite)
+* switch to `etherpad` user, `sudo - etherpad` (if it does not exist, make one)
+* make new subdomain, `pad.workshopproject.wiki`
+* set reading access to let’s encrypt certificates for `etherhpad` user and `eth` group (make new group): `sudo chgrp -h group folder / file` + `sudo chgown -h user folder / file` from `/etc/` all the way down to the `live` folder and also the `/archive` folder inside `/letsencrypt`
+* set ssl paths to etherpad’s `settings.json`
+* [set pad to be accessible from sub domain](https://github.com/ether/etherpad-lite/wiki/How-to-put-Etherpad-Lite-behind-a-reverse-Proxy#https-only) (change `proxy pass` under location/ to `https` instead of `http`)
+* use subdomain url when calling the iframe from the wiki’s `main.php` file
 * [set iframed etherpad to be accessible from the same server](https://www.digitalocean.com/community/questions/blocking-iframe-because-it-set-x-frame-options-to-deny) ([ref](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options))
 
 ### start Etherpad Lite instance managed by pm2
@@ -61,13 +67,11 @@ We need to install `node.js` to be able to run etherpad (which is why we opted t
 * to start the etherpad, from your root server folder do:
 
 ```
-cd /opt/etherpad-lite
+cd /var/www/pad
 pm2 start bin/run.sh --name='Etherpad-Lite'
 ```
 
 This will start the Etherpad server. You can check it is correctly running by doing `pm2 list`: you will see a table with  Etherpad-Lite and the status `online`.
-
-## Etherpad
 
 If you are working locally, you can simply do 
 
@@ -77,7 +81,7 @@ etherpad-lite/bin/run.sh
 
 to start the Etherpad. Of course you can install `pm2` as well and use it on your local environment.
 
-### API
+## Etherpad API
 
 This is handy table to show some of the options you can use to interact with Etherpad, in case you want to extend and or add other functionalities to it. 
 
