@@ -55,7 +55,7 @@ We need to install `node.js` to be able to run etherpad (which is why we opted t
 * make new subdomain, `pad.workshopproject.wiki`
 * set reading access to let’s encrypt certificates for `etherhpad` user and `eth` group (make new group): `sudo chgrp -h group folder / file` + `sudo chgown -h user folder / file` from `/etc/` all the way down to the `live` folder and also the `/archive` folder inside `/letsencrypt`
 * set ssl paths to etherpad’s `settings.json`
-* [set pad to be accessible from sub domain](https://github.com/ether/etherpad-lite/wiki/How-to-put-Etherpad-Lite-behind-a-reverse-Proxy#https-only) (change `proxy pass` under location/ to `https` instead of `http`)
+* [set pad to be accessible from sub domain](https://github.com/ether/etherpad-lite/wiki/How-to-put-Etherpad-Lite-behind-a-reverse-Proxy#https-only) (change `proxy pass` under `location/` from `http` to `http`)
 * use subdomain url when calling the iframe from the wiki’s `main.php` file
 * [set iframed etherpad to be accessible from the same server](https://www.digitalocean.com/community/questions/blocking-iframe-because-it-set-x-frame-options-to-deny) ([ref](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options))
 
