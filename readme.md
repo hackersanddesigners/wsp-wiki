@@ -45,6 +45,8 @@ In that case, jump to `2.` Otherwise:
 
 TODO: figure how to keep customised copies of the files in 5., 6. and 7. so when dokuwiki has to be upgraded there's not need to manually replace them (DW lets you make local copies of config files, but it seems to be a bit harder when you need to manipulate core files).
 
+UPDATE: apparently no way to make a local copy of core files (clearly). Need to use `diff` when update the wiki software.
+
 ### Install Etherpad
 
 We need to install `node.js` to be able to run etherpad (which is why we opted to setup a linux server from scratch).
@@ -72,6 +74,12 @@ pm2 start bin/run.sh --name='Etherpad-Lite'
 ```
 
 This will start the Etherpad server. You can check it is correctly running by doing `pm2 list`: you will see a table with  Etherpad-Lite and the status `online`.
+
+You’ll get a new `APIKEY.txt` in the same folder, copy that text on line 100 of `main.php` (inside `lib/tpl/free/`):
+
+```
+$instance = new EtherpadLite\Client('APIKEY', $baseUrl);
+````
 
 If you are working locally, you can simply do 
 
