@@ -53,7 +53,7 @@ We need to install `node.js` to be able to run etherpad (which is why we opted t
 
 * [install node.js with nvm](http://blog.pagepro.co/2017/01/25/setting-up-node-js-application-on-digital-ocean-droplet/) (in case you need to install Ubuntu software to build the nvm package, do `sudo apt-get update` and then `sudo apt-get install build-essential libssl-dev`) ([ref](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04))
 * install [etherpad-lite](https://github.com/ether/etherpad-lite)
-* switch to `etherpad` user, `sudo - etherpad` (if it does not exist, make one)
+* switch to `etherpad` user, `su - etherpad` (if it does not exist, make one)
 * make new subdomain, `pad.workshopproject.wiki`
 * set reading access to let’s encrypt certificates for `etherhpad` user and `eth` group (make new group): `sudo chgrp -h group folder / file` + `sudo chgown -h user folder / file` from `/etc/` all the way down to the `live` folder and also the `/archive` folder inside `/letsencrypt`
 * set ssl paths to etherpad’s `settings.json`
