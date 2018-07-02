@@ -13,11 +13,23 @@
 }
 
 .bgc-blue {
-  background-color: blue;
+  background-color: #52cbe8;
 }
 
-.bgc-red {
-  background-color: red;
+.bgc-green {
+  background-color: #24d8c0;
+}
+
+.bgc-pink {
+  background-color: #f4dfff;
+}
+
+.bgc-yellow {
+  background-color: #fbf296;
+}
+
+.bg-gr-bluegreen {
+  background-image: linear-gradient(to right, #52cbe8, #24d8c0);
 }
 
 /* borders */

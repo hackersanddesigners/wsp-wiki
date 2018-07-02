@@ -60,13 +60,13 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
 
    <div class="dokuwiki wrapper flex flex-cl flex-row__md flex-jsb">
       <?php if ($showSidebar): ?>
-        <aside class="w--full w--third__md pd-t--1 pd-b--1 pd-t--2__md pd-h--1 bgc-red xdl">
+        <aside class="w--full w--third__md pd-t--1 pd-b--1 pd-t--2__md pd-h--1 bgc-blue xdl">
           <?php tpl_include_page($conf['sidebar'], 1, 1) /* includes the nearest sidebar page */ ?>
         </aside>
       <?php endif; ?>
 
       <?php $admin = $_REQUEST['do'] != 'admin' ?>
-      <main class="dw h--full w--full<?php echo $admin > 0 ? ' w--two-thirds__bg' : '' ?> pd-b--4 pd-b--3__md pd-h--2 pd-h--3__bg of-scroll xdl">
+      <main class="dw h--full w--full<?php echo $admin > 0 ? ' w--two-thirds__bg' : '' ?> pd-b--4 pd-b--3__md pd-h--2 pd-h--3__bg of-scroll bg-gr-bluegreen xdl">
         <div class="ft-small pd-t--1 pd-b--2">
           <?php if ($_REQUEST['do'] == 'search' OR $_REQUEST['do'] == 'admin'): ?>
             ← <a href="/">Home</a> ——

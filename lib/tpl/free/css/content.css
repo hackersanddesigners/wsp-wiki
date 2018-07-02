@@ -24,7 +24,7 @@ a.breadcrumbs {
   z-index: 3;
   float: none;
   width: 100%;
-  background-color: yellow;
+  background-color: #fbf296;
   margin: 0;
   padding: 0.5rem;
   border-top: 1px solid black;
@@ -67,7 +67,7 @@ a.breadcrumbs {
     position: fixed;
     bottom: 0;
     min-height: 85px;
-    background-color: yellow;
+    background-color: #fbf296;
     width: 13.2rem;
   }
 
@@ -521,8 +521,7 @@ button.toolbutton:not(:last-child) {
 
 button.pad-button {
   border: none;
-  background-color: blue;
-  color: white;
+  background-color: #fbf296;
 }
 
 #size__ctl {
