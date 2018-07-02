@@ -11,6 +11,7 @@ vendor
 # etherpad
 !etherpad-lite/
 etherpad-lite/*
+etherpad-lite/settings.json.template
 !etherpad-lite/src/
 etherpad-lite/src/*
 !etherpad-lite/src/static/
