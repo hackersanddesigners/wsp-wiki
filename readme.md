@@ -1,6 +1,3 @@
-wsp.wiki
-========
-
 # wsp.wiki
 
 Mish-mash of heavily customised [DokuWiki](https://www.dokuwiki.org/dokuwiki#) with a dedicated [Etherpad](http://etherpad.org) running for each new wiki article.
