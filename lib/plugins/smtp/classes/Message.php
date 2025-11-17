@@ -73,19 +73,19 @@ class Message extends \Tx\Mailer\Message {
      */
     public function toString() {
         // we need to remove the BCC header here
-        $lines = explode("\n", $this->body);
+        $lines = preg_split('/\r?\n/', $this->body);
         $count = count($lines);
         for($i=0; $i<$count; $i++) {
             if(trim($lines[$i]) === '') break; // end of headers, we're done
             if(substr($lines[$i],0, 4) == 'Bcc:') {
                 unset($lines[$i]); // we found the Bcc: header and remove it
                 while(substr($lines[++$i],0, 1) === ' ') {
-                    unset($lines[$i]); // indented lines are header continuiation
+                    unset($lines[$i]); // indented lines are header continuation
                 }
                 break; // header removed, we're done
             }
         }
-        $body = join("\n", $lines);
+        $body = join($this->CRLF, $lines);
 
         return $body . $this->CRLF . $this->CRLF . "." . $this->CRLF;
     }
