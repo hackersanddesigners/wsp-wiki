@@ -28,6 +28,10 @@
   background-color: #fbf296;
 }
 
+.bgc-red {
+  background-color: #ff3333;
+}
+
 .bg-gr-bluegreen {
   background-image: linear-gradient(to right, #52cbe8, #24d8c0);
 }

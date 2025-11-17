@@ -33,7 +33,7 @@ html {
 }
 
 body {
-  background-image: linear-gradient(to right, #52cbe8, #24d8c0);
+  background-color: #ff3333;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
 }
