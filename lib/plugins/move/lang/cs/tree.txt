@@ -1,3 +1,0 @@
-====== Move Manager =====
-
-Tento interface umožňuje přeorganizovat vaše wiki namespace, stránky a média pomocí Drag'n'Drop.

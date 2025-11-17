@@ -21,7 +21,7 @@ class plugin_move_pagemove_test  extends DokuWikiTest {
     // @todo Move page to an ID which already exists
     // @todo Check backlinks of a sub-namespace page (moving same, up, down, different)
 
-    function setUp() {
+    function setUp(): void {
         parent::setUpBeforeClass();
         $this->pluginsEnabled[] = 'move';
         global $ID;
@@ -431,12 +431,13 @@ EOT;
 [[.current_ns:|..:current_ns:]]
 [[.parallel_ns:|..parallel_ns:]]
 [[.parallel_ns:|..:parallel_ns:]]
-[[:|..:..:]]
+[[..:..:|..:..:]]
 [[..:..:parent_ns:|..:..:parent_ns:]]
 [[parent_ns:new_page|parent_ns:new_page]]
 [[parent_ns/new_page|parent_ns/new_page]]
 [[/start|/start]]
 EOT;
+        // Note: ..:..: is not a great link for a page in a namespace 'parent_ns', but it is correctly resolved.
 	    $this->assertEquals($expectedContent, $newContent);
 
 	    // page is moved to same NS as backlinking page (parent_ns)

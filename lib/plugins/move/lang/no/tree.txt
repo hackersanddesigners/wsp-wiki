@@ -1,3 +1,0 @@
-====== Move Manager =====
-
-Denne dialogen tillater deg å flytte din wikis navnerom, sider og mediafiler ved hjelp av «dra og slipp».

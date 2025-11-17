@@ -1,4 +1,0 @@
-====== Upravitelj premještanja =====
-
-Ovo sučelje omogućava reorganizaciju wiki imenskih prostora, stranica i medijskih datoteka korištenjem Povuci-i-Spusti radnje.
- 
