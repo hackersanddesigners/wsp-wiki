@@ -25,8 +25,9 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
 </head>
 
 <body>
-<div id="dokuwiki__site">
- <?php $usr_l = $INFO['userinfo'] ?>
+    <div id="dokuwiki__site">
+	<?php if (isset($INFO['userinfo'])): ?>
+	    <?php $usr_l = $INFO['userinfo'] ?>
  <div class="flex flex-cl site <?php echo tpl_classes(); ?><?php echo ($showSidebar) ? 'hasSidebar' : ''; ?>">
    <nav class="pos-fx pos-t pos-r pos-l z-2 flex<?php echo $usr_l > 0 ? ' flex-cl flex-row__bg' : ' flex-row' ?> flex-jsb flex-aib pd-v--05 pd-h--1 bgc-white">
       <?php html_msgarea() ?>
@@ -35,7 +36,6 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
         <?php tpl_searchform() ?>
       </div>
 
-      <?php if ($INFO['userinfo'] != ''): ?>
         <ul class="usertools">
           <?php if ($showTools): ?>
           <?php tpl_toolsevent('pagetools', array(
@@ -60,40 +60,45 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
 
    <div class="dokuwiki wrapper flex flex-cl flex-row__md flex-jsb">
       <?php if ($showSidebar): ?>
-        <aside class="w--full w--third__md pd-t--1 pd-b--1 pd-t--2__md pd-h--1 bgc-blue xdl">
-          <?php tpl_include_page($conf['sidebar'], 1, 1) /* includes the nearest sidebar page */ ?>
-        </aside>
+          <aside class="w--full w--third__md pd-t--1 pd-b--1 pd-t--2__md pd-h--1 bgc-blue xdl">
+              <?php tpl_include_page($conf['sidebar'], 1, 1) /* includes the nearest sidebar page */ ?>
+          </aside>
       <?php endif; ?>
 
-      <?php $admin = $_REQUEST['do'] != 'admin' ?>
+      <?php $admin = isset($_REQUEST['do']) AND $_REQUEST['do'] != 'admin' ?>
       <main class="dw h--full w--full<?php echo $admin > 0 ? ' w--two-thirds__bg' : '' ?> pd-b--4 pd-b--3__md pd-h--2 pd-h--3__bg of-scroll bg-gr-bluegreen xdl">
-        <div class="ft-small pd-t--1 pd-b--2">
-          <?php if ($_REQUEST['do'] == 'search' OR $_REQUEST['do'] == 'admin'): ?>
-            ← <a href="/">Home</a> ——
-          <?php endif; ?>
-          <?php tpl_breadcrumbs() ?>
-        </div>
-        <?php tpl_flush() ?>
-        <?php tpl_content() ?>
-        <?php tpl_flush() ?>
+          <div class="ft-small pd-t--1 pd-b--2">
+              <?php if (isset($_REQUEST['do'])): ?>
+		  <?php if ($_REQUEST['do'] == 'search' OR $_REQUEST['do'] == 'admin'): ?>
+		      ← <a href="/">Home</a> ——
+		  <?php endif; ?>
+	      <?php endif; ?>
+              <?php tpl_breadcrumbs() ?>
+          </div>
+          <?php tpl_flush() ?>
+          <?php tpl_content() ?>
+          <?php tpl_flush() ?>
       </main>
 
-    <?php
+      <?php
       // check if
       // user is logged in
-      if ($INFO['userinfo'] != ''
-      // page exists
-      AND $INFO['exists']
-      // page is not in 'edit' mode
-      AND $_REQUEST['do'] != 'edit'
-      // page is not in 'admin' mode
-      AND $_REQUEST['do'] != 'admin'
-      // page is not in 'search' mode
-      AND $_REQUEST['do'] != 'search'
-      // page is not in 'media&image' mode
-      AND $_REQUEST['do'] != 'media&image'
-      ):
-    ?>
+
+      if (
+	  isset($INFO['userinfo'])
+	  AND isset($INFO['do'])
+	      // page exists
+	      AND $INFO['exists']
+	      // page is not in 'edit' mode
+	      AND $_REQUEST['do'] != 'edit'
+	      // page is not in 'admin' mode
+	      AND $_REQUEST['do'] != 'admin'
+	      // page is not in 'search' mode
+	      AND $_REQUEST['do'] != 'search'
+	      // page is not in 'media&image' mode
+	      AND $_REQUEST['do'] != 'media&image'
+	  ):
+      ?>
 
       <?php
         require 'vendor/autoload.php';
