@@ -5,13 +5,23 @@
  *
  * @author Carbain Frédéric <fcarbain@yahoo.fr>
  * @author Nicolas Friedli <nicolas@theologique.ch>
+<<<<<<< HEAD
+=======
+ * @author Schplurtz le Déboulonné <Schplurtz@laposte.net>
+>>>>>>> stable
  */
 $lang['menu']                  = 'Paramètres de style du thème (template)';
 $lang['js']['loader']          = 'La prévisualisation est en chargement... <br />Si rien ne se passe, les données sont peut-être erronées';
 $lang['js']['popup']           = 'Ouvrir dans une nouvelle fenêtre';
+<<<<<<< HEAD
 $lang['error']                 = 'Désolé, ce thème ne supporte pas cette fonctionnalité.';
 $lang['btn_preview']           = 'Aperçu des changements';
 $lang['btn_save']              = 'sauvegarder les changements.';
+=======
+$lang['error']                 = 'Désolé, ce thème n\'utilise pas cette fonctionnalité.';
+$lang['btn_preview']           = 'Aperçu des changements';
+$lang['btn_save']              = 'Sauvegarder les changements.';
+>>>>>>> stable
 $lang['btn_reset']             = 'Remettre les changements courants à zéro';
 $lang['btn_revert']            = 'Remettre les styles du thème aux valeurs par défaut';
 $lang['__text__']              = 'Couleur de texte principale';

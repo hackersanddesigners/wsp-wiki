@@ -3,6 +3,10 @@
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
  *
+<<<<<<< HEAD
+=======
+ * @author Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>
+>>>>>>> stable
  * @author Robert Bogenschneider <bogi@uea.org>
  */
 $lang['menu']                  = 'Aldonaĵa administrado';
@@ -25,6 +29,10 @@ $lang['btn_disable']           = 'Malebligi';
 $lang['btn_install']           = 'Instali';
 $lang['btn_reinstall']         = 'Re-instali';
 $lang['js']['reallydel']       = 'Ĉu vere malinstali la aldonaĵon?';
+<<<<<<< HEAD
+=======
+$lang['js']['display_updatable'] = 'ĝisdatigebla';
+>>>>>>> stable
 $lang['search_for']            = 'Serĉi la aldonaĵon:';
 $lang['search']                = 'Serĉi';
 $lang['extensionby']           = '<strong>%s</strong> fare de %s';
@@ -67,12 +75,20 @@ $lang['msg_template_update_success'] = 'Ŝablono %s sukcese aktualiĝis';
 $lang['msg_plugin_install_success'] = 'Kromaĵo %s sukcese instaliĝis';
 $lang['msg_plugin_update_success'] = 'Kromaĵo %s sukcese aktualiĝis';
 $lang['msg_upload_failed']     = 'Ne eblis alŝuti la dosieron';
+<<<<<<< HEAD
 $lang['missing_dependency']    = '<strong>Mankanta aŭ malebligita dependeco:</strong> %s';
 $lang['security_issue']        = '<strong>Sekureca problemo:</strong> %s';
 $lang['security_warning']      = '<strong>Sekureca averto:</strong> %s';
 $lang['update_available']      = '<strong>Aktualigo:</strong> Nova versio %s haveblas.';
 $lang['wrong_folder']          = '<strong>Kromaĵo instalita malĝuste:</strong> Renomu la kromaĵdosierujon "%s" al "%s".';
 $lang['url_change']            = '<strong>URL ŝanĝita:</strong> La elŝuta URL ŝanĝiĝis ekde la lasta elŝuto. Kontrolu, ĉu la nova URL validas antaŭ aktualigi aldonaĵon.<br />Nova: %s<br />Malnova: %s';
+=======
+$lang['missing_dependency']    = 'Mankanta aŭ malebligita dependeco: %s';
+$lang['security_issue']        = 'Sekureca problemo: %s';
+$lang['security_warning']      = 'Sekureca averto: %s';
+$lang['wrong_folder']          = 'Kromaĵo instalita malĝuste: Renomu la kromaĵdosierujon "%s" al "%s".';
+$lang['url_change']            = "URL ŝanĝita: La elŝuta URL ŝanĝiĝis ekde la lasta elŝuto. Kontrolu, ĉu la nova URL validas antaŭ aktualigi aldonaĵon.\nNova: %s\nMalnova: %s";
+>>>>>>> stable
 $lang['error_badurl']          = 'URLoj komenciĝu per http aŭ https';
 $lang['error_dircreate']       = 'Ne eblis krei portempan dosierujon por akcepti la elŝuton';
 $lang['error_download']        = 'Ne eblis elŝuti la dosieron: %s';

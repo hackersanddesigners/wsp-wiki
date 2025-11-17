@@ -2,7 +2,11 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
+=======
+ *
+>>>>>>> stable
  * @author Otto Vainio <otto@valjakko.net>
  */
 $lang['starttls']              = 'Käytä TLS yhteyttä';

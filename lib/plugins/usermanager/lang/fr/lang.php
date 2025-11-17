@@ -6,16 +6,24 @@
  * @author Guy Brand <gb@unistra.fr>
  * @author Delassaux Julien <julien@delassaux.fr>
  * @author Maurice A. LeBlanc <leblancma@cooptel.qc.ca>
+<<<<<<< HEAD
  * @author stephane.gully@gmail.com
+=======
+ * @author stephane.gully <stephane.gully@gmail.com>
+>>>>>>> stable
  * @author Guillaume Turri <guillaume.turri@gmail.com>
  * @author Erik Pedersen <erik.pedersen@shaw.ca>
  * @author olivier duperray <duperray.olivier@laposte.net>
  * @author Vincent Feltz <psycho@feltzv.fr>
  * @author Philippe Bajoit <philippe.bajoit@gmail.com>
  * @author Florian Gaub <floriang@floriang.net>
+<<<<<<< HEAD
  * @author Samuel Dorsaz samuel.dorsaz@novelion.net
  * @author Johan Guilbaud <guilbaud.johan@gmail.com>
  * @author skimpax@gmail.com
+=======
+ * @author Johan Guilbaud <guilbaud.johan@gmail.com>
+>>>>>>> stable
  * @author Yannick Aure <yannick.aure@gmail.com>
  * @author Olivier DUVAL <zorky00@gmail.com>
  * @author Anael Mobilia <contrib@anael.eu>
@@ -28,7 +36,11 @@
  */
 $lang['menu']                  = 'Gestion des utilisateurs';
 $lang['noauth']                = '(authentification de l\'utilisateur non disponible)';
+<<<<<<< HEAD
 $lang['nosupport']             = '(gestion de l\'utilisateur non supportée)';
+=======
+$lang['nosupport']             = '(gestion de l\'utilisateur non pris en charge)';
+>>>>>>> stable
 $lang['badauth']               = 'mécanisme d\'authentification invalide';
 $lang['user_id']               = 'Identifiant ';
 $lang['user_pass']             = 'Mot de passe ';

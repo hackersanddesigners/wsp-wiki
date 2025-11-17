@@ -5,15 +5,22 @@
  *
  * @author ZDYX <zhangduyixiong@gmail.com>
  * @author http://www.chinese-tools.com/tools/converter-tradsimp.html
+<<<<<<< HEAD
  * @author George Sheraton guxd@163.com
  * @author Simon zhan <simonzhan@21cn.com>
  * @author mr.jinyi@gmail.com
+=======
+ * @author Simon zhan <simonzhan@21cn.com>
+>>>>>>> stable
  * @author ben <ben@livetom.com>
  * @author lainme <lainme993@gmail.com>
  * @author caii <zhoucaiqi@gmail.com>
  * @author Hiphen Lee <jacob.b.leung@gmail.com>
+<<<<<<< HEAD
  * @author caii, patent agent in China <zhoucaiqi@gmail.com>
  * @author lainme993@gmail.com
+=======
+>>>>>>> stable
  * @author Shuo-Ting Jian <shoting@gmail.com>
  */
 $lang['admin_acl']             = '访问控制列表（ACL）管理器';
@@ -22,7 +29,11 @@ $lang['acl_user']              = '用户:';
 $lang['acl_perms']             = '许可给';
 $lang['page']                  = '页面';
 $lang['namespace']             = '命名空间';
+<<<<<<< HEAD
 $lang['btn_select']            = '選擇';
+=======
+$lang['btn_select']            = '选择';
+>>>>>>> stable
 $lang['p_user_id']             = '用户 <b class="acluser">%s</b> 当前在页面 <b class="aclpage">%s</b> 拥有以下权限：<i>%s</i>。';
 $lang['p_user_ns']             = '用户 <b class="acluser">%s</b> 当前在命名空间 <b class="aclns">%s</b> 拥有以下权限：<i>%s</i>。';
 $lang['p_group_id']            = '<b class="aclgroup">%s</b> 组成员当前在页面 <b class="aclpage">%s</b> 拥有以下权限：<i>%s</i>。';

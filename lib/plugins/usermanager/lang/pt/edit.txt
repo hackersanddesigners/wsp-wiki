@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ===== Editar Utilizador =====
+=======
+===== Editar Usuário =====
+>>>>>>> stable

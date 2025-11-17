@@ -2,7 +2,11 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
+=======
+ *
+>>>>>>> stable
  * @author Jussi Takala <jussi.takala@live.fi>
  */
 $lang['tab_plugins']           = 'Asennetut liitännäiset';

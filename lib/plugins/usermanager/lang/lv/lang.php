@@ -2,9 +2,14 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
  * @author Aivars Miška <allefm@gmail.lv>
  * @author Aivars Miška <allefm@gmail.com>
+=======
+ *
+ * @author Aivars Miška <allefm@gmail.lv>
+>>>>>>> stable
  */
 $lang['menu']                  = 'Lietotāju pārvaldnieks';
 $lang['noauth']                = '(lietotāju autentifikācijas nav)';

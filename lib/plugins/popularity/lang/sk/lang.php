@@ -4,7 +4,11 @@
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
  *
  * @author Michal Mesko <michal.mesko@gmail.com>
+<<<<<<< HEAD
  * @author exusik@gmail.com
+=======
+ * @author exusik <exusik@gmail.com>
+>>>>>>> stable
  * @author Martin Michalek <michalek.dev@gmail.com>
  */
 $lang['name']                  = 'Prieskum používania (môže chvíľu trvať)';

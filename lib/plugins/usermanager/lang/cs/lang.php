@@ -3,6 +3,7 @@
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
  *
+<<<<<<< HEAD
  * @author Tomas Valenta <t.valenta@sh.cvut.cz>
  * @author Zbynek Krivka <zbynek.krivka@seznam.cz>
  * @author Bohumir Zamecnik <bohumir@zamecnik.org>
@@ -14,6 +15,19 @@
  * @author Bohumir Zamecnik <bohumir.zamecnik@gmail.com>
  * @author Jakub A. Těšínský (j@kub.cz)
  * @author mkucera66@seznam.cz
+=======
+ * @author Martin Růžička <martinr@post.cz>
+ * @author Petr Kajzar <petr.kajzar@lf1.cuni.cz>
+ * @author Tomas Valenta <t.valenta@sh.cvut.cz>
+ * @author Zbynek Krivka <zbynek.krivka@seznam.cz>
+ * @author Bohumir Zamecnik <bohumir@zamecnik.org>
+ * @author tomas <tomas@valenta.cz>
+ * @author Marek Sacha <sachamar@fel.cvut.cz>
+ * @author Lefty <lefty@multihost.cz>
+ * @author Vojta Beran <xmamut@email.cz>
+ * @author Jakub A. Těšínský (j@kub.cz)
+ * @author mkucera66 <mkucera66@seznam.cz>
+>>>>>>> stable
  * @author Zbyněk Křivka <krivka@fit.vutbr.cz>
  * @author Jaroslav Lichtblau <jlichtblau@seznam.cz>
  * @author Daniel Slováček <danslo@danslo.cz>
@@ -45,7 +59,11 @@ $lang['import']                = 'Importovat nové uživatele';
 $lang['line']                  = 'Řádek č.';
 $lang['error']                 = 'Chybová zpráva';
 $lang['summary']               = 'Zobrazuji uživatele %1$d-%2$d z %3$d nalezených. Celkem %4$d uživatelů.';
+<<<<<<< HEAD
 $lang['nonefound']             = 'Žadný uživatel nenalezen. Celkem %d uživatelů.';
+=======
+$lang['nonefound']             = 'Žádný uživatel nebyl nalezen. Celkem %d uživatelů.';
+>>>>>>> stable
 $lang['delete_ok']             = '%d uživatelů smazáno';
 $lang['delete_fail']           = '%d uživatelů nelze smazat.';
 $lang['update_ok']             = 'Uživatel upraven';
@@ -76,6 +94,7 @@ $lang['import_error_upload']   = 'Import selhal. CSV soubor nemohl být nahrán 
 $lang['import_error_readfail'] = 'Import selhal. Nelze číst nahraný soubor.';
 $lang['import_error_create']   = 'Nelze vytvořit uživatele';
 $lang['import_notify_fail']    = 'Importovanému uživateli %s s e-mailem %s nemohlo být zasláno upozornění.';
+<<<<<<< HEAD
 $lang['import_downloadfailures'] = 'Stáhnout chyby pro nápravu jako CVS';
 $lang['addUser_error_missing_pass'] = 'Buď prosím nastavte heslo nebo aktivujte upozorňování uživatel aby fungovalo vytváření hesel.';
 $lang['addUser_error_pass_not_identical'] = 'Zadaná hesla nebyla shodná.';
@@ -84,4 +103,14 @@ $lang['addUser_error_name_missing'] = 'Zadejte prosím jméno nového uživatele
 $lang['addUser_error_modName_disabled'] = 'Změna jmen je momentálně zakázána.';
 $lang['addUser_error_mail_missing'] = 'Zadejte prosím emailovou adresu nového uživatele.';
 $lang['addUser_error_modMail_disabled'] = 'Změna emailové adresy je momentálně zákázána.';
+=======
+$lang['import_downloadfailures'] = 'Stáhnout chyby pro nápravu jako CSV';
+$lang['addUser_error_missing_pass'] = 'Buď prosím nastavte heslo nebo aktivujte upozorňování uživatel aby fungovalo vytváření hesel.';
+$lang['addUser_error_pass_not_identical'] = 'Zadaná hesla nebyla shodná.';
+$lang['addUser_error_modPass_disabled'] = 'Změna hesel je momentálně zakázána.';
+$lang['addUser_error_name_missing'] = 'Zadejte prosím jméno nového uživatele.';
+$lang['addUser_error_modName_disabled'] = 'Změna jmen je momentálně zakázána.';
+$lang['addUser_error_mail_missing'] = 'Zadejte prosím e-mailovou adresu nového uživatele.';
+$lang['addUser_error_modMail_disabled'] = 'Změna e-mailové adresy je momentálně zakázána.';
+>>>>>>> stable
 $lang['addUser_error_create_event_failed'] = 'Zásuvný modul zabránil přidání nového uživatele. Pro více informací si prohlédněte další možné zprávy.';

@@ -5,15 +5,22 @@
  *
  * @author ZDYX <zhangduyixiong@gmail.com>
  * @author http://www.chinese-tools.com/tools/converter-tradsimp.html
+<<<<<<< HEAD
  * @author George Sheraton guxd@163.com
  * @author Simon zhan <simonzhan@21cn.com>
  * @author mr.jinyi@gmail.com
+=======
+ * @author Simon zhan <simonzhan@21cn.com>
+>>>>>>> stable
  * @author ben <ben@livetom.com>
  * @author lainme <lainme993@gmail.com>
  * @author caii <zhoucaiqi@gmail.com>
  * @author Hiphen Lee <jacob.b.leung@gmail.com>
+<<<<<<< HEAD
  * @author caii, patent agent in China <zhoucaiqi@gmail.com>
  * @author lainme993@gmail.com
+=======
+>>>>>>> stable
  * @author Shuo-Ting Jian <shoting@gmail.com>
  * @author phy25 <git@phy25.com>
  */

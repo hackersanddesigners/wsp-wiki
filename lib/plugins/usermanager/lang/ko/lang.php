@@ -4,6 +4,7 @@
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
  *
  * @author jk Lee
+<<<<<<< HEAD
  * @author dongnak@gmail.com
  * @author Song Younghwan <purluno@gmail.com>
  * @author Seung-Chul Yoo <dryoo@live.com>
@@ -12,6 +13,15 @@
  * @author Gerrit Uitslag <klapinklapin@gmail.com>
  * @author Garam <rowain8@gmail.com>
  * @author Erial <erial2@gmail.com>
+=======
+ * @author dongnak <dongnak@gmail.com>
+ * @author Song Younghwan <purluno@gmail.com>
+ * @author Seung-Chul Yoo <dryoo@live.com>
+ * @author erial2 <erial2@gmail.com>
+ * @author Myeongjin <aranet100@gmail.com>
+ * @author Gerrit Uitslag <klapinklapin@gmail.com>
+ * @author Garam <rowain8@gmail.com>
+>>>>>>> stable
  */
 $lang['menu']                  = '사용자 관리자';
 $lang['noauth']                = '(사용자 인증을 사용할 수 없습니다)';

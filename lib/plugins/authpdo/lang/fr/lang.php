@@ -2,7 +2,11 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
+=======
+ *
+>>>>>>> stable
  * @author Pietroni <pietroni@informatique.univ-paris-diderot.fr>
  */
 $lang['connectfail']           = 'Impossible de se connecter à la base de données.';

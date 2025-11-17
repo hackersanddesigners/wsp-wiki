@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ===== Erabiltzailea ezabatu =====
+=======
+===== Ezabatu erabiltzailea =====
+>>>>>>> stable

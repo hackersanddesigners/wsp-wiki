@@ -3,6 +3,10 @@
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
  *
+<<<<<<< HEAD
+=======
+ * @author Tibor Repček <tiborepcek@gmail.com>
+>>>>>>> stable
  * @author Martin Michalek <michalek.dev@gmail.com>
  */
 $lang['server']                = 'LDAP server. Adresa (<code>localhost</code>) alebo úplné URL (<code>ldap://server.tld:389</code>)';
@@ -19,9 +23,21 @@ $lang['binddn']                = 'DN prípadného priradenia používateľa, ak 
 $lang['bindpw']                = 'Heslo vyššie uvedeného používateľa';
 $lang['userscope']             = 'Obmedzenie oblasti pri vyhľadávaní používateľa';
 $lang['groupscope']            = 'Obmedzenie oblasti pri vyhľadávaní skupiny';
+<<<<<<< HEAD
 $lang['groupkey']              = 'Príslušnost k skupine určená z daného atribútu používateľa (namiesto štandardnej AD skupiny) napr. skupiny podľa oddelenia alebo telefónneho čísla';
+=======
+$lang['userkey']               = 'Atribút označujúci meno používateľa, musí byt konzistentný s používateľským filtrom.';
+$lang['groupkey']              = 'Príslušnost k skupine určená z daného atribútu používateľa (namiesto štandardnej AD skupiny) napr. skupiny podľa oddelenia alebo telefónneho čísla';
+$lang['modPass']               = 'Môže byť LDAP heslo zmenené prostredníctvom dokuwiki?';
+>>>>>>> stable
 $lang['debug']                 = 'Zobraziť dodatočné ladiace informácie pri chybe';
 $lang['deref_o_0']             = 'LDAP_DEREF_NEVER';
 $lang['deref_o_1']             = 'LDAP_DEREF_SEARCHING';
 $lang['deref_o_2']             = 'LDAP_DEREF_FINDING';
 $lang['deref_o_3']             = 'LDAP_DEREF_ALWAYS';
+<<<<<<< HEAD
+=======
+$lang['referrals_o_-1']        = 'použiť prednastavené';
+$lang['referrals_o_0']         = 'nesleduj odkazovače';
+$lang['referrals_o_1']         = 'sleduj odkazovače';
+>>>>>>> stable

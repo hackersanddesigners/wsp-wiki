@@ -1,0 +1,60 @@
+====== DokuWiki Test Suite and Develpoment Tools ======
+
+This directory contains the test suite for DokuWiki as well as configuration for various code quality tools.
+
+===== Setup =====
+
+Before you can use any of the tools you need to install the dependencies. This is done using composer.
+
+  composer install
+
+If you don't have composer installed yet, you can get it from https://getcomposer.org/
+
+===== Composer Scripts =====
+
+The composer configuration contains a number of scripts to run the various tools on all of DokuWiki.
+
+Run all the tests:
+
+  composer run test
+
+Check for code style violations:
+
+  composer run check
+
+Automatically fix code style violations:
+
+  composer run autofix
+
+===== Tools =====
+
+All the tools can be called directly from the ''vendor/bin'' directory.
+
+==== PHPUnit ====
+
+  ./vendor/bin/phpunit --verbose --stderr
+
+The --stderr flag is needed to avoid a headers already sent error on some systems.
+
+To learn more about running tests and writing your own, visit https://www.dokuwiki.org/devel:unittesting
+
+==== PHP CodeSniffer ====
+
+To check for code violations:
+
+  ./vendor/bin/phpcs
+
+To automatically fix code violations:
+
+  ./vendor/bin/phpcbf
+
+To learn more about PHP CodeSniffer visit https://www.dokuwiki.org/devel:phpcodesniffer
+
+==== Rector ====
+
+To automatically fix code smells
+
+  ./vendor/bin/rector process
+
+To learn more about PHP CodeSniffer visit https://www.dokuwiki.org/devel:rector
+

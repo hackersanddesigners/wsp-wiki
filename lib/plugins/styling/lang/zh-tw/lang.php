@@ -2,7 +2,11 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
+=======
+ *
+>>>>>>> stable
  * @author Liou, Jhe-Yu <lioujheyu@gmail.com>
  */
 $lang['menu']                  = '模板風格設定';

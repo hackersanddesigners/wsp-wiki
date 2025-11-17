@@ -3,10 +3,16 @@
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
  *
+<<<<<<< HEAD
  * @author Змей Этерийский evil_snake@eternion.ru
  * @author Hikaru Nakajima <jisatsu@mail.ru>
  * @author Alexei Tereschenko <alexeitlex@yahoo.com>
  * @author Irina Ponomareva irinaponomareva@webperfectionist.com
+=======
+ * @author Змей Этерийский <evil_snake@eternion.ru>
+ * @author Hikaru Nakajima <jisatsu@mail.ru>
+ * @author Alexei Tereschenko <alexeitlex@yahoo.com>
+>>>>>>> stable
  * @author Alexander Sorkin <kibizoid@gmail.com>
  * @author Kirill Krasnov <krasnovforum@gmail.com>
  * @author Vlad Tsybenko <vlad.development@gmail.com>
@@ -15,7 +21,10 @@
  * @author Ladyko Andrey <fylh@succexy.spb.ru>
  * @author Eugene <windy.wanderer@gmail.com>
  * @author Johnny Utah <pcpa@cyberpunk.su>
+<<<<<<< HEAD
  * @author Ivan I. Udovichenko (sendtome@mymailbox.pp.ua)
+=======
+>>>>>>> stable
  */
 $lang['name']                  = 'Сбор информации о популярности (для загрузки может потребоваться некоторое время)';
 $lang['submit']                = 'Отправить данные';

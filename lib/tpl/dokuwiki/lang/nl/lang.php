@@ -3,6 +3,10 @@
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
  *
+<<<<<<< HEAD
+=======
+ * @author Harriet Neitz <harrietneitz@gmail.com>
+>>>>>>> stable
  * @author hugo smet <hugo.smet@scarlet.be>
  */
 $lang['__background_site__']   = 'Kleur voor de onderste ondergrond (achter de inhoud kader)';
@@ -13,3 +17,7 @@ $lang['__site_width__']        = 'Breedte van de max site (in gelijk welke eenhe
 $lang['__sidebar_width__']     = 'Breedte van de zijbalk,  indien aanwezig  (in gelijk welke eenheid: %, px, em,...)';
 $lang['__tablet_width__']      = 'Beneden de breedte van deze schermafmetingen schakelt de site over naar tablet modus.';
 $lang['__phone_width__']       = 'Beneden de breedte van deze schermafmetingen schakelt de site over naar telefoon modus.';
+<<<<<<< HEAD
+=======
+$lang['__theme_color__']       = 'Thema kleur van de web app';
+>>>>>>> stable

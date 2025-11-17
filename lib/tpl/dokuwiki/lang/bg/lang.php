@@ -2,7 +2,11 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
+=======
+ *
+>>>>>>> stable
  * @author Kiril <neohidra@gmail.com>
  */
 $lang['__background_site__']   = 'Цвят за фона, под съдъжанието';

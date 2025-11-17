@@ -2,6 +2,7 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
  * @author Håkan Sandell <hakan.sandell@home.se>
  * @author Dennis Karlsson
@@ -14,6 +15,16 @@
  * @author Peter Åström <eaustreum@gmail.com>
  * @author mikael@mallander.net
  * @author Smorkster Andersson smorkster@gmail.com
+=======
+ *
+ * @author Håkan Sandell <hakan.sandell@home.se>
+ * @author Dennis Karlsson
+ * @author Tormod Otter Johansson <tormod@latast.se>
+ * @author Pontus Bergendahl <pontus.bergendahl@gmail.com>
+ * @author Emil Lind <emil@sys.nu>
+ * @author Bogge Bogge <bogge@bogge.com>
+ * @author Peter Åström <eaustreum@gmail.com>
+>>>>>>> stable
  */
 $lang['name']                  = 'Popularitets-feedback (det kan ta en stund att ladda sidan)';
 $lang['submit']                = 'Sänd data';

@@ -2,11 +2,20 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
  * @author Inko Illarramendi <inko.i.a@gmail.com>
  * @author Zigor Astarbe <astarbe@gmail.com>
  */
 $lang['menu']                  = 'Erabiltzaile Kudeatzailea';
+=======
+ *
+ * @author Inko Illarramendi <inko.i.a@gmail.com>
+ * @author Zigor Astarbe <astarbe@gmail.com>
+ * @author Osoitz <oelkoro@gmail.com>
+ */
+$lang['menu']                  = 'Erabiltzaile-kudeatzailea';
+>>>>>>> stable
 $lang['noauth']                = '(erabiltzaile kautotzea ez dago erabilgarri)';
 $lang['nosupport']             = '(erabiltzaile kudeaketa ez dago erabilgarri)';
 $lang['badauth']               = 'kautotze mekanismo baliogabea';

@@ -2,7 +2,11 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
+=======
+ *
+>>>>>>> stable
  * @author Frederico Gonçalves Guimarães <frederico@teia.bio.br>
  */
 $lang['connectfail']           = 'Não foi possível conectar ao banco de dados.';

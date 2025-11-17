@@ -3,6 +3,10 @@
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
  *
+<<<<<<< HEAD
+=======
+ * @author PBU <pbu@xs4all.nl>
+>>>>>>> stable
  * @author Gerrit Uitslag <klapinklapin@gmail.com>
  * @author Remon <no@email.local>
  * @author Johan Wijnker <johan@wijnker.eu>
@@ -19,6 +23,10 @@ $lang['referrals']             = 'Moeten verwijzingen worden gevolgd?';
 $lang['deref']                 = 'Hoe moeten de verwijzing van aliases worden bepaald?';
 $lang['binddn']                = 'DN van een optionele bind gebruiker als anonieme bind niet genoeg is. Bijv. <code>cn=beheer, dc=mijn, dc=thuis</code>';
 $lang['bindpw']                = 'Wachtwoord van bovenstaande gebruiker';
+<<<<<<< HEAD
+=======
+$lang['attributes']            = 'Welke onderdelen moeten in LDAP gezocht worden';
+>>>>>>> stable
 $lang['userscope']             = 'Beperken scope van zoekfuncties voor gebruikers';
 $lang['groupscope']            = 'Beperken scope van zoekfuncties voor groepen';
 $lang['userkey']               = 'Attribuut aanduiding van de gebruikersnaam; moet consistent zijn met userfilter.';

@@ -2,9 +2,14 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
  * @author DoK <kamberd@yahoo.com>
  * @author Dotan Kamber <kamberd@yahoo.com>
+=======
+ *
+ * @author DoK <kamberd@yahoo.com>
+>>>>>>> stable
  * @author Moshe Kaplan <mokplan@gmail.com>
  * @author Yaron Yogev <yaronyogev@gmail.com>
  * @author Yaron Shahrabani <sh.yaron@gmail.com>

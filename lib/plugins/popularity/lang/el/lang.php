@@ -2,11 +2,19 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
  * @author Konstantinos Koryllos <koryllos@gmail.com>
  * @author George Petsagourakis <petsagouris@gmail.com>
  * @author Petros Vidalis <pvidalis@gmail.com>
  * @author Vasileios Karavasilis vasileioskaravasilis@gmail.com
+=======
+ *
+ * @author Konstantinos Koryllos <koryllos@gmail.com>
+ * @author George Petsagourakis <petsagouris@gmail.com>
+ * @author Petros Vidalis <pvidalis@gmail.com>
+ * @author Vasileios Karavasilis <vasileioskaravasilis@gmail.com>
+>>>>>>> stable
  */
 $lang['name']                  = 'Αναφορά Δημοτικότητας (ίσως αργήσει λίγο να εμφανιστεί)';
 $lang['submit']                = 'Αποστολή Δεδομένων';

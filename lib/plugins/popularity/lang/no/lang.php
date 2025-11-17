@@ -9,8 +9,12 @@
  * @author Knut Staring <knutst@gmail.com>
  * @author Lisa Ditlefsen <lisa@vervesearch.com>
  * @author Erik Pedersen <erik.pedersen@shaw.ca>
+<<<<<<< HEAD
  * @author Erik Bjørn Pedersen <erik.pedersen@shaw.ca>
  * @author Rune Rasmussen syntaxerror.no@gmail.com
+=======
+ * @author Rune Rasmussen <syntaxerror.no@gmail.com>
+>>>>>>> stable
  * @author Thomas Nygreen <nygreen@gmail.com>
  * @author Jon Bøe <jonmagneboe@hotmail.com>
  * @author Egil Hansen <egil@rosetta.no>

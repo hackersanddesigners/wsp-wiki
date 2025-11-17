@@ -3,9 +3,17 @@
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
  *
+<<<<<<< HEAD
  * @author Matthias Schulte <dokuwiki@lupo49.de>
  * @author Volker Bödker <volker@boedker.de>
  * @author rnck <dokuwiki@rnck.de>
+=======
+ * @author MaWi <drmaxxis@gmail.com>
+ * @author Matthias Schulte <dokuwiki@lupo49.de>
+ * @author Volker Bödker <volker@boedker.de>
+ * @author rnck <dokuwiki@rnck.de>
+ * @author F. Mueller-Donath <j.felix@mueller-donath.de>
+>>>>>>> stable
  */
 $lang['server']                = 'Adresse zum LDAP-Server. Entweder als Hostname (<code>localhost</code>) oder als FQDN (<code>ldap://server.tld:389</code>).';
 $lang['port']                  = 'Port des LDAP-Servers, falls kein Port angegeben wurde.';
@@ -19,8 +27,15 @@ $lang['referrals']             = 'Weiterverfolgen von LDAP-Referrals (Verweise)?
 $lang['deref']                 = 'Wie sollen Aliasse derefernziert werden?';
 $lang['binddn']                = 'DN eines optionalen Benutzers, wenn der anonyme Zugriff nicht ausreichend ist. Zum Beispiel: <code>cn=admin, dc=my, dc=home</code>.';
 $lang['bindpw']                = 'Passwort des angegebenen Benutzers.';
+<<<<<<< HEAD
 $lang['userscope']             = 'Die Suchweite nach Benutzeraccounts.';
 $lang['groupscope']            = 'Die Suchweite nach Benutzergruppen.';
+=======
+$lang['attributes']            = 'Attribute, die mit der LDAP-Suche abgerufen werden sollen.';
+$lang['userscope']             = 'Die Suchweite nach Benutzeraccounts.';
+$lang['groupscope']            = 'Die Suchweite nach Benutzergruppen.';
+$lang['userkey']               = 'Attribut, das den Benutzernamen enthält; muss konsistent zum userfilter sein.';
+>>>>>>> stable
 $lang['groupkey']              = 'Gruppieren der Benutzeraccounts anhand eines beliebigen Benutzerattributes z. B. Telefonnummer oder Abteilung, anstelle der Standard-Gruppen).';
 $lang['modPass']               = 'Kann das LDAP Passwort via dokuwiki geändert werden?';
 $lang['debug']                 = 'Debug-Informationen beim Auftreten von Fehlern anzeigen?';

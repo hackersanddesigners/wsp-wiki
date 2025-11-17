@@ -3,8 +3,13 @@
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
  *
+<<<<<<< HEAD
  * @author Remon <no@email.local>
  * @author Gerrit Uitslag <klapinklapin@gmail.com>
+=======
+ * @author Gerrit Uitslag <klapinklapin@gmail.com>
+ * @author Remon <no@email.local>
+>>>>>>> stable
  * @author Sjoerd <sjoerd@sjomar.eu>
  */
 $lang['account_suffix']        = 'Je account domeinnaam. Bijv <code>@mijn.domein.org</code>';
@@ -22,3 +27,7 @@ $lang['expirywarn']            = 'Waarschuwingstermijn voor vervallen wachtwoord
 $lang['additional']            = 'Een kommagescheiden lijst van extra AD attributen van de gebruiker. Wordt gebruikt door sommige plugins.';
 $lang['update_name']           = 'Sta gebruikers toe om hun getoonde AD naam bij te werken';
 $lang['update_mail']           = 'Sta gebruikers toe hun email adres bij te werken';
+<<<<<<< HEAD
+=======
+$lang['recursive_groups']      = 'Zoek voor de geneste groepen hun respectievelijke leden op (langzamer).';
+>>>>>>> stable

@@ -2,12 +2,20 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
+=======
+ *
+ * @author Gorm <gorm.chandler@gmail.com>
+ * @author Patrik K Lundberg <patrik.kotiranta.lundberg@gmail.com>
+ * @author Tor Härnqvist <tor@harnqvist.se>
+>>>>>>> stable
  * @author Per Foreby <per@foreby.se>
  * @author Nicklas Henriksson <nicklas[at]nihe.se>
  * @author Håkan Sandell <hakan.sandell@home.se>
  * @author Dennis Karlsson
  * @author Tormod Otter Johansson <tormod@latast.se>
+<<<<<<< HEAD
  * @author emil@sys.nu
  * @author Pontus Bergendahl <pontus.bergendahl@gmail.com>
  * @author Tormod Johansson tormod.otter.johansson@gmail.com
@@ -18,6 +26,13 @@
  * @author Smorkster Andersson smorkster@gmail.com
  * @author Henrik <henrik@idealis.se>
  * @author Tor Härnqvist <tor.harnqvist@gmail.com>
+=======
+ * @author Pontus Bergendahl <pontus.bergendahl@gmail.com>
+ * @author Emil Lind <emil@sys.nu>
+ * @author Bogge Bogge <bogge@bogge.com>
+ * @author Peter Åström <eaustreum@gmail.com>
+ * @author Henrik <henrik@idealis.se>
+>>>>>>> stable
  * @author Hans Iwan Bratt <hibratt@gmail.com>
  * @author Mikael Bergström <krank23@gmail.com>
  */

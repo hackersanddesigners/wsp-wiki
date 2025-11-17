@@ -2,13 +2,21 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
+=======
+ *
+>>>>>>> stable
  * @author Thanos Massias <tm@thriasio.gr>
  * @author Αθανάσιος Νταής <homunculus@wana.gr>
  * @author Konstantinos Koryllos <koryllos@gmail.com>
  * @author George Petsagourakis <petsagouris@gmail.com>
  * @author Petros Vidalis <pvidalis@gmail.com>
+<<<<<<< HEAD
  * @author Vasileios Karavasilis vasileioskaravasilis@gmail.com
+=======
+ * @author Vasileios Karavasilis <vasileioskaravasilis@gmail.com>
+>>>>>>> stable
  */
 $lang['menu']                  = 'Αποκατάσταση κακόβουλων αλλαγών σελίδων';
 $lang['filter']                = 'Αναζήτηση σελίδων που περιέχουν spam';

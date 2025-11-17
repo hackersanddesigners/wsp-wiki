@@ -6,7 +6,10 @@
  * @author Christopher Schive <chschive@frisurf.no>
  * @author Patrick <spill.p@hotmail.com>
  * @author Arne Hanssen <arne.hanssen@getmail.no>
+<<<<<<< HEAD
  * @author Arne Hanssen <arnehans@getmail.no>
+=======
+>>>>>>> stable
  */
 $lang['server']                = 'Din LDAP-server. Enten  vertsnavnet (<code>localhost</code>) eller hele URL (<code>ldap://server.tld:389</code>)';
 $lang['port']                  = 'LDAP serverport dersom ingen full URL var gitt over.';

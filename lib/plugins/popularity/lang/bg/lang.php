@@ -2,7 +2,11 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
+=======
+ *
+>>>>>>> stable
  * @author Viktor Usunov <usun0v@mail.bg>
  * @author Kiril <neohidra@gmail.com>
  */

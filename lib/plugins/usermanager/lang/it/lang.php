@@ -5,6 +5,7 @@
  *
  * @author Chris Smith <chris@jalakai.co.uk>
  * @author Silvia Sargentoni <polinnia@tin.it>
+<<<<<<< HEAD
  * @author Pietro Battiston toobaz@email.it
  * @author Diego Pierotto ita.translations@tiscali.it
  * @author ita.translations@tiscali.it
@@ -15,6 +16,13 @@
  * @author Jacopo Corbetta <jacopo.corbetta@gmail.com>
  * @author Matteo Pasotti <matteo@xquiet.eu>
  * @author snarchio@gmail.com
+=======
+ * @author Pietro Battiston <toobaz@email.it>
+ * @author Lorenzo Breda <lbreda@gmail.com>
+ * @author robocap <robocap1@gmail.com>
+ * @author Jacopo Corbetta <jacopo.corbetta@gmail.com>
+ * @author Matteo Pasotti <matteo@xquiet.eu>
+>>>>>>> stable
  * @author Claudio Lanconelli <lancos@libero.it>
  * @author Francesco <francesco.cavalli@hotmail.com>
  * @author Fabio <fabioslurp@yahoo.it>

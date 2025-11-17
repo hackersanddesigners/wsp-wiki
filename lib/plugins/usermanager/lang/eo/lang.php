@@ -2,6 +2,7 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
  * @author Felipe Castro <fefcas@uol.com.br>
  * @author Felipe Castro <fefcas@gmail.com>
@@ -12,6 +13,13 @@
  * @author Erik Pedersen <erik.pedersen@shaw.ca>
  * @author Robert Bogenschneider <bogi@uea.org>
  * @author Felipe Castro <fefcas@yahoo.com.br>
+=======
+ *
+ * @author Felipe Castro <fefcas@uol.com.br>
+ * @author Felipo Kastro <fefcas@gmail.com>
+ * @author Robert Bogenschneider <robog@gmx.de>
+ * @author Erik Pedersen <erik pedersen@shaw.ca>
+>>>>>>> stable
  */
 $lang['menu']                  = 'Administrado de uzantoj';
 $lang['noauth']                = '(identiĝo de uzantoj ne disponeblas)';

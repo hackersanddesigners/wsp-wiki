@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ===== Erabiltzailea gehitu =====
+=======
+===== Gehitu erabiltzailea =====
+>>>>>>> stable

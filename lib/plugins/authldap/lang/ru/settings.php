@@ -3,10 +3,17 @@
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
  *
+<<<<<<< HEAD
  * @author Ivan I. Udovichenko (sendtome@mymailbox.pp.ua)
  * @author Aleksandr Selivanov <alexgearbox@gmail.com>
  * @author Erli Moen <evseev.jr@gmail.com>
  * @author Aleksandr Selivanov <alexgearbox@yandex.ru>
+=======
+ * @author Impeck <impeck@ya.ru>
+ * @author Aleksandr Selivanov <alexgearbox@yandex.ru>
+ * @author Ivan I. Udovichenko (sendtome@mymailbox.pp.ua)
+ * @author Erli Moen <evseev.jr@gmail.com>
+>>>>>>> stable
  * @author Владимир <id37736@yandex.ru>
  * @author Vitaly Filatenko <kot@hacktest.net>
  * @author Alex P <alexander@lanos.co.uk>
@@ -23,16 +30,30 @@ $lang['referrals']             = 'Следовать за referrals?';
 $lang['deref']                 = 'Как расшифровывать псевдонимы?';
 $lang['binddn']                = 'DN вторичного bind-пользователя, если anonymous bind недостаточно. Например: <code>cn=admin, dc=my, dc=home</code>';
 $lang['bindpw']                = 'Пароль для указанного пользователя';
+<<<<<<< HEAD
 $lang['userscope']             = 'Ограничить область поиска при поиске пользователей';
 $lang['groupscope']            = 'Ограничить область поиска при поиске групп';
 $lang['userkey']               = 'Атрибут означающий имя пользователя; должен быть таким же как в userfilter';
 $lang['groupkey']              = 'Использовать любой атрибут пользователя для включения в группу (вместо стандартного AD groups) Например из атрибута department или telephone number';
 $lang['modPass']               = 'Может ли пароль LDAP быть изменён через «Докувики»?';
+=======
+$lang['attributes']            = 'Атрибуты для извлечения с помощью поиска LDAP.';
+$lang['userscope']             = 'Ограничить область поиска при поиске пользователей';
+$lang['groupscope']            = 'Ограничить область поиска при поиске групп';
+$lang['userkey']               = 'Атрибут, означающий имя пользователя; должен быть таким же как в userfilter';
+$lang['groupkey']              = 'Использовать любой атрибут пользователя для включения в группу (вместо стандартного AD groups). Например, из атрибута department или telephone number';
+$lang['modPass']               = 'Может ли пароль LDAP быть изменён через «Докувики»?';
+$lang['modPassPlain']          = 'Отправлять обновления пароля в виде простого текста на LDAP-сервер (вместо хеширования с солью по настроенному алгоритму перед отправкой)?';
+>>>>>>> stable
 $lang['debug']                 = 'Показывать дополнительную отладочную информацию при ошибках';
 $lang['deref_o_0']             = 'LDAP_DEREF_NEVER';
 $lang['deref_o_1']             = 'LDAP_DEREF_SEARCHING';
 $lang['deref_o_2']             = 'LDAP_DEREF_FINDING';
 $lang['deref_o_3']             = 'LDAP_DEREF_ALWAYS';
+<<<<<<< HEAD
 $lang['referrals_o_-1']        = 'исользовать по умолчанию';
+=======
+$lang['referrals_o_-1']        = 'использовать по умолчанию';
+>>>>>>> stable
 $lang['referrals_o_0']         = 'не следовать за referrals';
 $lang['referrals_o_1']         = 'следовать за referrals';

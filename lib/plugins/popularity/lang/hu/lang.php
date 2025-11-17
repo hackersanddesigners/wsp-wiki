@@ -2,6 +2,7 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
  * @author Sandor TIHANYI <stihanyi+dw@gmail.com>
  * @author Siaynoq Mage <siaynoqmage@gmail.com>
@@ -9,6 +10,13 @@
  * @author Szabó Dávid <szabo.david@gyumolcstarhely.hu>
  * @author Sándor TIHANYI <stihanyi+dw@gmail.com>
  * @author David Szabo <szabo.david@gyumolcstarhely.hu>
+=======
+ *
+ * @author Sandor TIHANYI <stihanyi+dw@gmail.com>
+ * @author Siaynoq Mage <siaynoqmage@gmail.com>
+ * @author schilling.janos <schilling.janos@gmail.com>
+ * @author Szabó Dávid <szabo.david@gyumolcstarhely.hu>
+>>>>>>> stable
  * @author Marton Sebok <sebokmarton@gmail.com>
  */
 $lang['name']                  = 'Visszajelzés a DokuWiki használatáról (sok időt vehet igénybe a betöltése)';

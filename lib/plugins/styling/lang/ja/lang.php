@@ -3,12 +3,20 @@
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
  *
+<<<<<<< HEAD
+=======
+ * @author HokkaidoPerson <dosankomali@yahoo.co.jp>
+>>>>>>> stable
  * @author Hideaki SAWADA <chuno@live.jp>
  */
 $lang['menu']                  = 'テンプレートのスタイル設定';
 $lang['js']['loader']          = 'プレビューを読込み中です・・・<br/>この表示が消えない場合、変更した設定値に問題があるかもしれません。';
 $lang['js']['popup']           = 'ポップアップとして表示';
+<<<<<<< HEAD
 $lang['error']                 = 'このテンプレートは、この機能に対応していません。';
+=======
+$lang['error']                 = '恐れ入りますが、このテンプレートはこの機能に対応していません。';
+>>>>>>> stable
 $lang['btn_preview']           = '変更内容のプレビュー';
 $lang['btn_save']              = '変更内容の保存';
 $lang['btn_reset']             = '変更内容の初期化';

@@ -3,6 +3,10 @@
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
  *
+<<<<<<< HEAD
+=======
+ * @author Filippo <abrickslife@gmail.com>
+>>>>>>> stable
  * @author Edmondo Di Tucci <snarchio@gmail.com>
  * @author Claudio Lanconelli <lancos@libero.it>
  * @author Francesco <francesco.cavalli@hotmail.com>
@@ -20,6 +24,10 @@ $lang['referrals']             = 'Possono i reindirizzamenti essere seguiti?';
 $lang['deref']                 = 'Come differenziare un alias?';
 $lang['binddn']                = 'DN di un utente bind opzionale se un bind anonimo non è sufficiente. E.g. <code>cn=admin, dc=casa, dc=mia</code>';
 $lang['bindpw']                = 'Password del utente di cui sopra';
+<<<<<<< HEAD
+=======
+$lang['attributes']            = 'Attributi da mostrare con la ricerca LDAP.';
+>>>>>>> stable
 $lang['userscope']             = 'Limita il contesto di ricerca per la ricerca degli utenti';
 $lang['groupscope']            = 'Limita il contesto di ricerca per la ricerca dei gruppi';
 $lang['userkey']               = 'Attributo indicante il nome utente; deve essere consistente con il filtro utente.';

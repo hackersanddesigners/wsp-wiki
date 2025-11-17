@@ -2,6 +2,7 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
  * @author Oleksiy Voronin <ovoronin@gmail.com>
  * @author serg_stetsuk@ukr.net
@@ -9,6 +10,13 @@
  * @author Oleksandr Kunytsia <okunia@gmail.com>
  * @author Uko uko@uar.net
  * @author Ulrikhe Lukoie  <lukoie@gmail>.com
+=======
+ *
+ * @author uaKalwin <world9online@gmail.com>
+ * @author Oleksiy Voronin <ovoronin@gmail.com>
+ * @author serg_stetsuk <serg_stetsuk@ukr.net>
+ * @author Oleksandr Kunytsia <okunia@gmail.com>
+>>>>>>> stable
  */
 $lang['menu']                  = 'Керування користувачами';
 $lang['noauth']                = '(автентифікація користувачів не	доступна)';
@@ -51,3 +59,21 @@ $lang['add_ok']                = 'Користувача додано';
 $lang['add_fail']              = 'Неможливо додати користувача';
 $lang['notify_ok']             = 'Листа з повідомленням надіслано';
 $lang['notify_fail']           = 'Неможливо вислати листа з повідомленням';
+<<<<<<< HEAD
+=======
+$lang['import_error_badname']  = 'Погана назва';
+$lang['import_error_badmail']  = 'Погана адреса електронної пошти';
+$lang['import_error_upload']   = 'Імпорт не вдався. Файл CSV не може бути завантажений або він порожній.';
+$lang['import_error_readfail'] = 'Імпорт не вдався. Неможливо прочитати завантажений файлю.';
+$lang['import_error_create']   = 'Не вдалося створити користувача';
+$lang['import_notify_fail']    = 'Повідомлення не вдалося відправити для імпортованого користувача, %s з електронною адресою %s.';
+$lang['import_downloadfailures'] = 'Завантажені помилки у форматі CSV для виправлення';
+$lang['addUser_error_missing_pass'] = 'Будь ласка, встановіть пароль або активуйте сповіщення користувача для генерації пароля.';
+$lang['addUser_error_pass_not_identical'] = 'Введені паролі не співпадають.';
+$lang['addUser_error_modPass_disabled'] = 'Зміна паролей наразі відключена';
+$lang['addUser_error_name_missing'] = 'Будь ласка, введіть ім\'я для нового користувача.';
+$lang['addUser_error_modName_disabled'] = 'Зміна імен наразі відключена.';
+$lang['addUser_error_mail_missing'] = 'Будь ласка, введіть адресу електронної пошти для нового користувача.';
+$lang['addUser_error_modMail_disabled'] = 'Зміна електронних адрес наразі відключена.';
+$lang['addUser_error_create_event_failed'] = 'Плагін перешкодив додаванню нового користувача. Перегляньте інші можливі повідомлення для отримання додаткової інформації.';
+>>>>>>> stable

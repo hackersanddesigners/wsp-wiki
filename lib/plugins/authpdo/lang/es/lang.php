@@ -2,7 +2,11 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
+=======
+ *
+>>>>>>> stable
  * @author Domingo Redal <docxml@gmail.com>
  */
 $lang['connectfail']           = 'Error al conectar con la base de datos.';

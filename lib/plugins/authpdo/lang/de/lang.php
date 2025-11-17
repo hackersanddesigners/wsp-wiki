@@ -2,7 +2,11 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
+=======
+ *
+>>>>>>> stable
  * @author Noel Tilliot <noeltilliot@byom.de>
  * @author Hendrik Diel <diel.hendrik@gmail.com>
  * @author Philip Knack <p.knack@stollfuss.de>

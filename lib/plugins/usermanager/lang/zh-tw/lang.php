@@ -2,16 +2,26 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
+=======
+ *
+>>>>>>> stable
  * @author chinsan <chinsan.tw@gmail.com>
  * @author Li-Jiun Huang <ljhuang.tw@gmail.com>
  * @author http://www.chinese-tools.com/tools/converter-simptrad.html
  * @author Wayne San <waynesan@zerozone.tw>
+<<<<<<< HEAD
  * @author Li-Jiun Huang <ljhuang.tw@gmai.com>
  * @author Cheng-Wei Chien <e.cwchien@gmail.com>
  * @author Shuo-Ting Jian <shoting@gmail.com>
  * @author syaoranhinata@gmail.com
  * @author Ichirou Uchiki <syaoranhinata@gmail.com>
+=======
+ * @author Cheng-Wei Chien <e.cwchien@gmail.com>
+ * @author Shuo-Ting Jian <shoting@gmail.com>
+ * @author syaoranhinata <syaoranhinata@gmail.com>
+>>>>>>> stable
  * @author tsangho <ou4222@gmail.com>
  * @author Danny Lin <danny0838@gmail.com>
  */

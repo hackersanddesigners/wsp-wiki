@@ -2,7 +2,12 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
+=======
+ *
+ * @author Yves Nevelsteen <yves.nevelsteen@gmail.com>
+>>>>>>> stable
  * @author Felipe Castro <fefcas@yahoo.com.br>
  */
 $lang['server']                = 'Via LDAP-servilo. Aŭ servila nomo (<code>localhost</code>) aŭ plene detala URL (<code>ldap://servilo.lando:389</code>)';
@@ -17,11 +22,26 @@ $lang['referrals']             = 'Ĉu sekvi referencojn?';
 $lang['deref']                 = 'Kiel dereferencigi kromnomojn?';
 $lang['binddn']                = 'DN de opcie bindita uzanto, se anonima bindado ne sufiĉas, ekz. <code>cn=admin, dc=mia, dc=hejmo</code>';
 $lang['bindpw']                = 'Pasvorto de tiu uzanto';
+<<<<<<< HEAD
 $lang['userscope']             = 'Limigi serĉospacon de uzantaj serĉoj';
 $lang['groupscope']            = 'Limigi serĉospacon por grupaj serĉoj';
 $lang['groupkey']              = 'Grupa membreco de iu uzanta atributo (anstataŭ standardaj AD-grupoj), ekz. grupo de departemento aŭ telefonnumero';
+=======
+$lang['attributes']            = 'Atributoj por preni per la LDAP-serĉo.';
+$lang['userscope']             = 'Limigi serĉospacon de uzantaj serĉoj';
+$lang['groupscope']            = 'Limigi serĉospacon por grupaj serĉoj';
+$lang['userkey']               = 'Atributo indikanta la uzantnomon; devas esti konsekvenca al uzantfiltrilo.';
+$lang['groupkey']              = 'Grupa membreco de iu uzanta atributo (anstataŭ standardaj AD-grupoj), ekz. grupo de departemento aŭ telefonnumero';
+$lang['modPass']               = 'Ĉu la LDAP-pasvorto povas esti ŝanĝita per dokuwiki?';
+>>>>>>> stable
 $lang['debug']                 = 'Ĉu montri aldonajn erarinformojn?';
 $lang['deref_o_0']             = 'LDAP_DEREF_NEVER';
 $lang['deref_o_1']             = 'LDAP_DEREF_SEARCHING';
 $lang['deref_o_2']             = 'LDAP_DEREF_FINDING';
 $lang['deref_o_3']             = 'LDAP_DEREF_ALWAYS';
+<<<<<<< HEAD
+=======
+$lang['referrals_o_-1']        = 'uzu defaŭlton';
+$lang['referrals_o_0']         = 'ne sekvu referencojn';
+$lang['referrals_o_1']         = 'sekvu referencojn';
+>>>>>>> stable

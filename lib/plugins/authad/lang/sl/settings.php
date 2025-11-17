@@ -2,7 +2,11 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
+=======
+ *
+>>>>>>> stable
  * @author matej <mateju@svn.gnome.org>
  * @author Jernej Vidmar <jernej.vidmar@vidmarboehm.com>
  */

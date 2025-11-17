@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ===== Lista de Utilizadores =====
+=======
+===== Lista de Usuários =====
+>>>>>>> stable

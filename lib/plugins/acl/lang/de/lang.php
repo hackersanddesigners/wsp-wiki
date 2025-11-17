@@ -3,6 +3,10 @@
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
  *
+<<<<<<< HEAD
+=======
+ * @author Robert Riebisch <rr@bttr-software.de>
+>>>>>>> stable
  * @author Andreas Gohr <andi@splitbrain.org>
  * @author Christof <gagi@fin.de>
  * @author Anika Henke <anika@selfthinker.org>
@@ -14,7 +18,11 @@
  * @author Robin Kluth <commi1993@gmail.com>
  * @author Arne Pelka <mail@arnepelka.de>
  * @author Dirk Einecke <dirk@dirkeinecke.de>
+<<<<<<< HEAD
  * @author Blitzi94@gmx.de
+=======
+ * @author Blitzi94 <Blitzi94@gmx.de>
+>>>>>>> stable
  * @author Robert Bogenschneider <robog@GMX.de>
  * @author Niels Lange <niels@boldencursief.nl>
  * @author Christian Wichmann <nospam@zone0.de>
@@ -33,8 +41,13 @@ $lang['p_user_id']             = 'Nutzer <b class="acluser">%s</b> hat momentan 
 $lang['p_user_ns']             = 'Nutzer <b class="acluser">%s</b> hat momentan folgende Berechtigungen im Namensraum <b class="aclns">%s</b>: <i>%s</i>.';
 $lang['p_group_id']            = 'Mitglieder der Gruppe <b class="aclgroup">%s</b> haben momentan folgende Berechtigungen für die Seite <b class="aclpage">%s</b>: <i>%s</i>.';
 $lang['p_group_ns']            = 'Mitglieder der Gruppe <b class="aclgroup">%s</b> haben momentan folgende Berechtigungen für den Namensraum <b class="aclns">%s</b>: <i>%s</i>.';
+<<<<<<< HEAD
 $lang['p_choose_id']           = 'Bitte geben Sie in obigem Formular eine <b>einen Benutzer oder eine Gruppe</b> an, um die Berechtigungen für die Seite <b class="aclpage">%s</b> zu sehen oder zu ändern.';
 $lang['p_choose_ns']           = 'Bitte geben Sie in obigem Formular eine <b>einen Benutzer oder eine Gruppe</b> an, um die Berechtigungen für den Namensraum <b class="aclns">%s</b> zu sehen oder zu ändern.';
+=======
+$lang['p_choose_id']           = 'Bitte geben Sie in obigem Formular <b>einen Benutzer oder eine Gruppe</b> an, um die Berechtigungen für die Seite <b class="aclpage">%s</b> zu sehen oder zu ändern.';
+$lang['p_choose_ns']           = 'Bitte geben Sie in obigem Formular <b>einen Benutzer oder eine Gruppe</b> an, um die Berechtigungen für den Namensraum <b class="aclns">%s</b> zu sehen oder zu ändern.';
+>>>>>>> stable
 $lang['p_inherited']           = 'Hinweis: Diese Berechtigungen wurden nicht explizit gesetzt, sondern von anderen Gruppen oder höher liegenden Namensräumen geerbt.';
 $lang['p_isadmin']             = 'Hinweis: Die ausgewählte Gruppe oder Benutzer haben immer alle Berechtigungen, da sie als Superuser konfiguriert wurden.';
 $lang['p_include']             = 'Höhere Berechtigungen schließen niedrigere mit ein. Anlegen, Hochladen und Entfernen gilt nur für Namensräume, nicht für einzelne Seiten';

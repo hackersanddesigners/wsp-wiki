@@ -4,6 +4,7 @@
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
  *
  * @author Bohumir Zamecnik <bohumir@zamecnik.org>
+<<<<<<< HEAD
  * @author tomas@valenta.cz
  * @author Marek Sacha <sachamar@fel.cvut.cz>
  * @author Lefty <lefty@multihost.cz>
@@ -12,6 +13,15 @@
  * @author Bohumir Zamecnik <bohumir.zamecnik@gmail.com>
  * @author Jakub A. Těšínský (j@kub.cz)
  * @author mkucera66@seznam.cz
+=======
+ * @author tomas <tomas@valenta.cz>
+ * @author Marek Sacha <sachamar@fel.cvut.cz>
+ * @author Lefty <lefty@multihost.cz>
+ * @author Vojta Beran <xmamut@email.cz>
+ * @author zbynek.krivka <zbynek.krivka@seznam.cz>
+ * @author Jakub A. Těšínský (j@kub.cz)
+ * @author mkucera66 <mkucera66@seznam.cz>
+>>>>>>> stable
  */
 $lang['name']                  = 'Průzkum používání (může chviličku trvat, než se natáhne)';
 $lang['submit']                = 'Odeslat data';

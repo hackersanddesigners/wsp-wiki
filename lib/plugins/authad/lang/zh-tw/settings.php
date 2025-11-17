@@ -2,8 +2,14 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
  * @author syaoranhinata@gmail.com
+=======
+ *
+ * @author Peter Dave Hello <hsu@peterdavehello.org>
+ * @author syaoranhinata <syaoranhinata@gmail.com>
+>>>>>>> stable
  * @author June-Hao Hou <junehao@gmail.com>
  */
 $lang['account_suffix']        = '您的帳號後綴。如： <code>@my.domain.org</code>';
@@ -19,3 +25,7 @@ $lang['use_tls']               = '使用 TLS 連接嗎？如果要使用，請�
 $lang['debug']                 = '有錯誤時，顯示額外除錯資訊嗎？';
 $lang['expirywarn']            = '提前多少天警告使用者密碼即將到期。輸入0表示停用。';
 $lang['additional']            = '從使用者數據中取得額外 AD 屬性列表，以供某些附加元件使用。列表以逗號分隔。';
+<<<<<<< HEAD
+=======
+$lang['update_mail']           = '允許使用者更新電子郵件地址？';
+>>>>>>> stable

@@ -2,7 +2,11 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
+=======
+ *
+>>>>>>> stable
  * @author Mohmmad Razavi <sepent@gmail.com>
  * @author Masoud Sadrnezhaad <masoud@sadrnezhaad.ir>
  */

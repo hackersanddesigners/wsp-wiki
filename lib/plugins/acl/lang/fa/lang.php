@@ -5,8 +5,12 @@
  *
  * @author behrad eslamifar <behrad_es@yahoo.com)
  * @author Mohsen Firoozmandan <info@mambolearn.com>
+<<<<<<< HEAD
  * @author omidmr@gmail.com
  * @author Omid Mottaghi <omidmr@gmail.com>
+=======
+ * @author omidmr <omidmr@gmail.com>
+>>>>>>> stable
  * @author Mohammad Reza Shoaei <shoaei@gmail.com>
  * @author Milad DZand <M.DastanZand@gmail.com>
  * @author AmirH Hassaneini <mytechmix@gmail.com>

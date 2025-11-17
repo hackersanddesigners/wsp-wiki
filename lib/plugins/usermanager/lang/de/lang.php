@@ -11,7 +11,11 @@
  * @author Robin Kluth <commi1993@gmail.com>
  * @author Arne Pelka <mail@arnepelka.de>
  * @author Dirk Einecke <dirk@dirkeinecke.de>
+<<<<<<< HEAD
  * @author Blitzi94@gmx.de
+=======
+ * @author Blitzi94 <Blitzi94@gmx.de>
+>>>>>>> stable
  * @author Robert Bogenschneider <robog@GMX.de>
  * @author Niels Lange <niels@boldencursief.nl>
  * @author Christian Wichmann <nospam@zone0.de>

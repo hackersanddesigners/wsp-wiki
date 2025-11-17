@@ -2,7 +2,11 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
+=======
+ *
+>>>>>>> stable
  * @author Dejan Levec <webphp@gmail.com>
  * @author Boštjan Seničar <senicar@gmail.com>
  * @author Gregor Skumavc (grega.skumavc@gmail.com)

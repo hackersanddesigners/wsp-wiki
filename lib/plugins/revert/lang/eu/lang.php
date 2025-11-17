@@ -2,10 +2,18 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
  * @author Inko Illarramendi <inko.i.a@gmail.com>
  * @author Zigor Astarbe <astarbe@gmail.com>
  * @author Yadav Gowda <yadav.gowda@gmail.com>
+=======
+ *
+ * @author Inko Illarramendi <inko.i.a@gmail.com>
+ * @author Zigor Astarbe <astarbe@gmail.com>
+ * @author Yadav Gowda <yadav.gowda@gmail.com>
+ * @author Osoitz <oelkoro@gmail.com>
+>>>>>>> stable
  */
 $lang['menu']                  = 'Berrezartze Kudeatzailea';
 $lang['filter']                = 'Bilatu spam duten orriak';

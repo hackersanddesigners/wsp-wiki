@@ -12,6 +12,7 @@
  * @author Niels Schoot <niels.schoot@quintiq.com>
  * @author Dion Nicolaas <dion@nicolaas.net>
  * @author Danny Rotsaert <danny.rotsaert@edpnet.be>
+<<<<<<< HEAD
  * @author Marijn Hofstra hofstra.m@gmail.com
  * @author Matthias Carchon webmaster@c-mattic.be
  * @author Marijn Hofstra <hofstra.m@gmail.com>
@@ -20,6 +21,12 @@
  * @author Ricardo Guijt <ricardoguijt@gmail.com>
  * @author Gerrit <klapinklapin@gmail.com>
  * @author Gerrit Uitslag <klapinklapin@gmail.com>
+=======
+ * @author Marijn Hofstra <hofstra.m@gmail.com>
+ * @author Timon Van Overveldt <timonvo@gmail.com>
+ * @author Ricardo Guijt <ricardoguijt@gmail.com>
+ * @author Gerrit <klapinklapin@gmail.com>
+>>>>>>> stable
  * @author Remon <no@email.local>
  */
 $lang['admin_acl']             = 'Toegangsrechten';

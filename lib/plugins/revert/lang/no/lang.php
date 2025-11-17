@@ -3,6 +3,13 @@
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
  *
+<<<<<<< HEAD
+=======
+ * @author Torgeir Blesvik <bletor@banenor.no>
+ * @author Rut Kristin Aanestad <dark@met.no>
+ * @author ThorPrestboen <thor.erling.prestboen@gmail.com>
+ * @author Christian McKenna <mckchr@banenor.no>
+>>>>>>> stable
  * @author Thomas Nygreen <nygreen@gmail.com>
  * @author Arild Burud <arildb@met.no>
  * @author Torkill Bruland <torkar-b@online.no>
@@ -12,8 +19,12 @@
  * @author Knut Staring <knutst@gmail.com>
  * @author Lisa Ditlefsen <lisa@vervesearch.com>
  * @author Erik Pedersen <erik.pedersen@shaw.ca>
+<<<<<<< HEAD
  * @author Erik Bjørn Pedersen <erik.pedersen@shaw.ca>
  * @author Rune Rasmussen syntaxerror.no@gmail.com
+=======
+ * @author Rune Rasmussen <syntaxerror.no@gmail.com>
+>>>>>>> stable
  * @author Jon Bøe <jonmagneboe@hotmail.com>
  * @author Egil Hansen <egil@rosetta.no>
  * @author Thomas Juberg <Thomas.Juberg@Gmail.com>
@@ -22,7 +33,10 @@
  * @author Patrick <spill.p@hotmail.com>
  * @author Danny Buckhof <daniel.raknes@hotmail.no>
  * @author Arne Hanssen <arne.hanssen@getmail.no>
+<<<<<<< HEAD
  * @author Arne Hanssen <arnehans@getmail.no>
+=======
+>>>>>>> stable
  * @author Patrick Sletvold <patricksletvold@hotmail.com>
  */
 $lang['menu']                  = 'Tilbakestillingsbehandler';

@@ -3,6 +3,7 @@
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
  *
+<<<<<<< HEAD
  * @author Bohumir Zamecnik <bohumir@zamecnik.org>
  * @author Zbynek Krivka <zbynek.krivka@seznam.cz>
  * @author tomas@valenta.cz
@@ -13,6 +14,21 @@
  * @author Bohumir Zamecnik <bohumir.zamecnik@gmail.com>
  * @author Jakub A. Těšínský (j@kub.cz)
  * @author mkucera66@seznam.cz
+=======
+ * @author Petr Kajzar <petr.kajzar@centrum.cz>
+ * @author Aleksandr Selivanov <alexgearbox@yandex.ru>
+ * @author Robert Surý <rsurycz@seznam.cz>
+ * @author Martin Hořínek <hev@hev.cz>
+ * @author Jonáš Dyba <jonas.dyba@gmail.com>
+ * @author Bohumir Zamecnik <bohumir@zamecnik.org>
+ * @author Zbynek Krivka <zbynek.krivka@seznam.cz>
+ * @author tomas <tomas@valenta.cz>
+ * @author Marek Sacha <sachamar@fel.cvut.cz>
+ * @author Lefty <lefty@multihost.cz>
+ * @author Vojta Beran <xmamut@email.cz>
+ * @author Jakub A. Těšínský (j@kub.cz)
+ * @author mkucera66 <mkucera66@seznam.cz>
+>>>>>>> stable
  * @author Zbyněk Křivka <krivka@fit.vutbr.cz>
  * @author Gerrit Uitslag <klapinklapin@gmail.com>
  * @author Petr Klíma <qaxi@seznam.cz>
@@ -21,6 +37,11 @@
  * @author Jaroslav Lichtblau <jlichtblau@seznam.cz>
  * @author Turkislav <turkislav@blabla.com>
  * @author Daniel Slováček <danslo@danslo.cz>
+<<<<<<< HEAD
+=======
+ * @author Martin Růžička <martinr@post.cz>
+ * @author Pavel Krupička <pajdacz@gmail.com>
+>>>>>>> stable
  */
 $lang['menu']                  = 'Obnova zaspamovaných stránek';
 $lang['filter']                = 'Hledat zaspamované stránky';

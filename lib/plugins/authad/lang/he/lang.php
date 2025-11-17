@@ -2,7 +2,11 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
+=======
+ *
+>>>>>>> stable
  * @author tomer <tomercarolldergicz@gmail.com>
  * @author Menashe Tomer <menashesite@gmail.com>
  */

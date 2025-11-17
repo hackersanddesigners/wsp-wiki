@@ -3,6 +3,7 @@
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
  *
+<<<<<<< HEAD
  * @author Pietro Battiston toobaz@email.it
  * @author Diego Pierotto ita.translations@tiscali.it
  * @author ita.translations@tiscali.it
@@ -13,6 +14,13 @@
  * @author Jacopo Corbetta <jacopo.corbetta@gmail.com>
  * @author Matteo Pasotti <matteo@xquiet.eu>
  * @author snarchio@gmail.com
+=======
+ * @author Pietro Battiston <toobaz@email.it>
+ * @author Lorenzo Breda <lbreda@gmail.com>
+ * @author robocap <robocap1@gmail.com>
+ * @author Jacopo Corbetta <jacopo.corbetta@gmail.com>
+ * @author Matteo Pasotti <matteo@xquiet.eu>
+>>>>>>> stable
  */
 $lang['menu']                  = 'Gestore di ripristini';
 $lang['filter']                = 'Cerca pagine con spam';

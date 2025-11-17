@@ -4,6 +4,7 @@
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
  *
  * @author Sergiu Baltariu <s_baltariu@yahoo.com>
+<<<<<<< HEAD
  * @author s_baltariu@yahoo.com
  * @author Emanuel-Emeric Andrasi <n30@mandrivausers.ro>
  * @author Emanuel-Emeric Andrași <n30@mandrivausers.ro>
@@ -12,6 +13,11 @@
  * @author Marius OLAR <olarmariusalex@gmail.com>
  * @author Marius Olar <olarmariusalex@yahoo.com>
  * @author Emanuel-Emeric Andrași <em.andrasi@mandrivausers.ro>
+=======
+ * @author Emanuel-Emeric Andrasi <n30@mandrivausers.ro>
+ * @author Emanuel-Emeric Andraşi <em.andrasi@mandrivausers.ro>
+ * @author Marius OLAR <olarmariusalex@gmail.com>
+>>>>>>> stable
  */
 $lang['admin_acl']             = 'Managementul Listei de Control a Accesului';
 $lang['acl_group']             = 'Grup:';

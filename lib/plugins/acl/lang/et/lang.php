@@ -2,11 +2,19 @@
 
 /**
  * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+<<<<<<< HEAD
  * 
  * @author Oliver S6ro <seem.iges@mail.ee>
  * @author Aari Juhanson <aari@vmg.vil.ee>
  * @author Kaiko Kaur <kaiko@kultuur.edu.ee>
  * @author kristian.kankainen@kuu.la
+=======
+ *
+ * @author Oliver S6ro <seem.iges@mail.ee>
+ * @author Aari Juhanson <aari@vmg.vil.ee>
+ * @author Kaiko Kaur <kaiko@kultuur.edu.ee>
+ * @author kristian.kankainen <kristian.kankainen@kuu.la>
+>>>>>>> stable
  * @author Rivo Zängov <eraser@eraser.ee>
  * @author Janar Leas <janar.leas@eesti.ee>
  */
