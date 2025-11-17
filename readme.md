@@ -79,7 +79,7 @@ You’ll get a new `APIKEY.txt` in the same folder, copy that text on line 100 o
 
 ```
 $instance = new EtherpadLite\Client('APIKEY', $baseUrl);
-````
+```
 
 If you are working locally, you can simply do 
 
