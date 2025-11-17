@@ -18,7 +18,7 @@ class _DiffOp {
      * @return _DiffOp
      */
     function reverse() {
-        trigger_error("pure virtual", E_USER_ERROR);
+        throw new \RuntimeException("pure virtual");
     }
 
     function norig() {
@@ -226,6 +226,14 @@ class _DiffEngine {
      * of the two files do not match, and likewise that the last lines do not
      * match.  The caller must trim matching lines from the beginning and end
      * of the portions it is going to specify.
+     *
+     * @param integer $xoff
+     * @param integer $xlim
+     * @param integer $yoff
+     * @param integer $ylim
+     * @param integer $nchunks
+     *
+     * @return array
      */
     function _diag($xoff, $xlim, $yoff, $ylim, $nchunks) {
         $flip = false;
@@ -262,16 +270,9 @@ class _DiffEngine {
                 if (empty($ymatches[$line]))
                     continue;
                 $matches = $ymatches[$line];
-                reset($matches);
-                while (list ($junk, $y) = each($matches))
-                    if (empty($this->in_seq[$y])) {
-                        $k = $this->_lcs_pos($y);
-                        USE_ASSERTS && assert($k > 0);
-                        $ymids[$k] = $ymids[$k-1];
-                        break;
-                    }
-                while (list ($junk, $y) = each($matches)) {
-                    if ($y > $this->seq[$k-1]) {
+                $switch = false;
+                foreach ($matches as $y) {
+                    if ($switch && $y > $this->seq[$k-1]) {
                         USE_ASSERTS && assert($y < $this->seq[$k]);
                         // Optimization: this is a common case:
                         //  next match is just replacing previous match.
@@ -283,6 +284,7 @@ class _DiffEngine {
                         $k = $this->_lcs_pos($y);
                         USE_ASSERTS && assert($k > 0);
                         $ymids[$k] = $ymids[$k-1];
+                        $switch = true;
                     }
                 }
             }
@@ -336,6 +338,11 @@ class _DiffEngine {
      *
      * Note that XLIM, YLIM are exclusive bounds.
      * All line numbers are origin-0 and discarded lines are not counted.
+     *
+     * @param integer $xoff
+     * @param integer $xlim
+     * @param integer $yoff
+     * @param integer $ylim
      */
     function _compareseq($xoff, $xlim, $yoff, $ylim) {
         // Slide down the bottom initial diagonal.
@@ -392,12 +399,16 @@ class _DiffEngine {
      * to be the "change".
      *
      * This is extracted verbatim from analyze.c (GNU diffutils-2.7).
+     *
+     * @param array $lines
+     * @param array $changed
+     * @param array $other_changed
      */
     function _shift_boundaries($lines, &$changed, $other_changed) {
         $i = 0;
         $j = 0;
 
-        USE_ASSERTS && assert('count($lines) == count($changed)');
+        USE_ASSERTS && assert(count($lines) == count($changed));
         $len = count($lines);
         $other_len = count($other_changed);
 
@@ -417,7 +428,7 @@ class _DiffEngine {
                 $j++;
 
             while ($i < $len && ! $changed[$i]) {
-                USE_ASSERTS && assert('$j < $other_len && ! $other_changed[$j]');
+                USE_ASSERTS && assert($j < $other_len && ! $other_changed[$j]);
                 $i++;
                 $j++;
                 while ($j < $other_len && $other_changed[$j])
@@ -450,10 +461,10 @@ class _DiffEngine {
                     $changed[--$i] = false;
                     while ($start > 0 && $changed[$start - 1])
                         $start--;
-                    USE_ASSERTS && assert('$j > 0');
+                    USE_ASSERTS && assert($j > 0);
                     while ($other_changed[--$j])
                         continue;
-                    USE_ASSERTS && assert('$j >= 0 && !$other_changed[$j]');
+                    USE_ASSERTS && assert($j >= 0 && !$other_changed[$j]);
                 }
 
                 /*
@@ -476,7 +487,7 @@ class _DiffEngine {
                     while ($i < $len && $changed[$i])
                         $i++;
 
-                    USE_ASSERTS && assert('$j < $other_len && ! $other_changed[$j]');
+                    USE_ASSERTS && assert($j < $other_len && ! $other_changed[$j]);
                     $j++;
                     if ($j < $other_len && $other_changed[$j]) {
                         $corresponding = $i;
@@ -493,10 +504,10 @@ class _DiffEngine {
             while ($corresponding < $i) {
                 $changed[--$start] = 1;
                 $changed[--$i] = 0;
-                USE_ASSERTS && assert('$j > 0');
+                USE_ASSERTS && assert($j > 0);
                 while ($other_changed[--$j])
                     continue;
-                USE_ASSERTS && assert('$j >= 0 && !$other_changed[$j]');
+                USE_ASSERTS && assert($j >= 0 && !$other_changed[$j]);
             }
         }
     }
@@ -612,23 +623,26 @@ class Diff {
      * Check a Diff for validity.
      *
      * This is here only for debugging purposes.
+     *
+     * @param mixed $from_lines
+     * @param mixed $to_lines
      */
     function _check($from_lines, $to_lines) {
         if (serialize($from_lines) != serialize($this->orig()))
-            trigger_error("Reconstructed original doesn't match", E_USER_ERROR);
+            throw new \RuntimeException("Reconstructed original doesn't match");
         if (serialize($to_lines) != serialize($this->closing()))
-            trigger_error("Reconstructed closing doesn't match", E_USER_ERROR);
+            throw new \RuntimeException("Reconstructed closing doesn't match");
 
         $rev = $this->reverse();
         if (serialize($to_lines) != serialize($rev->orig()))
-            trigger_error("Reversed original doesn't match", E_USER_ERROR);
+            throw new \RuntimeException("Reversed original doesn't match");
         if (serialize($from_lines) != serialize($rev->closing()))
-            trigger_error("Reversed closing doesn't match", E_USER_ERROR);
+            throw new \RuntimeException("Reversed closing doesn't match");
 
         $prevtype = 'none';
         foreach ($this->edits as $edit) {
             if ($prevtype == $edit->type)
-                trigger_error("Edit sequence is non-optimal", E_USER_ERROR);
+                throw new \RuntimeException("Edit sequence is non-optimal");
             $prevtype = $edit->type;
         }
 
@@ -791,7 +805,7 @@ class DiffFormatter {
             elseif ($edit->type == 'change')
                 $this->_changed($edit->orig, $edit->closing);
             else
-                trigger_error("Unknown edit type", E_USER_ERROR);
+                throw new \RuntimeException("Unknown edit type");
         }
         $this->_end_block();
     }
@@ -856,10 +870,10 @@ class DiffFormatter {
 
     /**
      * Escape string
-     * 
+     *
      * Override this method within other formatters if escaping required.
      * Base class requires $str to be returned WITHOUT escaping.
-     * 
+     *
      * @param $str string Text string to escape
      * @return string The escaped string.
      */
@@ -889,6 +903,10 @@ class HTMLDiff {
 
     /**
      * Return a class or style parameter
+     *
+     * @param string $classname
+     *
+     * @return string
      */
     static function css($classname){
         global $DIFF_INLINESTYLES;
@@ -910,6 +928,18 @@ class HTMLDiff {
 define('NBSP', "\xC2\xA0");     // utf-8 non-breaking space.
 
 class _HWLDF_WordAccumulator {
+
+    /** @var array */
+    protected $_lines;
+
+    /** @var string */
+    protected $_line;
+
+    /** @var string */
+    protected $_group;
+
+    /** @var string */
+    protected $_tag;
 
     function __construct() {
         $this->_lines = array();
@@ -1339,6 +1369,11 @@ class Diff3 extends Diff {
 
     /**
      * @access private
+     *
+     * @param array $edits1
+     * @param array $edits2
+     *
+     * @return array
      */
     function _diff3($edits1, $edits2) {
         $edits = array();
@@ -1415,6 +1450,18 @@ class Diff3 extends Diff {
  * @access private
  */
 class _Diff3_Op {
+
+    /** @var array|mixed */
+    protected $orig;
+
+    /** @var array|mixed */
+    protected $final1;
+
+    /** @var array|mixed */
+    protected $final2;
+
+    /** @var array|mixed|false */
+    protected $_merged;
 
     function __construct($orig = false, $final1 = false, $final2 = false) {
         $this->orig = $orig ? $orig : array();
