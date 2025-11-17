@@ -6,11 +6,6 @@
  * @author     Anika Henke <anika@selfthinker.org>
  */
 
-if(!defined('DOKU_INC')) die();
-
-if(!defined('DOKU_PLUGIN')) define('DOKU_PLUGIN',DOKU_INC.'lib/plugins/');
-require_once(DOKU_PLUGIN.'syntax.php');
-
 class syntax_plugin_wrap_div extends DokuWiki_Syntax_Plugin {
     protected $special_pattern = '<div\b[^>\r\n]*?/>';
     protected $entry_pattern   = '<div\b.*?>(?=.*?</div>)';
@@ -51,7 +46,7 @@ class syntax_plugin_wrap_div extends DokuWiki_Syntax_Plugin {
                 return array($state, $data);
 
             case DOKU_LEXER_UNMATCHED:
-                $handler->_addCall('cdata', array($match), $pos);
+                $handler->addCall('cdata', array($match), $pos);
                 break;
 
             case DOKU_LEXER_MATCHED:
@@ -63,7 +58,7 @@ class syntax_plugin_wrap_div extends DokuWiki_Syntax_Plugin {
                 $title = trim($title,'=');
                 $title = trim($title);
 
-                $handler->_addCall('header',array($title,$level,$pos), $pos);
+                $handler->addCall('header',array($title,$level,$pos), $pos);
                 // close the section edit the header could open
                 if ($title && $level <= $conf['maxseclevel']) {
                     $handler->addPluginCall('wrap_closesection', array(), DOKU_LEXER_SPECIAL, $pos, '');
@@ -79,23 +74,30 @@ class syntax_plugin_wrap_div extends DokuWiki_Syntax_Plugin {
     /**
      * Create output
      */
-    function render($mode, Doku_Renderer $renderer, $indata) {
+    function render($format, Doku_Renderer $renderer, $indata) {
         static $type_stack = array ();
 
         if (empty($indata)) return false;
         list($state, $data) = $indata;
 
-        if($mode == 'xhtml'){
+        if($format == 'xhtml'){
             /** @var Doku_Renderer_xhtml $renderer */
             switch ($state) {
                 case DOKU_LEXER_ENTER:
+                    $sectionEditStartData = ['target' => 'plugin_wrap_start', 'hid' => ''];
+                    $sectionEditEndData = ['target' =>'plugin_wrap_end', 'hid' => ''];
+                    if (!defined('SEC_EDIT_PATTERN')) {
+                        // backwards-compatibility for Frusterick Manners (2017-02-19)
+                        $sectionEditStartData = 'plugin_wrap_start';
+                        $sectionEditEndData = 'plugin_wrap_end';
+                    }
                     // add a section edit right at the beginning of the wrap output
-                    $renderer->startSectionEdit(0, 'plugin_wrap_start');
+                    $renderer->startSectionEdit(0, $sectionEditStartData);
                     $renderer->finishSectionEdit();
                     // add a section edit for the end of the wrap output. This prevents the renderer
                     // from closing the last section edit so the next section button after the wrap syntax will
                     // include the whole wrap syntax
-                    $renderer->startSectionEdit(0, 'plugin_wrap_end');
+                    $renderer->startSectionEdit(0,  $sectionEditEndData);
 
                 case DOKU_LEXER_SPECIAL:
                     $wrap = $this->loadHelper('wrap');
@@ -112,7 +114,7 @@ class syntax_plugin_wrap_div extends DokuWiki_Syntax_Plugin {
             }
             return true;
         }
-        if($mode == 'odt'){
+        if($format == 'odt'){
             switch ($state) {
                 case DOKU_LEXER_ENTER:
                     $wrap = plugin_load('helper', 'wrap');
