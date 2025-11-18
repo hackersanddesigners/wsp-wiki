@@ -101,22 +101,28 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
       ?>
 
       <?php
-        require 'vendor/autoload.php';
-        $instance = new EtherpadLite\Client('', $baseUrl);
-				$page = str_replace(':', '.', $INFO['id']);
-        $padID = $page . '-' . $INFO['meta']['date']['created'];
+	  require 'vendor/autoload.php';
+
+	  $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+	  $dotenv->load();
+
+	  // we can run the API call against the etherpad localhost (:9001) instead of via the DNS
+          $instance = new EtherpadLite\Client($_SERVER['ETHERPAD_APIKEY']);
+	  $page = str_replace(':', '.', $INFO['id']);
+	  $padID = $page . '-' . $INFO['meta']['date']['created'];
+
         
-        // listAllPads
-        $padlist = $instance->listAllPads();
+	  // listAllPads
+	  $padlist = $instance->listAllPads()->getData();
 
         // check if pad already exists, otherwise make a new one
         // --- http://thinkofdev.com/php-fast-way-to-determine-a-key-elements-existance-in-an-array/
-        if(isset($padlist->padIDs[$padID]) === NULL || !in_array($padID, $padlist->padIDs)) {
+        if(isset($padlist[$padID]) === NULL || !in_array($padID, $padlist)) {
           $newPad = $instance->createPad($padID);
         }
       ?>
       <div class="pad-wrap flex__md flex-jsb__md h--full__md xdl">
-        <div class="pad xdsd ofy-scroll"><iframe src="http://localhost:9001/p/<?php echo $padID ?>" class="w--full h--full bd-a--0"></iframe></div>
+	<div class="pad xdsd ofy-scroll"><iframe src="<?php echo $_SERVER['ETHERPAD_URL']?>/p/<?php echo $padID ?>" class="w--full h--full bd-a--0"></iframe></div>
         <button class="pad-button w--full w--auto__md h--full__md">✎</button>
       </div>
 

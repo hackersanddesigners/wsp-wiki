@@ -18,7 +18,9 @@
         "splitbrain/slika": "^1.0",
         "kissifrot/php-ixr": "^1.8",
         "splitbrain/php-jsstrip": "^1.0",
-        "php81_bc/strftime": "dev-fallback-intl"
+        "php81_bc/strftime": "dev-fallback-intl",
+        "vlucas/phpdotenv": "^5.6",
+        "0x46616c6b/etherpad-lite-client": "^0.7.0"
     },
     "config": {
         "platform": {
