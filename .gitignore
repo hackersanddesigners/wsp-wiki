@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-# wiki
-documents
-data
-conf
-bin
-lib/tpl/dokuwiki
-
-# wiki plugins
-vendor
-
-# etherpad
-!etherpad-lite/
-etherpad-lite/*
-!etherpad-lite/src/
-etherpad-lite/src/*
-!etherpad-lite/src/static/
-etherpad-lite/src/static/*
-=======
 # Editor and temporary files
 *.swp
 *.bak
@@ -48,18 +29,7 @@ etherpad-lite/src/static/*
 !/conf/scheme.conf
 !/conf/smileys.conf
 !/conf/wordblock.conf
-/data/attic/*
-/data/cache/*
-/data/index/*
-/data/locks/*
-/data/log/*
-/data/media/*
-/data/media_meta/*
-/data/media_attic/*
-/data/meta/*
-/data/tmp/*
-/data/pages/*
-!data/pages/wiki/
+data
 /lib/tpl/*
 !/lib/tpl/dokuwiki
 !/lib/tpl/index.php
@@ -119,4 +89,3 @@ phpunit.phar
 *.phpunit.result.cache
 _test/data/
 _test/.rector-cache/
->>>>>>> stable
