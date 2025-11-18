@@ -86,7 +86,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
 
       if (
 	  isset($INFO['userinfo'])
-	  AND isset($INFO['do'])
+	  AND isset($_REQUEST['do'])
 	      // page exists
 	      AND $INFO['exists']
 	      // page is not in 'edit' mode
