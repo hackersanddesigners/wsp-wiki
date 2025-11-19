@@ -39,12 +39,9 @@ a.breadcrumbs {
   #dw__toc {
     position: fixed;
     width: 6rem;
-    /* max-height: 80vh; */
     padding-top: 9px;
-    top: 62px;
-    /* bottom: 1rem; */
-    /* right: 36px; */
-    right: 0;
+    bottom: 1rem;
+    right: 36px;
   }
 
   #dw__toc.closed,
@@ -61,27 +58,16 @@ a.breadcrumbs {
   }
 
   #dw__toc.open {
-    right: 0;      
     width: 14rem;
   }
 
   #dw__toc h3.open {
-    /* position: fixed; */
-    /* bottom: 0; */
-    /* top: 0; */
-    /* right: 0;     */
-    /* min-height: 85px; */
-    /* background-color: #ffe900; */
-    /* width: 14rem; */
-  }
-
-  #dw__toc > div {
-    /* position: absolute; */
-    /* bottom: 2rem; */
-    /* top: 2rem; */
-    /* right: 0; */
-    /* width: 14rem; */
-    /* padding-top: 2.4rem; */
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 0.5rem;
+      background-color: #ffe900;
+      width: 100%;
   }
 
   #dw__toc > div.closed,
@@ -99,9 +85,9 @@ a.breadcrumbs {
   }
 
   #dw__toc > div.open {
-    /* width: 14rem; */
-    /* height: 80vh; */
+    height: 80vh;
     overflow-y: scroll;
+    padding-bottom: 3rem;
   }
 
 }
