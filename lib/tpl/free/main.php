@@ -81,24 +81,11 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
       </main>
 
       <?php
-      // check if
-      // user is logged in
-
       if (
-	  isset($INFO['userinfo'])
-	  AND isset($_REQUEST['do'])
-	      // page exists
-	      AND $INFO['exists']
-	      // page is not in 'edit' mode
-	      AND $_REQUEST['do'] != 'edit'
-	      // page is not in 'admin' mode
-	      AND $_REQUEST['do'] != 'admin'
-	      // page is not in 'search' mode
-	      AND $_REQUEST['do'] != 'search'
-	      // page is not in 'media&image' mode
-	      AND $_REQUEST['do'] != 'media&image'
-	  ):
-      ?>
+	  isset($INFO['userinfo']) AND $INFO['exists']
+	  AND (!isset($_REQUEST['do']) OR isset($_REQUEST['do']) AND $_REQUEST['do'] == '')
+      )
+      :?>
 
       <?php
 	  require 'vendor/autoload.php';
