@@ -39,11 +39,12 @@ a.breadcrumbs {
   #dw__toc {
     position: fixed;
     width: 6rem;
-    max-height: 80vh;
+    /* max-height: 80vh; */
     padding-top: 9px;
-    bottom: 1rem;
-    right: 36px;
-    /* right: 0; */
+    top: 62px;
+    /* bottom: 1rem; */
+    /* right: 36px; */
+    right: 0;
   }
 
   #dw__toc.closed,
@@ -60,22 +61,27 @@ a.breadcrumbs {
   }
 
   #dw__toc.open {
+    right: 0;      
     width: 14rem;
-    height: 80vh;
   }
 
   #dw__toc h3.open {
-    position: fixed;
-    bottom: 0;
-    min-height: 85px;
-    background-color: #ffe900;
-    width: 13.2rem;
+    /* position: fixed; */
+    /* bottom: 0; */
+    /* top: 0; */
+    /* right: 0;     */
+    /* min-height: 85px; */
+    /* background-color: #ffe900; */
+    /* width: 14rem; */
   }
 
   #dw__toc > div {
-    position: absolute;
-    bottom: 2rem;
-    padding-top: 2.4rem;
+    /* position: absolute; */
+    /* bottom: 2rem; */
+    /* top: 2rem; */
+    /* right: 0; */
+    /* width: 14rem; */
+    /* padding-top: 2.4rem; */
   }
 
   #dw__toc > div.closed,
@@ -93,8 +99,8 @@ a.breadcrumbs {
   }
 
   #dw__toc > div.open {
-    width: 14rem;
-    height: 80vh;
+    /* width: 14rem; */
+    /* height: 80vh; */
     overflow-y: scroll;
   }
 
