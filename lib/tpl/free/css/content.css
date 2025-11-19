@@ -670,3 +670,7 @@ div.notify {
 [dir=rtl] .JSpopup ol {
     padding-right: 0;
 }
+
+.plugin__pdfjs {
+    height: 80vh;
+}
