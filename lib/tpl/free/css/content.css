@@ -144,6 +144,9 @@ div.thumb2 .mediabox2 {
 }
 
 /* table */
+.dokuwiki .table {
+    overflow-x: auto;
+}
 
 .dokuwiki table.inline {
   min-width: 50%;
