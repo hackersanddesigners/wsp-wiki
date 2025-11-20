@@ -10,7 +10,7 @@ Commissioned by [Workshop Project](http://www.workshopproject.org) for [FREE, A 
 ## Setup
 
 * [DokuWiki](https://github.com/splitbrain/dokuwiki)
-* [Etherpad Lite](https://github.com/ether/etherpad-lite) + [php client](https://github.com/tomnomnom/etherpad-lite-client)
+* [Etherpad Lite](https://github.com/ether/etherpad-lite) + [php client](https://github.com/0x46616c6b/etherpad-lite-client)
 
 DokuWiki plugins:
 
@@ -24,15 +24,9 @@ DokuWiki plugins:
 
 ## Installation
 
-Note: the wiki runs on a digital ocean server, and I extensively followed the documentation present on the digital ocean website to set things up. For the most part though, it’s a matter of working on a unix environment with Ubuntu (in this case, but interchangeable with some other distros if you want).
-
-The setup consists of Ubuntu 16.04.2 LTS and nginx (as it seems to work better with `node.js`).  [Let's Encrypt](https://letsencrypt.org) for the SSL certificate.
+The setup consists of Debian, php-fpm, Node.js via nvm and Nginx.
 
 ### Install DokuWiki
-
-As stated above, I presume you already have a vps set up, and running a unix-flavored distro. Often times, many hosting providers offer the option of a one-click installation of popular software, and DokuWiki is usually one of them. 
-
-In that case, jump to `2.` Otherwise:
 
 1. [follow this guide](https://www.digitalocean.com/community/tutorials/how-to-install-dokuwiki-with-nginx-on-an-ubuntu-12-04-vps) to have tips on how to install DokuWiki (don't bother that the guide is marked as deprecated, start reading from the section Install and Configure DokuWiki)
 2. add custom theme: copy the `free` folder ([here](https://github.com/afincato/wsp-wiki/tree/master/lib/tpl/free)) inside `/lib/tpl/` (check [this article](https://www.dokuwiki.org/template) as a reference) (note: you have to manually copy the folder inside `/lib/tpl/`, as this custom template is not available on the DokuWiki’s Extension Manager)
@@ -43,9 +37,26 @@ In that case, jump to `2.` Otherwise:
 7. replace `page.js` with custom version in `/lib/scripts` (the TOC button works differently) ([ref](https://github.com/hackersanddesigners/wsp-wiki/blob/master/lib/scripts/page.js))
 8. for nice urls, first set some options in the panel config and update the `.htaccess` file in `/wiki` accordingly ([see this](https://www.dokuwiki.org/rewrite), and double check [this section](https://www.dokuwiki.org/rewrite#further_details_for_the_technically_savvy)), then [update nginx config file](https://www.nginx.com/resources/wiki/start/topics/recipes/dokuwiki/)
 
-TODO: figure how to keep customised copies of the files in 5., 6. and 7. so when dokuwiki has to be upgraded there's not need to manually replace them (DW lets you make local copies of config files, but it seems to be a bit harder when you need to manipulate core files).
+As of 2025-11 we track the mainline git repo of Dokuwiki to a separate branch of this repo, and we upgrade our customized version of the wiki by pulling changes from Dokuwiki’s repo.
 
-UPDATE: apparently no way to make a local copy of core files (clearly). Need to use `diff` when update the wiki software.
+#### .env
+
+As of 2025-11 we store some secrets inside a .env file. Make a new file under `./lib/tpl/free/` with the following:
+
+``` shell
+ETHERPAD_APIKEY=<get this after running Etherpad Lite for the first time>
+ETHERPAD_URL=https://pad.workshopproject.wiki
+```
+
+#### CSS dev
+
+To make sure newly uploaded CSS and JS files are picked up by the PHP wiki, you need to do the following:
+
+``` shell
+touch /var/www/wiki/conf/local.php
+```
+
+This will update the file time of the given file and Dokuwiki will rebuild its cache.
 
 ### Install Etherpad
 
@@ -55,39 +66,35 @@ We need to install `node.js` to be able to run etherpad (which is why we opted t
 * install [etherpad-lite](https://github.com/ether/etherpad-lite)
 * switch to `etherpad` user, `su - etherpad` (if it does not exist, make one)
 * make new subdomain, `pad.workshopproject.wiki`
-* set reading access to let’s encrypt certificates for `etherhpad` user and `eth` group (make new group): `sudo chgrp -h group folder / file` + `sudo chgown -h user folder / file` from `/etc/` all the way down to the `live` folder and also the `/archive` folder inside `/letsencrypt`
-* set ssl paths to etherpad’s `settings.json`
 * [set pad to be accessible from sub domain](https://github.com/ether/etherpad-lite/wiki/How-to-put-Etherpad-Lite-behind-a-reverse-Proxy#https-only) (change `proxy pass` under `location/` from `http` to `http`)
 * use subdomain url when calling the iframe from the wiki’s `main.php` file
 * [set iframed etherpad to be accessible from the same server](https://www.digitalocean.com/community/questions/blocking-iframe-because-it-set-x-frame-options-to-deny) ([ref](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options))
+* in the settings.json make sure to switch the database to use MySQL, and set `"authenticationMethod": "apikey",` (this will create an `APIKEY.txt` file that we use to authenticate with the PHP Etherpad plugin)
 
-### start Etherpad Lite instance managed by pm2
+### start Etherpad Lite instance via systemd
 
-`pm2` keeps the etherpad running also we we log out from the server and in case we update the server, `pm2` restart the etherpad as well.
+We manage Etherpad via `systemd`. Here the config:
 
-* [install pm2](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04)
-* to start the etherpad, from your root server folder do:
+``` shell
+[Unit]
+Description=Etherpad-lite, the collaborative editor.
+After=network.target
 
+[Service]
+Type=simple
+User=etherpad
+Group=etherpad
+WorkingDirectory=<path/to/etherpad>
+Environment=NODE_ENV=production PATH=<do echo $PATH to get this value>
+ExecStart=<which pnpm's path> run prod
+# use mysql plus a complete settings.json to avoid Service hold-off time over, scheduling restart.
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
 ```
-cd /var/www/pad
-pm2 start bin/run.sh --name='Etherpad-Lite'
-```
 
-This will start the Etherpad server. You can check it is correctly running by doing `pm2 list`: you will see a table with  Etherpad-Lite and the status `online`.
-
-You’ll get a new `APIKEY.txt` in the same folder, copy that text on line 100 of `main.php` (inside `lib/tpl/free/`):
-
-```
-$instance = new EtherpadLite\Client('APIKEY', $baseUrl);
-```
-
-If you are working locally, you can simply do 
-
-```
-etherpad-lite/bin/run.sh
-``` 
-
-to start the Etherpad. Of course you can install `pm2` as well and use it on your local environment.
+Important: add the etherpad user’s PATH value to the `Environment` key so we can correctly run the `pnpm run prod` command.
 
 ## Etherpad API
 
