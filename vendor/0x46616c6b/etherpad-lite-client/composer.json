@@ -1,0 +1,22 @@
+{
+    "name": "0x46616c6b/etherpad-lite-client",
+    "description": "PHP Client for Etherpad Lite",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Louis Miller",
+            "email": "louis@systemli.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "": "src/" }
+    },
+    "require": {
+        "php": "^7.3|^7.4|^8.0",
+        "guzzlehttp/guzzle": "~7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~8.5",
+        "behat/behat": "^3.8"
+    }
+}

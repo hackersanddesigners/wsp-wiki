@@ -7,13 +7,19 @@ namespace Composer\Autoload;
 class ComposerStaticInita19a915ee98347a0c787119619d2ff9b
 {
     public static $files = array (
+        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
+        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         'fdc0e9724ddc47859c8bf0c1ea0a623a' => __DIR__ . '/..' . '/openpsa/universalfeedcreator/lib/constants.php',
         '9e71c1459ef1226520e4b26dac3a180d' => __DIR__ . '/..' . '/php81_bc/strftime/src/php-8.1-strftime.php',
         'decc78cc4436b1292c6c0d151b19445c' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/bootstrap.php',
     );
 
     public static $prefixLengthsPsr4 = array (
-        's' => 
+        's' =>
         array (
             'splitbrain\\slika\\tests\\' => 23,
             'splitbrain\\slika\\' => 17,
@@ -22,101 +28,167 @@ class ComposerStaticInita19a915ee98347a0c787119619d2ff9b
             'splitbrain\\JSStrip\\tests\\' => 25,
             'splitbrain\\JSStrip\\' => 19,
         ),
-        'p' => 
+        'p' =>
         array (
             'phpseclib3\\' => 11,
         ),
-        'S' => 
+        'S' =>
         array (
+            'Symfony\\Polyfill\\Php80\\' => 23,
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Polyfill\\Ctype\\' => 23,
             'SimplePie\\' => 10,
         ),
-        'P' => 
+        'P' =>
         array (
+            'Psr\\Http\\Message\\' => 17,
+            'Psr\\Http\\Client\\' => 16,
+            'PhpOption\\' => 10,
             'ParagonIE\\ConstantTime\\' => 23,
             'PHP81_BC\\strftime\\' => 18,
         ),
-        'L' => 
+        'L' =>
         array (
             'LesserPHP\\tests\\' => 16,
             'LesserPHP\\' => 10,
         ),
-        'I' => 
+        'I' =>
         array (
             'IXR\\tests\\' => 10,
             'IXR\\' => 4,
         ),
+        'G' =>
+        array (
+            'GuzzleHttp\\Psr7\\' => 16,
+            'GuzzleHttp\\Promise\\' => 19,
+            'GuzzleHttp\\' => 11,
+            'GrahamCampbell\\ResultType\\' => 26,
+        ),
+        'D' =>
+        array (
+            'Dotenv\\' => 7,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'splitbrain\\slika\\tests\\' => 
+        'splitbrain\\slika\\tests\\' =>
         array (
             0 => __DIR__ . '/..' . '/splitbrain/slika/tests',
         ),
-        'splitbrain\\slika\\' => 
+        'splitbrain\\slika\\' =>
         array (
             0 => __DIR__ . '/..' . '/splitbrain/slika/src',
         ),
-        'splitbrain\\phpcli\\' => 
+        'splitbrain\\phpcli\\' =>
         array (
             0 => __DIR__ . '/..' . '/splitbrain/php-cli/src',
         ),
-        'splitbrain\\PHPArchive\\' => 
+        'splitbrain\\PHPArchive\\' =>
         array (
             0 => __DIR__ . '/..' . '/splitbrain/php-archive/src',
         ),
-        'splitbrain\\JSStrip\\tests\\' => 
+        'splitbrain\\JSStrip\\tests\\' =>
         array (
             0 => __DIR__ . '/..' . '/splitbrain/php-jsstrip/tests',
         ),
-        'splitbrain\\JSStrip\\' => 
+        'splitbrain\\JSStrip\\' =>
         array (
             0 => __DIR__ . '/..' . '/splitbrain/php-jsstrip/src',
         ),
-        'phpseclib3\\' => 
+        'phpseclib3\\' =>
         array (
             0 => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib',
         ),
-        'SimplePie\\' => 
+        'Symfony\\Polyfill\\Php80\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
+        ),
+        'Symfony\\Polyfill\\Mbstring\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Polyfill\\Ctype\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+        ),
+        'SimplePie\\' =>
         array (
             0 => __DIR__ . '/..' . '/simplepie/simplepie/src',
         ),
-        'ParagonIE\\ConstantTime\\' => 
+        'Psr\\Http\\Message\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'Psr\\Http\\Client\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-client/src',
+        ),
+        'PhpOption\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption',
+        ),
+        'ParagonIE\\ConstantTime\\' =>
         array (
             0 => __DIR__ . '/..' . '/paragonie/constant_time_encoding/src',
         ),
-        'PHP81_BC\\strftime\\' => 
+        'PHP81_BC\\strftime\\' =>
         array (
             0 => __DIR__ . '/..' . '/php81_bc/strftime/src',
         ),
-        'LesserPHP\\tests\\' => 
+        'LesserPHP\\tests\\' =>
         array (
             0 => __DIR__ . '/..' . '/splitbrain/lesserphp/tests',
         ),
-        'LesserPHP\\' => 
+        'LesserPHP\\' =>
         array (
             0 => __DIR__ . '/..' . '/splitbrain/lesserphp/src',
         ),
-        'IXR\\tests\\' => 
+        'IXR\\tests\\' =>
         array (
             0 => __DIR__ . '/..' . '/kissifrot/php-ixr/tests',
         ),
-        'IXR\\' => 
+        'IXR\\' =>
         array (
             0 => __DIR__ . '/..' . '/kissifrot/php-ixr/src',
         ),
+        'GuzzleHttp\\Psr7\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
+        ),
+        'GuzzleHttp\\Promise\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/promises/src',
+        ),
+        'GuzzleHttp\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
+        ),
+        'GrahamCampbell\\ResultType\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/graham-campbell/result-type/src',
+        ),
+        'Dotenv\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
+        ),
+    );
+
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/..' . '/0x46616c6b/etherpad-lite-client/src',
     );
 
     public static $prefixesPsr0 = array (
-        'S' => 
+        'S' =>
         array (
-            'SimplePie' => 
+            'SimplePie' =>
             array (
                 0 => __DIR__ . '/..' . '/simplepie/simplepie/library',
             ),
         ),
-        'E' => 
+        'E' =>
         array (
-            'EmailAddressValidator' => 
+            'EmailAddressValidator' =>
             array (
                 0 => __DIR__ . '/..' . '/aziraphale/email-address-validator',
             ),
@@ -126,6 +198,7 @@ class ComposerStaticInita19a915ee98347a0c787119619d2ff9b
     public static $classMap = array (
         'AtomCreator03' => __DIR__ . '/..' . '/openpsa/universalfeedcreator/lib/Creator/AtomCreator03.php',
         'AtomCreator10' => __DIR__ . '/..' . '/openpsa/universalfeedcreator/lib/Creator/AtomCreator10.php',
+        'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'FeedCreator' => __DIR__ . '/..' . '/openpsa/universalfeedcreator/lib/Creator/FeedCreator.php',
         'FeedDate' => __DIR__ . '/..' . '/openpsa/universalfeedcreator/lib/Element/FeedDate.php',
@@ -143,10 +216,14 @@ class ComposerStaticInita19a915ee98347a0c787119619d2ff9b
         'OPMLCreator' => __DIR__ . '/..' . '/openpsa/universalfeedcreator/lib/Creator/OPMLCreator.php',
         'PHPCreator' => __DIR__ . '/..' . '/openpsa/universalfeedcreator/lib/Creator/PHPCreator.php',
         'PIECreator01' => __DIR__ . '/..' . '/openpsa/universalfeedcreator/lib/Creator/PIECreator01.php',
+        'PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
         'RSSCreator091' => __DIR__ . '/..' . '/openpsa/universalfeedcreator/lib/Creator/RSSCreator091.php',
         'RSSCreator10' => __DIR__ . '/..' . '/openpsa/universalfeedcreator/lib/Creator/RSSCreator10.php',
         'RSSCreator20' => __DIR__ . '/..' . '/openpsa/universalfeedcreator/lib/Creator/RSSCreator20.php',
+        'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
+        'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'UniversalFeedCreator' => __DIR__ . '/..' . '/openpsa/universalfeedcreator/lib/UniversalFeedCreator.php',
+        'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -154,6 +231,7 @@ class ComposerStaticInita19a915ee98347a0c787119619d2ff9b
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInita19a915ee98347a0c787119619d2ff9b::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInita19a915ee98347a0c787119619d2ff9b::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInita19a915ee98347a0c787119619d2ff9b::$fallbackDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInita19a915ee98347a0c787119619d2ff9b::$prefixesPsr0;
             $loader->classMap = ComposerStaticInita19a915ee98347a0c787119619d2ff9b::$classMap;
 
