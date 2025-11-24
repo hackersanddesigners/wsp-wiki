@@ -41,7 +41,11 @@ a.breadcrumbs {
     width: 6rem;
     padding-top: 9px;
     bottom: 1rem;
-    right: 36px;
+    right: 0;
+  }
+
+  #dw__toc.with-pad-wrap {
+      right: 36px;
   }
 
   #dw__toc.closed,
@@ -518,6 +522,7 @@ button.toolbutton:not(:last-child) {
 button.pad-button {
   border: none;
   background-color: #ffe900;
+  cursor: pointer;
 }
 
 #size__ctl {
